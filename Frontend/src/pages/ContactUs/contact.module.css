@@ -1,0 +1,12 @@
+.cov{
+    padding-top: 10vh;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 5rem;
+    padding-bottom: 20rem;
+    flex-wrap: wrap;
+}

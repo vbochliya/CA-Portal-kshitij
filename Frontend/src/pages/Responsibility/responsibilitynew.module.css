@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    
+  }
+  .background{
+    height : 100vh;
+    position: relative;
+    width : 100%;
+    background-color :#2C0333 ;
+    overflow: hidden;
+    background-image : url('https://i.postimg.cc/YqkfrQn3/background-comp.png');
+    background-size : 100vw 82vh ;
+  }
+  /* .imgcontainer{
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+  } */
+  .heading{
+    font : "Ubuntu",sans-serif;
+    color : white;
+    font-size: 7em;
+    text-align: center;
+    min-width : 60vw;
+    min-height : 20vh;
+    margin:auto;
+    margin-top : 15vh;
+    margin-bottom : 7vh ;
+    text-shadow: 0px 0px 45px black;
+    font-weight : 400;
+  }
+  
+  .cardfront>img{
+    /* width : 25vw;
+    height: 60vh; */
+    position: relative;
+   
+  }
+  .cardcontainer{
+    min-width: 15vw;
+    min-height: 60vh;
+    background-color: #07000B;
+    box-shadow: 0px 0px 50px pink ;
+    border-radius: 2px;
+  }
+  .cardfront{
+  color : white;
+  font-size: 1.5rem;
+
+  }
+  .cardback ,.cardfront{
+    backface-visibility: hidden;
+    position: absolute;
+    width : 100%;
+    height: 100%;
+   
+  
+  }
+  
+  .flexcontainer{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+   /* align-items: center; 
+   text-align: center;
+   */
+  }
+  .bottom{
+    min-width : 100vw;
+    min-height : 18vh;
+    background-color: #07000B;
+    position: absolute;
+    bottom:0px;
+    
+    
+  }
+  .cardback{
+    padding : 1em;
+    justify-content: center;
+    color : white;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    transform: rotateY(180deg);
+    
+  }
+  .flipcontainer{
+    position: relative;
+    width : 100%;
+  height : 100%;
+  text-align: center;
+  transition : transform 0.8s;
+  transform-style : preserve-3d ;
+  }
+  .cardcontainer:hover .flipcontainer{
+    transform: rotateY(180deg);
+  }
+  
+  .img > img {
+    width : 100% ;
+  }
+  @media (max-width:720px) {
+    .cardcontainer{
+        width : 25vw
+    }
+    .heading {
+        font-size: 5em;
+    }
+  }

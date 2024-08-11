@@ -1,0 +1,656 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+ 
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  .cont {
+    background-image:url("ktj background.png");
+    height: 120vh;
+    width: 130vw;
+    background-repeat:no-repeat;
+    border-radius: 0px;
+    display:flex;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow:hidden;
+    position:fixed;
+  }
+  
+  
+   .SignSide {
+    height: 77vh;
+  width: 29.7916vw;
+  left: 5vw;
+  top: 16vh;
+  position:absolute;
+  border-top-left-radius: 1.7vw;
+  border-bottom-left-radius: 1.7vw;
+  Opacity: 80%;
+  background-blend-mode: multiply;
+  background-image: url("div background.png");
+  bottom:50vh;
+   }
+
+   .SignSide h1 {
+position: absolute;
+top:50vh;
+left:1.5vw;
+font-size:2.9rem;
+   }
+   .SignSide img {
+    position:absolute;
+    height:50vh;
+    width:30vw;
+    left:0.5vw;
+   }
+   .SignIn {
+    position:absolute;
+    height:77vh;
+  width: 89vw;
+  left: 5vw;
+  top: 16vh;
+  border-radius: 1.7vw;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 1.7vw 17px #00000040;
+  background-blend-mode: multiply;
+  min-height:60vh;
+  bottom: 50vh;
+  right: 5vw;
+   }
+   
+   .Sign {
+  height: 4vh;
+  width: 100%;
+  left: 20vw;
+  top:8.5vh;
+  position:absolute;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 5vh;
+  font-weight: 600;
+  line-height: 3.6vh;
+  letter-spacing: 0em;
+  text-align: justified;
+  vertical-align: top;
+  font-weight: SemiBold;
+  color:#13278F;
+  
+   }
+   .Sign1 {
+    height: 4vh;
+    width: 100%;
+    left: 43vw;
+    top:22vh;
+    position:absolute;
+    border-radius: nullpx;
+    /* font-family: Montserrat; */
+    font-size: 5vh;
+    font-weight: 600;
+    line-height: 3.6vh;
+    letter-spacing: 0em;
+    text-align: justified;
+    vertical-align: top;
+    font-weight: SemiBold;
+    color:#13278F;
+    
+     }
+     input {
+      border-radius: 0.5vw;
+  background:  #D9D9D9;
+  box-shadow: 0px 3px 3px 0px #817676;
+  outline: none;
+  border: none;
+  font-size: 2.5vh;
+  padding:0 5px 5px 5px;
+  stroke: solid #817676;
+    }
+   
+   .FormLabel1
+  {
+    height: 31.2px;
+  width: 100%;
+  left: 39vw;
+  top: 25vh;
+  position:absolute;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.15vh;
+  font-weight: 400;
+  line-height: 2.637vh;
+  letter-spacing: 0em;
+  text-align: justified;
+  color: #322929;
+  vertical-align: top;
+  
+  }
+  .FormLabel2 {
+  
+  height: 3vh;
+  width: 100%;
+  left: 65vw;
+  top: 25vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.15vh;
+  font-weight: 400;
+  line-height: 2.636vh;
+  letter-spacing: 0em;
+  text-align: justified;
+  color: #000000;
+  vertical-align: top;
+  position:absolute;
+  
+  }
+  .In1 {
+    height: 4.354vh;
+  width:25vw;
+  left: 39vw;
+  top: 28vh;
+  border-radius: 0.5vw;
+  background: #D9D9D9;
+  box-shadow: 0px 3px 3px 0px #00000040;
+  position:absolute;
+  }
+  .In2 {
+    height: 4.35vh;
+  width:25vw;
+  left: 65vw;
+  top: 28vh;
+  border-radius:0.5vw;
+  background: #D9D9D9;
+  box-shadow: 0px 3px 3px 0px #00000040;
+  position:absolute;
+  }
+  
+  #Eye {
+    height: 28px;
+  width: 2.222vw;
+  left: 81.805vw;
+  top: 587px;
+  border-radius: 0px;
+  position:absolute;
+  background-image: url("ktjeye.png");
+  background-blend-mode: multiply;
+  opacity:70%;
+  }
+  
+  
+  .Button1 {
+    
+    height: 4.735vh;
+    width: 42.219vw;
+    left: 40vw;
+    top: 83.5vh;
+    border-radius: 5px;
+    background: #5161BE;
+    border: 1px solid black;
+    /* box-shadow: 0px 3.878980875015259px 3.878980875015259px 0px #00000040; */
+    
+    /* box-shadow: 0px 4px 4px 0px #00000040; */
+   position: absolute;    
+  }
+
+  button{
+    outline: none;
+  }
+  .ButtonLabel {
+    
+    height: 2.54vh;
+  width: 100%;
+  left: 58vw;
+  top: 84.5vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.3vh;
+  font-weight: 700;
+  line-height: 2.636vh;
+  letter-spacing: 0em;
+  text-align: left;
+  vertical-align: top;
+  color: #FFFFFF;
+  position: absolute;
+  
+  }
+  .Already {
+    height: 2.54vh;
+  width: 100%;
+  left: 43vw;
+  top: 82.9vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2vh;
+  font-weight: 600;
+  line-height: 2.34vh;
+  letter-spacing: 0em;
+  text-align: center;
+  
+ 
+  padding:0;
+  margin:0;
+  position:absolute;
+  }
+
+  
+
+  #SignInB {
+    outline: none;
+    color:linear-gradient(0deg, #35469E, #35469E);
+  }
+  .ForgotPassword {
+    height: 3.03vh;
+  width: 15.5vw;
+  left: 71.4vw;
+  top: 63.72vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2vh;
+  font-weight: 500;
+  line-height: 2.343vh;
+  letter-spacing: 0em;
+  text-align: justified;
+  vertical-align: top;
+  color: #6977C6;
+  position:absolute;
+  
+  }
+  .Remember {
+    height: 2.44vh;
+    width: 2vw;
+    left: 43vw;
+    top: 63.72vh;
+    border-radius: 5px;
+    background: #DDDDDD;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    position: absolute;
+  }
+  .RememberMe {
+    font-size: 2vh;
+    font-weight: 500;
+    line-height: 2.343vh;
+    letter-spacing: 0em;
+    text-align: justified;
+   vertical-align: top;  
+   color: #6977C6;
+   position: absolute;
+   height: 3.03vh;
+  width: 15.5vw;
+  left: 45.7vw;
+  top: 63.72vh;
+  border-radius: nullpx;
+  }
+  
+  .SignInB {
+    height: 4.735vh;
+  width: 42.3vw;
+  left: 43vw;
+  top: 69.582vh;
+  border-radius: 0.3rem;
+  border: 1px solid black;
+  /* border-radius: 0.5vw; */
+  background: #5161BE;
+  /* box-shadow: 0px 3.878980875015259px 3.878980875015259px 0px #00000040; */
+  
+  box-shadow: 0px 4px 4px 0px #00000040;
+  position: absolute;
+  }
+  .SignInT {
+    height: 2.54vh;
+  width: 100%;
+  left:60.21vw;
+  top: 70.65vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.3vh;
+  font-weight: 700;
+  line-height: 2.636vh;
+  letter-spacing: 0em;
+  text-align: left;
+  vertical-align: top;
+  color: #FFFFFF;
+  position:absolute;
+  }
+  .Linksto {
+    height: 2.54vh;
+  width: 40vw;
+  left: 40vw;
+  top: 88.5vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.3vh;
+  font-weight: 600;
+  line-height: 2.636vh;
+  letter-spacing: 0em;
+  text-align: center;
+  color: linear-gradient(0deg, #000000, #000000);
+  position: absolute;
+  }
+  .Linksto a {
+    color: #35469E;
+  }
+  input {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0.1rem;
+    font-size: xx-large;
+    padding: 0.5rem;
+    padding-left: 1rem;
+  }
+  .PLabel3 {
+    height: 3.05vh;
+width: 8.855vw;
+left:39vw;
+top: 34.2vh;
+position:absolute;
+  }
+  .PLabel4 {
+    height: 3.05vh;
+width: 100%;
+left: 65vw;
+top: 34.2vh;
+position:absolute;
+  }
+  .PLabel5 {
+    height: 3.05vh;
+width: 100%;
+left: 39vw;
+top: 44vh;
+position:absolute;
+  }
+  .PLabel6 {
+    height: 3.05vh;
+width: 100%;
+left: 39vw;
+top: 54vh;
+position: absolute;
+  }
+  .PLabel7 {
+    height: 3.05vh;
+width: 8.855vw;
+left: 39vw;
+top: 64vh;
+border-radius: nullpx;
+position: absolute;
+  }
+  .PLabel8 {
+    height: 3.05vh;
+width: 8.855vw;
+left: 65vw;
+top: 64vh;
+position:absolute;
+  }
+  .PLabel9 {
+    height: 3.05vh;
+width: 8.855vw;
+left: 39vw;
+top: 73vh;
+position:absolute;
+  }
+  .forget{
+    font-weight: 600;
+    color: blue;
+    height: 3.05vh;
+    width: 100%;
+    left: 39vw;
+    top: 60.6vh;
+    border-radius: nullpx;
+    /* font-family: Montserrat; */
+    font-size: 2.15vh;
+    line-height: 2.636vh;
+    letter-spacing: 0em;
+    text-align: justified;
+    vertical-align: top;
+    cursor: pointer;
+    position: absolute;
+  }
+  .PLabel {
+    border-radius: nullpx;
+/* font-family: Montserrat; */
+font-size: 2.15vh;
+font-weight: 400;
+line-height: 2.636vh;
+letter-spacing: 0em;
+text-align: justified;
+color: #322929;
+
+  }
+  .PIn3 {
+    height: 4.354vh;
+width: 25vw;
+left: 39vw;
+top: 37.5vh;
+position:absolute;
+background:#D9D9D9;
+  }
+  .PIn4 {
+    height: 4.35vh;
+width:25vw;
+left: 65vw;
+top: 37.5vh;
+border-radius:0.5vw;
+position:absolute;
+background:#D9D9D9;
+  }
+  .PIn5 {
+    height: 4.735vh;
+width: 51vw;
+left: 39vw;
+top: 47.5vh;
+border-radius: 0.5vw;
+position:absolute;
+background:#D9D9D9;
+  }
+  .PIn6 {
+    height: 4.735vh;
+width: 51vw;
+left: 39vw;
+top: 57.6vh;
+border-radius: 0.5vw;
+position: absolute;
+background:#D9D9D9;
+  }
+  .PIn7 {
+    height: 4.354vh;
+width: 25vw;
+left: 39vw;
+top: 67.3vh;
+border-radius: 0.5vw;
+position:absolute;
+background:#D9D9D9;
+  }
+  .PIn8 {
+    height: 4.35vh;
+width: 25vw;
+left: 65vw;
+top: 67.3vh;
+border-radius:0.5vw;
+position:absolute;
+background:#D9D9D9;
+  }
+  .PIn9 {
+    height: 4.735vh;
+width: 51vw;
+left: 39vw;
+top: 76vh;
+border-radius: 0.5vw;
+position:absolute;
+background:#D9D9D9;
+  }
+  .FormLabel3 {
+    height: 3.05vh;
+  width: 100%;
+  left: 39vw;
+  top: 38.09vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.15vh;
+  font-weight: 400;
+  line-height: 2.636vh;
+  letter-spacing: 0em;
+  text-align: justified;
+  vertical-align: top;
+  color: #000000;
+  position:absolute;
+  }
+  .In3 {
+    height: 4.735vh;
+  width: 45vw;
+  left: 39vw;
+  top: 41.12vh;
+  border-radius: 0.5vw;
+  background: #D9D9D9;
+  box-shadow: 0px 3.878980875015259px 3.878980875015259px 0px #00000040;
+  position:absolute;
+  }
+  .FormLabel4 {
+    height: 3.05vh;
+  width: 100%;
+  left: 39vw;
+  top: 49.6vh;
+  border-radius: nullpx;
+  /* font-family: Montserrat; */
+  font-size: 2.15vh;
+  font-weight: 400;
+  line-height: 2.636vh;
+  letter-spacing: 0em;
+  text-align: justified;
+  vertical-align: top;
+  color: #000000;
+  position:absolute;
+  }
+  .In4 {
+    height: 4.735vh;
+  width: 45vw;
+  left: 39vw;
+  top: 52.43vh;
+  border-radius: 0.5vw;
+  background: #D9D9D9;
+  box-shadow: 0px 3.878980875015259px 3.878980875015259px 0px #00000040;
+  position:absolute;
+  }
+  
+  .FormLabel5 {
+    height: 3.048vh;
+    width: 100%;
+    left: 39vw;
+    top: 60.5vh;
+    border-radius: nullpx;
+    /* font-family: Montserrat; */
+    font-size: 2.15vh;
+    font-weight: 400;
+    line-height: 2.636vh;
+    letter-spacing: 0em;
+    text-align: justified;
+  vertical-align: top;
+  color: #000000;
+  position:absolute;
+  
+  }
+  .In5 {
+    height: 4.735vh;
+  width: 45vw;
+  left: 39vw;
+  top: 63.35vh;
+  border-radius: 0.5vw;
+  background: #D9D9D9;
+  box-shadow: 0px 3.878980875015259px 3.878980875015259px 0px #00000040;
+  position:absolute;
+  }
+  @media screen and (max-width:415px){
+    .Sign {left: 15.5vw;
+      top:10.5vh;
+      }
+      .Sign1 {
+        left: 33vw;
+      top:22vh;
+      }
+   }
+  
+  @media screen and (max-width:768px){
+    .Linksto {
+      font-size: 1.6vh;
+      top:89vh;
+      left:30vw;
+    }
+    .RememberMe,.ForgotPassword {
+      font-size: 1.7vh;
+    }
+    .FormLabel1,.FormLabel3,.In3,.PLabel3,.FormLabel4,.PLabel5,.PLabel7,.PIn7,.PLabel6,.PIn6,.PLabel9,.PIn9,.In1,.PIn3,.In4,.PIn5{
+      left:13vw;
+      font-size:1.9vh;
+    }
+    .forget{
+      left:13vw;
+      font-size:1.9vh;
+    }
+    .PIn5,.PIn6,.PIn9,.In3,.In4 {
+      width:77vw;
+    }
+    .In1,.In2,.PIn3,.PIn4,.PIn7,.PIn8 {
+      width:35vw;
+      
+    }
+    .FormLabel2,.In2,.PLabel4,.PIn4,.PIn8,.PLabel8 {
+      font-size: 1.9vh;
+      left:55vw;
+    }
+    .SignIn {
+      min-height: 60vh;
+      
+    }
+    .SignSide {
+      display:none;
+    }
+    .Button1 {
+      left:30vw;
+    }
+    .ButtonLabel {
+      left: 44vw;
+    }
+    .Remember {
+      left:15vw;
+    }
+    .RememberMe {
+      left:18vw;
+    }
+    .ForgotPassword {
+      left:72vw;
+    }
+    .SignInB {
+      left:21vw;
+      width:60vw;
+    }
+    .SignInT{
+      left:46vw;
+    }
+    .Sign {
+      top:8vh;
+    }
+   }
+   @media only screen and (max-width:1000px) {
+    .SignIn{
+      width:85vw;
+      position: relative;
+      padding:10vw;
+      right:5vw;
+      left:8vw;
+      min-height: 60vh;
+      margin-bottom: 2rem;
+    }
+    .SignSide {
+      left:8vw;
+      width: 27vw;
+    }
+    .Linksto {
+      top:88.5vh;
+    }
+  }

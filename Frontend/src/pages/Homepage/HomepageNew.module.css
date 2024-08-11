@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Montserrat:wght@400;600&family=Patua+One&display=swap");
+
+.container {
+  background-color: #2c0333;
+}
+.homeMain {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bgCoverImg {
+  width: 50%;
+  margin-top: 7rem;
+  max-width: 60rem;
+  object-fit: cover;
+  object-position: center;
+  border: solid #ffffff;
+  padding-left: 4rem;
+  border-width: 0 0 0 0.2rem;
+  animation: rise-up 1.8s ease-out forwards;
+}
+
+.homeContent {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding-right: 2rem;
+}
+
+.spon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 1.7rem;
+  animation: rise-up 2s ease-out forwards;
+}
+.spon img {
+  width: 24rem;
+}
+.heading1 {
+  font-family: "Patua One", sans-serif;
+  font-weight: 700;
+  font-size: 8rem;
+  max-width: 80rem;
+  margin: 0 2rem;
+  line-height: 8rem;
+  letter-spacing: 0.25rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 4rem #000000;
+  animation: rise-up 1.8s ease-out forwards;
+  padding-bottom: 1rem;
+}
+
+.heading3 {
+  font-family: "Oxygen", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  max-width: 80rem;
+  margin: 0 2rem;
+  text-align: center;
+  text-shadow: 0px 0px 4rem #00000044;
+  animation: rise-up 2.2s ease-out forwards;
+}
+
+@keyframes rise-up {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 1rem 2rem;
+  margin: 4rem 2rem 0 2rem;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 1rem;
+  color: white;
+  background: linear-gradient(0deg, #8514b8, #cc0388);
+  box-shadow: 0 0 4rem #000000, 0 0.1rem 0.5rem #00000044;
+  width: max-content;
+  max-width: calc(100% - 3rem);
+  transition: 0.25s;
+  animation: rise-up 2.4s ease-out forwards;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2rem #000000, 0 0.2rem 2rem 0.25rem #000000dd;
+}
+
+.info {
+  color: white;
+  opacity: 0.9;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-shadow: 0 0 1rem #000000, 0 0 2rem #000000, 0 0 3rem #000000;
+  text-align: center;
+  animation: rise-up 2.6s ease-out forwards;
+}
+
+.applicationId {
+  font-weight: bold;
+  font-family: monospace;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  background: #000000bb;
+  color: #ff81f0;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1440px) {
+  .heading1 {
+    font-size: clamp(2rem, 5vw, 8rem);
+    line-height: clamp(2rem, 5vw, 8rem);
+    letter-spacing: 0.1rem;
+  }
+
+  .heading3,
+  .btn,
+  .info,
+  .applicationId {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+
+  .btn,
+  .info,
+  .applicationId {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .homeMain {
+    flex-direction: column-reverse;
+  }
+
+  .homeContent {
+    width: 100%;
+    height: max-content;
+  }
+
+  .bgCoverImg {
+    width: 100%;
+    height: max-content;
+    max-width: 40rem;
+    border: none;
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
+
+  .heading1 {
+    font-size: clamp(2rem, 6vw, 8rem);
+    line-height: clamp(2rem, 6vw, 8rem);
+    letter-spacing: 0.1rem;
+  }
+
+  .heading3,
+  .btn,
+  .info,
+  .applicationId {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .btn,
+  .info,
+  .applicationId {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .homeMain {
+    padding: 0 2rem;
+  }
+
+  .bgCoverImg {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .spon {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  .spon img {
+    width: 20rem;
+    cursor: pointer;
+  }
+}

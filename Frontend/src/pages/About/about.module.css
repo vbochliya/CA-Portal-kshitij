@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Mplus;
+    src: url("../../fonts/Mplus1p-Regular.otf");
+  }
+
+@font-face {
+    font-family: Mplus-Bold;
+    src: url("../../fonts/\/Mplus1p-Bold.otf");
+  }
+
+
+.main{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 5rem;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+h1{
+    font-size: 4rem;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    font-family: Mplus-Bold;
+    color: #fff;
+}
+
+.box{
+    border-radius: 2rem;
+    box-sizing: border-box;
+    padding: 4rem 6rem;
+    background-color: white;
+    min-height: 100%;
+    max-width: 75%;
+    opacity: 0.73;
+    box-shadow: 0px 2px 25px 17px rgba(0, 0, 0, 0.25);
+}
+
+p{
+    font-family: Mplus;
+    font-size: 1.8rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+@media only screen and (max-width:1000px) {
+    .box{
+        border-radius: 1rem;
+        box-sizing: border-box;
+        padding: 2rem 4rem;
+        background-color: rgba(255,255,255,0.8);
+        min-height: 100%;
+        min-width: 85%;
+        
+        margin: 0 1.2rem 0 1.2rem ;
+        /* font-size: ; */
+    }
+
+    p{
+        font-size: 1.38rem;
+    }
+
+    .main{
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5rem;
+        padding-top: 0;
+    }
+}
+/* @media (max-width : 450px){
+
+}
+     */

@@ -1,0 +1,133 @@
+.elem {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 5fr;
+    font-size: 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    padding: 3rem 3rem;
+    background-color: rgba(255, 255, 255, 1);
+    min-height: 40rem;
+    width: 80%;
+    filter: drop-shadow(0 0.2rem 0.25rem black);
+}
+
+.elem:hover .box {
+    transform: translateX(4rem);
+}
+
+.elem:hover .para {
+    transform: scale(1.09);
+}
+
+.box {
+    width: 50%;
+    height: 70%;
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+    transition: all ease 0.6s;
+}
+
+.box img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.para {
+    grid-column: 2/3;
+    font-size: 2rem;
+    text-align: justify;
+    padding: 5rem;
+    transition: all 0.3s ease;
+}
+
+.p1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.p2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 1400px) {
+    .elem {
+        display: flex;
+        padding: 0.5rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3rem;
+        padding: 1rem;
+        padding-bottom: 1.5rem;
+        height: 50rem;
+        width: 86vw;
+        overflow: hidden;
+    }
+
+    .p1, .p2{
+        width: 80%;
+        text-align: center;
+        margin: 0 0.5rem 0 0.5rem;
+    }
+
+    .dv1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .box{
+        min-height: 10rem;
+        margin-bottom: 4rem;
+        /* object-fit:contain; */
+        /* overflow-y: scroll; */
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .box img{
+      /* max-height: 15rem; */
+      width: 12rem;
+      /* object-fit: fill;   */
+    }
+
+    .elem:hover .para {
+        transform: scale(1);
+    }
+
+    .elem:hover .box {
+        transform: none;
+    }
+
+    .cara {
+        padding-top: 10%;
+        padding-bottom: 20%;
+    }
+
+    .para {
+        font-size: 1.5rem;
+        text-align: justify;
+        height: 20rem;
+        overflow-y: scroll;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

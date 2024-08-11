@@ -1,0 +1,25 @@
+.Registrations{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.head{
+    font-size: xx-large;
+    padding: 2rem 1rem 3rem 1rem;
+    color: black;
+    background-color: rgb(0, 208, 255);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 550;
+}
+
+.list{
+    min-width: 100%;
+    border: 1px solid rgb(167, 164, 164);
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 3rem;
+}

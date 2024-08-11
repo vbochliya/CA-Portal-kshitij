@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Quicksand&family=Ubuntu&display=swap');
+
+
+
+.main{
+    flex-direction: column;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 5rem;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+
+.heading{
+    font-size: 4rem;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    font-family: Ubuntu;
+    color: #FFFFFF;
+    text-shadow: 0 0 4rem #000000;
+}
+
+.box{
+    /* background-color: #300736; */
+    color: #fff;
+    box-sizing: border-box;
+    padding: 4rem 6rem;
+    min-height: 100%;
+    max-width: 75%;
+    border-image: linear-gradient(135deg, #f701b2, #01a7fe) 30;
+    border-width: 0.6rem;
+    border-style: solid;
+    box-shadow: -1rem -0.5rem 2rem #f701b244,
+                1rem 0.5rem 2rem #01a7fe44,
+                inset 1rem 0.5rem 2rem #f701b244,
+                inset -1rem -0.5rem 2rem #01a7fe44;
+}
+  
+p{
+    font-family: oxygen;
+    font-size: 1.8rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+@media only screen and (max-width:1000px) {
+    .box{
+        border-radius: 1rem;
+        box-sizing: border-box;
+        padding: 4rem 4rem;
+        
+        /* background-color: rgba(255,255,255,0.8); */
+        min-height: 100%;
+        min-width: 85%;
+        
+        margin: 0 1.2rem 0 1.2rem ;
+        /* font-size: ; */
+    }
+
+    .heading{
+        font-size: 4rem;
+        padding-left: 1rem;
+        padding-bottom: 4rem;
+        text-align: center;
+        font-family: Ubuntu;
+        color: #FFFFFF;
+        text-shadow: 0 0 4rem #000000;
+    }
+    
+
+    
+
+    p{
+        font-size: 1.38rem;
+        
+    }
+
+    .main{
+       padding: 5rem 0;
+    }
+}
+    

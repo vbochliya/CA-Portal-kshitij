@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    
+  }
+  .background{
+    height : 100vh;
+    position: relative;
+    width : 100%;
+    background-color :#2C0333 ;
+    overflow: hidden;
+    background-image : url('https://i.postimg.cc/YqkfrQn3/background-comp.png');
+    background-size : 100vw 82vh ;
+  }
+  /* .imgcontainer{
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+  } */
+  .heading{
+    font : "Ubuntu",sans-serif;
+    color : white;
+    font-size: 7em;
+    text-align: center;
+    min-width : 60vw;
+    min-height : 20vh;
+    margin:auto;
+    margin-top : 15vh;
+    margin-bottom : 7vh ;
+    text-shadow: 0px 0px 45px black;
+    font-weight : 400;
+  }
+  
+  .cardfront>img{
+    width : 25vw;
+    height: 60vh;
+    position: relative;
+   
+  }
+  .cardcontainer{
+    width: 15vw;
+    height: 42vh;
+    /* z-index: 100; */
+    background-color: #07000B;
+    box-shadow: 0px 0px 3rem pink, 0px 0px 1rem 1rem #af06b5;
+    border-radius: 2px;
+  }
+  .cardfront{
+  color : white;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+  .cardback ,.cardfront{
+    backface-visibility: hidden;
+    position: absolute;
+    width : 100%;
+    height: 100%;
+  
+  }
+  
+  .flexcontainer{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+  
+  }
+  .bottom{
+    min-width : 100vw;
+    min-height : 18vh;
+    /* background-color: #07000B; */
+    background: linear-gradient(180deg, #07000B, #0d0111);
+    position: absolute;
+    bottom:0px;
+    
+    
+  }
+  .cardback{
+    padding : 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : white;
+    margin: auto;
+    /* text-align: center; */
+    font-size: 2em;
+    transform: rotateY(180deg);
+    text-shadow: 0 0 1rem #ea47ea;
+  }
+  .flipcontainer{
+    position: relative;
+    width : 100%;
+  height : 100%;
+  text-align: center;
+  transition : transform 0.8s;
+  transform-style : preserve-3d ;
+  }
+  .cardcontainer:hover .flipcontainer{
+    transform: rotateY(180deg);
+  }
+  
+  .img > img {
+    width : 100% ;
+  }
+  @media only screen and (max-width : 1200px){
+    .cardback{
+        font-size : 1.7em;
+    }
+  }
+  @media (max-width : 950px){
+    .cardcontainer{
+        min-width : 20vw ;
+        
+    }
+    .cardback{
+        font-size : 1.5em;
+        
+    }
+    .heading {
+        font-size: 5em;
+    }
+  }
+  @media only screen and (max-width :500px){
+    .cardcontainer{
+        width : 22vw;
+    }
+    .cardback{
+        font-size: 1.2em;
+        
+    }
+    .heading{
+        font-size : 3em;
+    }
+  }
+  @media (max-width : 500px){
+    .bottom{
+      display: none;
+    }
+    .cardback{
+        font-size: 2em;
+    }
+    .cardfront{
+      min-width:80%;
+    }
+    .cardcontainer{
+      min-height: 25vh;
+      min-width :80vw ;
+    margin: auto;
+    }
+    .flexcontainer{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin: auto;
+
+    }
+    .background{
+      overflow: inherit;
+      background-image: none;
+      width: fit-content;
+      min-height: 190vh;
+      text-align: center;
+      align-items: center;
+  
+      margin: auto;
+    }
+    .img>img{
+      width: 100%;
+      height : 100%;
+    }
+    .heading{
+      margin-top: 0;
+      padding: 0em;
+      min-height: 5vh;
+    }
+  }
+  

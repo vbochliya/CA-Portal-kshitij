@@ -1,0 +1,142 @@
+@font-face {
+  font-family: Mplus-Bold;
+  src: url("../../fonts/Mplus1p-Bold.otf");
+}
+
+@font-face {
+  font-family: Mplus;
+  src: url("../../fonts/Mplus1p-Regular.otf");
+}
+
+html {
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+}
+
+p{
+  font-family: Mplus;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.container{
+  background-image: url('../../images/Bgimgg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  background-size: cover;
+  /* background-size:100%; */
+  /* scroll-snap-type: y mandatory; */
+}
+.bg1{
+  display: flex;
+  flex-flow: row wrap;
+  align-items:center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+}
+.bg2{
+  position: relative;
+  top: 6rem;
+  margin-right: 2rem;
+  border-right: 5px solid black;
+}
+.bg2 img{
+  width: 90%;
+  margin-right: 0;
+}
+.bg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  top: 1rem;
+  margin-bottom: -6rem;
+}
+
+.heading {
+  font-family: Mplus-Bold;
+  font-size: 4rem;
+  color: #4D4141;
+}
+
+.head2{
+  font-family: Mplus-Bold;
+  font-size: 4rem;
+  color: #4D4141;
+}
+
+.btn{
+  font-family: Mplus-Bold;
+  font-size: 2rem;
+  background-color: #007FFF;
+  margin-top: 5rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  transition: all 150ms ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover{
+  background-color: #0072E5;
+}
+
+.btn:active{
+  background-color: #0059B2;
+}
+
+.info{
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0.3rem 0.6rem;
+}
+
+@media only screen and (max-width:1000px) {
+    .bg2{
+      position: relative;
+      top: 6rem;
+      margin-bottom: -2rem;
+      margin-left: 0;
+      border-right: none;
+    }
+    .container{
+      background-size: 400%;
+      background-position: -20rem -20rem;
+    }
+
+    .bg{
+      margin-bottom: 1rem;
+    }
+
+    .heading{
+      font-size: 4rem;
+    }
+
+    .head2{
+      font-size: 2rem;
+    }
+}
+

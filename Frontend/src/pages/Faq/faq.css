@@ -1,0 +1,35 @@
+.faq_div p{
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+}
+
+.MuiAccordion-root {
+    background-color: #D9D9D933 !important;
+}
+
+.MuiAccordionSummary-expandIconWrapper {
+    color: white !important;
+}
+
+.faq_div{
+    width: 70%;
+    margin: 0 auto;
+    color:#fff;
+
+}
+
+/* .MuiTypography-root{
+    color: black !important;
+} */
+
+@media only screen and (max-width:1200px){
+    .faq_div{
+        width:95%;
+        margin: 0 auto;
+
+    }
+}

@@ -1,0 +1,385 @@
+.cov {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: #300636; */
+    background: linear-gradient(180deg, #0d0111, transparent, transparent);
+    box-sizing: border-box;
+    padding: 8rem 4rem 4rem 4rem;
+}
+
+.heading {
+    font-size: 4rem;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    font-family: Mplus-Bold;
+    color: #fff;
+    text-shadow: 0 0 4rem #000000;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 15rem 0;
+}
+
+.incBox {
+    display: flex;
+    flex-direction: column;
+    max-width: 16.5rem;
+    min-width: 16.5rem;
+    max-height: 16.5rem;
+    min-height: 16.5rem;
+    align-items: center;
+}
+
+.incImgBox {
+    width: 15rem;
+    min-height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D9D9D933;
+    transform-origin: center;
+    outline: solid 0.75rem #2c0333;
+    outline-offset: -1rem;
+    border-image: linear-gradient(135deg, #f701b2, #01a7fe) 30;
+    border-width: 1rem;
+    border-style: solid;
+    transition: all 0.25s;
+}
+
+.incImgShadow {
+    width: 5rem;
+    height: 5rem;
+    transform: rotate(-45deg);
+    filter: blur(6px);
+    position: absolute;
+    transition: all 0.25s;
+}
+
+.incImg {
+    width: 5rem;
+    height: 5rem;
+    transform: rotate(-45deg) translate(-0.1rem, -0.1rem);
+    filter: invert(1);
+    transition: all 0.25s;
+}
+
+.incText {
+    position: absolute;
+    color: white;
+    font-family: "oxygen", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    white-space: break-spaces;
+    width: 25rem;
+}
+
+.incBox:nth-child(even) .incImgBox {
+    transform: translateY(3rem) rotate(45deg);
+
+}
+.incBox:nth-child(odd) .incImgBox {
+    transform: translateY(-3rem) rotate(45deg);
+}
+
+.incBox:nth-child(even) .incText {
+    transform: translateY(22rem);
+
+}
+.incBox:nth-child(odd) .incText {
+    transform: translateY(-17rem);
+}
+
+.incBox:hover .incImg {
+    transform: rotate(-45deg) translate(-0.1rem, -0.1rem) scale(1.2);
+}
+
+.incBox:hover .incImgShadow {
+    transform: rotate(-45deg) scale(1.2);
+}
+
+.incBox:hover .incImgBox {
+    outline: solid 0.75rem #2c0333;
+    outline-offset: -1.5rem;
+    border-image: linear-gradient(135deg, #f701b2, #01a7fe) 30;
+    border-width: 1.25rem;
+}
+
+@media only screen and (max-width: 960px) {
+    .main {
+        flex-direction: column;
+        margin: 2rem 0 6rem 0;
+    }
+
+    .incBox {
+        flex-direction: row;
+        justify-content: center;
+        max-height: 9rem;
+        min-height: 9rem;
+    }
+
+    .incImgBox {
+        flex-direction: row;
+        min-height: 12rem;
+        width: 12rem;
+    }
+    
+    .incImg, .incImgShadow {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .incBox:nth-child(even) .incImgBox {
+        transform: translateX(4.5rem) rotate(45deg);
+
+    }
+    .incBox:nth-child(odd) .incImgBox {
+        transform: translateX(-4.5rem) rotate(45deg);
+    }
+
+    .incBox:nth-child(even) .incText {
+        transform: translateX(25rem);
+
+    }
+    .incBox:nth-child(odd) .incText {
+        transform: translateX(-25rem);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    
+    .incBox {
+        max-height: 9rem;
+        min-height: 9rem;
+    }
+
+    .incImgBox {
+        flex-direction: row;
+        min-height: 10rem;
+        width: 10rem;
+    }
+    
+    .incImg, .incImgShadow {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .incBox:nth-child(even) .incImgBox {
+        transform: translateX(3.5rem) rotate(45deg);
+
+    }
+    .incBox:nth-child(odd) .incImgBox {
+        transform: translateX(-3.5rem) rotate(45deg);
+    }
+
+    .incText {
+        font-size: 1.25rem;
+        width: 23rem;
+    }
+
+    .incBox:nth-child(even) .incText {
+        transform: translateX(21rem);
+
+    }
+    .incBox:nth-child(odd) .incText {
+        transform: translateX(-21rem);
+    }
+    
+}
+
+/* @media only screen and (max-width: 660px) {
+
+    .main {
+        flex-direction: column;
+        margin: 1rem 0 6rem 0;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .incBox {
+        max-height: 10rem;
+        min-height: 10rem;
+        margin-right: 24rem;
+    }
+
+    .incImgBox {
+        min-height: 9rem;
+        width: 9rem;
+    }
+
+    .incBox:nth-child(even) .incImgBox {
+        transform: translateX(2rem) rotate(45deg);
+
+    }
+    .incBox:nth-child(odd) .incImgBox {
+        transform: translateX(-2rem) rotate(45deg);
+    }
+
+    .incText {
+        white-space:normal;
+        width: 23rem;
+        text-align: left;
+    }
+
+    .incBox:nth-child(even) .incText {
+        transform: translateX(21rem);
+
+    }
+    .incBox:nth-child(odd) .incText {
+        transform: translateX(17rem);
+    }
+
+} */
+
+@media only screen and (max-width: 660px) {
+
+    .cov {
+        padding: 8rem 1rem 4rem 1rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .main {
+        margin: 0 0 5rem 0;
+        row-gap: 2rem;
+    }
+
+    .incBox {
+        margin-right: 0;
+        flex-direction: row;
+        max-height: max-content;
+        max-width: 100%;
+        column-gap: 1rem;
+    }
+
+    .incImgBox {
+        min-height: 10rem;
+        width: 10rem;
+        min-width: 10rem;
+    }
+
+    .incImg, .incImgShadow {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .incBox:nth-child(even) .incImgBox {
+        transform: translateX(0) rotate(0);
+
+    }
+    .incBox:nth-child(odd) .incImgBox {
+        transform: translateX(0) rotate(0);
+    }
+
+    .incImgShadow {
+        transform: rotate(0);
+    }
+    
+    .incImg {
+        transform: rotate(0) translate(-0.1rem, -0.1rem);
+    }
+
+    .incBox:hover .incImg {
+        transform: rotate(0) translate(-0.1rem, -0.1rem) scale(1.2);
+    }
+    
+    .incBox:hover .incImgShadow {
+        transform: rotate(0) scale(1.2);
+    }
+
+    .incText {
+        position: initial;
+        font-size: 1.5rem;
+        width: 40rem;
+        white-space:normal;
+        text-align: left;
+    }
+
+    .incBox:nth-child(even) .incText {
+        transform: translateX(0);
+
+    }
+    .incBox:nth-child(odd) .incText {
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .main {
+        align-items: flex-start;
+    }
+
+    .incBox {
+        margin-right: 0;
+    }
+
+    .incImgBox {
+        min-height: 8rem;
+        width: 8rem;
+        min-width: 8rem;
+    }
+
+    .incImg, .incImgShadow {
+        width: 3rem;
+        height: 3rem;
+    }
+
+
+    .incText {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .main {
+        align-items: center;
+        row-gap: 4rem;
+    }
+    .incBox {
+        max-height: max-content;
+        max-width: 100%;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .incImgBox {
+        min-height: 10rem;
+        width: 10rem;
+    }
+
+    .incImg, .incImgShadow {
+        width: 4rem;
+        height: 4rem;
+    }
+
+
+    .incText {
+        position: initial;
+        width: calc(100% - 6rem);
+        left: 0;
+        text-align: center;
+    }
+
+    .incBox:nth-child(even) .incText {
+        transform: translateX(0);
+
+    }
+    .incBox:nth-child(odd) .incText {
+        transform: translateX(0);
+    }
+}
