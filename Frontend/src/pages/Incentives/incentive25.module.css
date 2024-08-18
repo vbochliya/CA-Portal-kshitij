@@ -1,0 +1,266 @@
+.cov {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111111;
+    box-sizing: border-box;
+    padding: 8rem 4rem 4rem 4rem;
+}
+
+.heading {
+    font-size: 6rem;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    font-family: Mplus-Bold;
+    color: #fff;
+    text-shadow: 0 0 4rem #000000;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:stretch;
+    row-gap: 12.5rem;
+    column-gap: 1rem;
+    width: 100%;
+    margin: 5rem 0rem;
+}
+
+.incBox {
+    display: flex;
+    flex-direction: row;
+    max-width: 45%;
+    min-width: 45%;
+    max-height: 30%;
+    min-height: 30%;
+    align-items: center;
+}
+
+.incImgBox {
+    min-width: 16rem;
+    min-height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.25s;
+    --b: 4px;
+    --c: #555555;
+    --w: 25px;
+    --r: 10px;
+    padding: var(--b);
+    position: relative;
+}
+
+.incImgBox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--c);
+    padding: var(--b);
+    border-radius: var(--r);
+    mask:
+        linear-gradient(0deg, #000 calc(2 * var(--b)), #0000 0) 50% var(--b) / calc(100% - 2 * var(--w)) 100% repeat-y,
+        linear-gradient(-90deg, #000 calc(2 * var(--b)), #0000 0) var(--b) 50% / 100% calc(100% - 2 * var(--w)) repeat-x,
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+
+.incImgShadow {
+    width: 10rem;
+    height: 10rem;
+    filter: blur(4px);
+    position: absolute;
+    transition: all 0.25s;
+    filter: blur(10px);
+}
+
+.incImg {
+    width: 10rem;
+    height: 10rem;
+    transition: all 0.25s;
+    filter: brightness(.95);
+}
+
+.incText {
+    padding-left: 5%;
+    color: #989898;
+    font-family: "oxygen", sans-serif;
+    text-align: left;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.incImgShadow:hover, .incImg:hover{
+    translate: scale(1.5);
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        flex-direction: row;
+        margin: 2rem 0 6rem 0;
+    }
+
+    .incBox {
+        flex-direction: row;
+        justify-content: center;
+        max-height: 9rem;
+        min-height: 9rem;
+        max-width: 50rem;
+        min-width: 50rem;
+    }
+
+    .incImgBox {
+        flex-direction: row;
+        height: 10rem;
+        width: 10rem;
+    }
+    
+    .incImg, .incImgShadow {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .incText{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .main{
+        flex-direction: row;
+        gap: 15rem;
+    }
+    
+    .incBox {
+        padding: 4rem 0rem 4rem 0rem;
+        max-height: 5rem;
+        min-height: 5rem;
+        max-width: 80vw;
+        min-width: 80vw;
+    }
+
+    .incImgBox {
+        flex-direction: row;
+        height: 10rem;
+        width: 10rem;
+    }
+    
+    .incImg, .incImgShadow {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+}
+
+
+@media only screen and (max-width: 660px) {
+
+    .cov {
+        padding: 8rem 1rem 4rem 4rem;
+    }
+
+    .heading {
+        font-size: 5rem;
+    }
+
+    .main {
+        margin: 0 0 5rem 0;
+        row-gap: 1rem;
+    }
+
+    .incBox {
+        margin-right: 0;
+        flex-direction: row;
+        max-height: 12.5rem;
+        max-width: 100%;
+        column-gap: 1rem;
+    }
+
+    .incImgBox {
+        height: 10rem;
+        min-height: 10rem;
+        width: 10rem;
+        min-width: 10rem;
+    }
+
+    .incImg, .incImgShadow {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .incText {
+        position: initial;
+        font-size: 1.5rem;
+        width: 40rem;
+        white-space:normal;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .main {
+        align-items: flex-start;
+        padding: 8rem 1rem 8rem 2rem;
+    }
+
+    .incBox {
+        margin-right: 0;
+    }
+
+    .incImgBox {
+        min-height: 8rem;
+        width: 8rem;
+        min-width: 8rem;
+    }
+
+    .incImg, .incImgShadow {
+        width: 6rem;
+        height: 6rem;
+    }
+
+
+    .incText {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .main {
+        align-items: center;
+        row-gap: 4rem;
+    }
+    .incBox {
+        max-height: max-content;
+        max-width: 100%;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .incImgBox {
+        min-height: 10rem;
+        width: 10rem;
+    }
+
+    .incImg, .incImgShadow {
+        width: 4rem;
+        height: 4rem;
+    }
+
+
+    .incText {
+        position: initial;
+        width: calc(100% - 6rem);
+        left: 0;
+        text-align: center;
+    }
+}

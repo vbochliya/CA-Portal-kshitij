@@ -5,7 +5,7 @@ import About from '../About/aboutnew';
 import CarouselComponent from '../Carousel/car';
 import Navbar from '../../components/navbar/Navbarnew';
 import Incentives from '../Incentives/incentive';
-import IncentivesNew from '../Incentives/incentiveNew';
+import IncentivesNew from '../Incentives/incentive25';
 import Contact from '../ContactUs/contact';
 import Footer from '../../components/footer/footer';
 // import ButtonUnstyled from '@mui/base/ButtonUnstyled';
