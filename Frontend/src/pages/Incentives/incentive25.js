@@ -20,23 +20,23 @@ function Incentives() {
                 <IncBox
                     imgThick={img0thick}
                     imgThin={img0thin}
-                    text={"Certificate of Appreciation signed\nby the Chairman, Kshitij IIT\nKharagpur and President,\nGymkhana IIT Kharagpur after the\nsuccessful completion of the tenure"}
+                    text={"Certificate of Appreciation signed\nby the Chairman, Kshitij IIT\nKharagpur and President,\nGymkhana IIT Kharagpur after the\nsuccessful completion of the tenure."}
                 />
                 
                 <IncBox
                     imgThin={img1thin}
                     imgThick={img1thick}
-                    text={"Invitation to all the events\nconducted by Kshitij IIT Kharagpur. Goodies and Hampers\nafter the fest"}
+                    text={"Invitation to all the events\nconducted by Kshitij IIT Kharagpur. Goodies and Hampers\nafter the fest."}
                 />
                 <IncBox
                     imgThin={img3thin}
                     imgThick={img3thick}
-                    text={"Extensive networking with\nstudents of IIT Kharagpur and\nstudents from various colleges"}
+                    text={"Extensive networking with\nstudents of IIT Kharagpur and\nstudents from various colleges."}
                 />
                 <IncBox
                     imgThin={img4thin}
                     imgThick={img4thick}
-                    text={"\nA special post will be released on\nKshitij's social media handles\nannouncing the top 10 best\ncampus ambassadors"}
+                    text={"\nA special post will be released on\nKshitij's social media handles\nannouncing the top 10 best\ncampus ambassadors."}
                 />
 
             </div>

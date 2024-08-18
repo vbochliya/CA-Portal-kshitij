@@ -163,7 +163,7 @@
 @media only screen and (max-width: 660px) {
 
     .cov {
-        padding: 8rem 1rem 4rem 4rem;
+        padding: 8rem 4rem 4rem 4rem;
     }
 
     .heading {
@@ -200,7 +200,7 @@
         font-size: 1.5rem;
         width: 40rem;
         white-space:normal;
-        text-align: left;
+        text-align: justify;
     }
 }
 
@@ -209,6 +209,7 @@
     .main {
         align-items: flex-start;
         padding: 8rem 1rem 8rem 0rem;
+        row-gap: 3rem;
     }
 
     .incBox {
