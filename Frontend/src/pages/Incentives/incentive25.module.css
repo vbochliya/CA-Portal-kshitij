@@ -208,7 +208,7 @@
 
     .main {
         align-items: flex-start;
-        padding: 8rem 1rem 8rem 2rem;
+        padding: 8rem 1rem 8rem 0rem;
     }
 
     .incBox {
@@ -216,9 +216,10 @@
     }
 
     .incImgBox {
-        min-height: 8rem;
-        width: 8rem;
-        min-width: 8rem;
+        height: 10rem;
+        min-height: 10rem;
+        width: 10rem;
+        min-width: 10rem;
     }
 
     .incImg, .incImgShadow {
@@ -238,12 +239,14 @@
     .main {
         align-items: center;
         row-gap: 4rem;
+        padding: 4rem 1rem 2rem 0rem;
     }
+
     .incBox {
         max-height: max-content;
         max-width: 100%;
         flex-direction: column;
-        row-gap: 1rem;
+        row-gap: 1.5rem;
     }
 
     .incImgBox {
