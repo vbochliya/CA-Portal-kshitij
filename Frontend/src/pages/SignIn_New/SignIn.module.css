@@ -1,6 +1,8 @@
-@font-face {
-  font-family: "Ubuntu";
-  src: local("Ubuntu"), url("../../fonts/Ubuntu-Regular.ttf") format("truetype");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+form *{
+  font-family: 'Poppins';
 }
 
 .formArea {
@@ -8,8 +10,8 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(44, 3, 51);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,10 +21,6 @@
   z-index: -1;
 }
 
-.form > * {
-  margin: 1rem 0;
-}
-
 h2 {
   color: #fff;
   text-align: left;
@@ -30,138 +28,104 @@ h2 {
     0px 0px 59.988075256347656px #000, 0px 0px 209.95826721191406px #000,
     0px 0px 419.9165344238281px #000, 0px 0px 719.8568725585938px #000,
     0px 0px 1259.7496337890625px #000;
-  font-family: Ubuntu;
-  font-size: 6.25rem;
+  font-size: 5rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
-  letter-spacing: 0.375rem;
+  margin-bottom: 2rem;
 }
 
 .form__formDiv {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  padding: 0.25rem;
+  align-items: center;
+  justify-content: flex-end;
   background-size: cover;
   background-position: center;
-  width: 60vw;
-  height: 70vh;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   border-radius: 1rem;
 }
 
-.form__formDiv::before,
-.form__formDiv::after {
-  content: "";
-  position: absolute;
-  inset: -0.6rem;
-  z-index: -1;
-  background: linear-gradient(135deg, #bb377d, blue);
-  border-radius: inherit;
-}
-
-.form__formDiv::after {
-  filter: blur(3rem);
-}
-
 .form__imgDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   content: "";
-  width: 45%;
+  width: 100%;
   height: 100%;
-  background-image: url("https://i.postimg.cc/8z581Rjd/back-signin-1.png");
+  background-image: url("../../images/signin_img.jpg");
   background-size: cover;
   background-position: center;
-}
-
-@media screen and (max-width: 53.975em) {
-  .form__imgDiv {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 50em) {
-  .form__imgDiv {
-    width: 0;
-  }
+  opacity: 0.8;
 }
 
 .form__formarea {
-  width: 55%;
+  width: 50%;
   height: 100%;
-  padding: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(43, 6, 49, 0.9),
-    rgba(43, 4, 53, 0.9)
-  );
+  backdrop-filter: blur(10px);
 }
 
-@media screen and (max-width: 53.975em) {
+@media screen and (max-width: 1000px) {
   .form__formarea {
-    width: 65%;
+    width: 58%;
     padding: 1.5rem;
   }
 }
-@media screen and (max-width: 50em) {
+
+@media screen and (max-width: 750px) {
   .form__formarea {
     width: 100%;
-  }
-}
-@media screen and (max-width: 50em) {
-  .form__formarea {
-    padding: 0.5rem;
-  }
-}
-@media screen and (max-width: 31.25em) {
-  .form__formarea {
     padding: 0.5rem;
   }
 }
 
 .form__group {
-  padding: 0 2rem 0 0;
+  padding: 10rem 6rem 6rem 6rem;
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 3rem;
   text-align: left;
   background-size: cover;
   height: 100%;
   width: 100%;
 }
 
-.form__group > * {
-  width: 100%;
-}
-
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 500px) {
   .form__group {
-    padding: 0;
+    padding: 10rem 3rem 0rem 3rem;
   }
 }
-@media screen and (max-width: 50em) {
+
+@media screen and (max-width: 1000px) {
   .form__group {
-    justify-content: space-around;
-    width: 100%;
-    padding: 1.5rem;
+    padding: 10rem 4rem 6rem 4rem;
   }
 }
 
 .form__input {
   width: 100%;
-  height: 3rem;
-  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 1.5rem 1rem 0rem;
   flex-shrink: 0;
-  border-radius: 0.72731rem;
-  background: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #888;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background: #ffffff00;
+  box-shadow: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 400;
+  stroke: solid #817676;
 }
 .form__input:focus {
-  transform: scale(1.05) translateY(-0.1rem);
-  outline-color: lightgreen;
-  border: none;
+  border-bottom: 2.5px solid #EFED34;
 }
 .form__input:focus:invalid {
   outline-color: orange;
@@ -170,16 +134,17 @@ h2 {
 .form__input:placeholder-shown ~ .form__label {
   opacity: 0;
 }
+.form__input::placeholder {
+  color: #888;
+}
+
 .form__label {
   color: #fff;
   text-align: justify;
-  font-family: Montserrat;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
-  font-variant: small-caps;
-  height: 2.5rem;
   flex-shrink: 0;
 }
 
@@ -189,7 +154,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  font-variant: small-caps;
   padding-left: 0;
 }
 .form_remforgot p {
@@ -203,56 +167,49 @@ h2 {
 .form_remforgot_forgotp {
   width: 100%;
 }
+.remforgot{
+  font-size: 1.5rem;
+}
+.remforgot:hover{
+  text-decoration: underline;
+}
 
 .form__button {
-  color: #fff;
-  background-image: linear-gradient(to bottom, #ff00cc, #333399);
-  font-family: Montserrat;
-  margin-left: 0;
+  color: black;
   width: 100%;
-  height: 40px;
+  padding: 1em;
   border-radius: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   cursor: pointer;
+  background: none;
+  border: none;
+  margin-top: 1.5rem;
+  background-color: #EFED34;
+  transition: all 0.2s ease;
 }
 .form__button:hover {
-  background-image: linear-gradient(135deg, #ff00cc, #333399);
+  background-color: #fbf96f;
 }
 
 .form__redirect {
   color: #fbfcfe;
   text-align: center;
-  text-decoration: underline;
-  font-family: Montserrat;
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
-  font-variant: small-caps;
   letter-spacing: 0.1rem;
   margin-top: 1rem;
 }
 
 .form__redirect span {
   color: #faf4f8;
-  font-family: Montserrat;
   font-size: 1.25rem;
+  text-decoration: underline;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  font-variant: small-caps;
-}
-
-@media screen and (max-width: 78em) {
-  .form__formDiv {
-    width: 75vw;
-  }
-}
-@media screen and (max-width: 62.5em) {
-  .form__formDiv {
-    width: 85vw;
-  }
 }
