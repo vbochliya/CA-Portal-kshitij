@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Montserrat:wght@400;600&family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 .container {
-  background-color: black;
+  /* background-image:url('landing1.jpg'); */
 }
+
 .homeMain {
   min-width: 100%;
   width: 100%;
@@ -15,6 +17,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+
+}
+.homeMain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('landing1.jpg');
+  background-size: cover;
+  filter: blur(6px);
 }
 
 .bgCoverImg {
@@ -49,14 +63,16 @@
   font-size: 1.7rem;
   animation: rise-up 2s ease-out forwards;
 }
+
 .spon img {
   width: 24rem;
 }
+
 .heading1 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 8rem;
-  max-width: 80rem; 
+  max-width: 80rem;
   margin-bottom: 2rem;
   line-height: 8rem;
   letter-spacing: 0.25rem;
@@ -84,15 +100,18 @@
     opacity: 0;
     transform: translateY(5rem);
   }
+
   50% {
     opacity: 0;
     transform: translateY(5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .animated-cta-container {
   position: relative;
   display: inline-block;
@@ -100,18 +119,20 @@
   margin: 0.3rem;
   cursor: pointer;
   text-align: center;
-  border:none;
+  border: none;
   background-color: black;
 }
-.reg{
+
+.reg {
   margin-left: 2rem;
 }
+
 .animated-cta-button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  border:none;
+  border: none;
   margin: 4rem 2rem 0 3rem;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
@@ -183,80 +204,97 @@
 .animated-cta-button:hover .is-right,
 .animated-cta-button:hover .is-top,
 .animated-cta-button:hover .is-bottom {
-  background-color: #101206; 
+  background-color: #101206;
 }
-.bubbles{
+
+.bubbles {
   position: absolute;
   width: 100vw;
   height: 100vh;
 }
-.bubble10{
+
+.bubble10 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
   animation: float 8s ease-in-out infinite, blink 2s infinite;
 }
-.bubble2{
+
+.bubble2 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
   animation: float 8s ease-in-out infinite, blink 1s infinite;
 }
+
 .bubble3 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
   animation: float 8s ease-in-out infinite, blink 5s infinite;
 }
+
 .bubble4 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
   animation: float 8s ease-in-out infinite, blink 2.3s infinite;
 }
+
 .bubble5 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
   animation: float 8s ease-in-out infinite, blink 4s infinite;
 }
+
 @keyframes float {
-  0%,100%{
-      transform: translateY(-1rem) translateX(0);
+
+  0%,
+  100% {
+    transform: translateY(-1rem) translateX(0);
   }
+
   50% {
-      transform: translateY(1rem) translateX(0);
+    transform: translateY(1rem) translateX(0);
   }
 }
 
 @keyframes blink {
-  0%, 100% {
-      opacity: 1;
+
+  0%,
+  100% {
+    opacity: 1;
   }
+
   50% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 
 @keyframes textAnimation {
   0% {
-      color: rgb(112, 222, 28);
-      transform: scale(1);
+    color: rgb(112, 222, 28);
+    transform: scale(1);
   }
+
   50% {
-      color: rgb(17, 13, 5);
-      transform: scale(1.1);
+    color: rgb(17, 13, 5);
+    transform: scale(1.1);
   }
+
   100% {
-      color: yellow;
-      transform: scale(1);
+    color: yellow;
+    transform: scale(1);
   }
 }
-.animated-cta-button:hover{
+
+.animated-cta-button:hover {
   box-shadow: 0 0 4rem #e6ff02, 0 0.1rem 0.5rem #e6ff02;
 }
-.animated-cta-button:hover span{
+
+.animated-cta-button:hover span {
   animation: textAnimation 1s infinite;
 }
 
@@ -282,34 +320,41 @@
   color: #ff81f0;
   text-decoration: underline;
 }
-@media only screen and (min-width: 720px){
-  .bubble10{
-    left:60vw;
-    top:30vh;
+
+@media only screen and (min-width: 720px) {
+  .bubble10 {
+    left: 60vw;
+    top: 30vh;
   }
-  .bubble2{
-    top:40vh;
-    left:25vw;
+
+  .bubble2 {
+    top: 40vh;
+    left: 25vw;
   }
-  .bubble3{
+
+  .bubble3 {
     top: 45vh;
-    left:70vw;
+    left: 70vw;
   }
-  .bubble4{
+
+  .bubble4 {
     top: 55vh;
-    left:45vw;
+    left: 45vw;
   }
-  .bubble5{
-    top:50vh;
-    left:30vw;
+
+  .bubble5 {
+    top: 50vh;
+    left: 30vw;
   }
 }
+
 @media only screen and (max-width: 1440px) {
   .heading1 {
     font-size: clamp(4rem, 5vw, 8rem);
     line-height: clamp(2rem, 5vw, 8rem);
     letter-spacing: 0.1rem;
   }
+
   .heading3,
   .btn,
   .info,
@@ -328,33 +373,41 @@
   .homeMain {
     flex-direction: column-reverse;
   }
-  .animated-cta-button{
+
+  .animated-cta-button {
     font-size: 1.5rem;
   }
+
   .btn-main-icon-block {
     width: 0.8rem;
     height: 0.8rem;
   }
-.bubble10{
-  top:24vh;
-  left:70vw;
-}
-.bubble2{
-  top:50vh;
-  left:45vw;
-}
-.bubble3{
-  top:40vh;
-  left:85vw;
-}
-.bubble4{
-  top:30vh;
-  left:10vw;
-}
-.bubble5{
-  top:50vh;
-  left:10vw;
-}
+
+  .bubble10 {
+    top: 24vh;
+    left: 70vw;
+  }
+
+  .bubble2 {
+    top: 50vh;
+    left: 45vw;
+  }
+
+  .bubble3 {
+    top: 40vh;
+    left: 85vw;
+  }
+
+  .bubble4 {
+    top: 30vh;
+    left: 10vw;
+  }
+
+  .bubble5 {
+    top: 50vh;
+    left: 10vw;
+  }
+
   .homeContent {
     width: 100%;
     height: max-content;
@@ -398,36 +451,44 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
   .spon {
     font-size: 1rem;
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
   }
+
   .spon img {
     width: 20rem;
     cursor: pointer;
   }
-  .bubble10{
-    top:24vh;
-    left:65vw;
+
+  .bubble10 {
+    top: 24vh;
+    left: 65vw;
   }
-  .bubble2{
-    top:55vh;
-    left:45vw;
+
+  .bubble2 {
+    top: 55vh;
+    left: 45vw;
   }
-  .bubble3{
-    top:40vh;
-    left:75vw;
+
+  .bubble3 {
+    top: 40vh;
+    left: 75vw;
   }
-  .bubble4{
-    top:30vh;
-    left:10vw;
+
+  .bubble4 {
+    top: 30vh;
+    left: 10vw;
   }
-  .bubble5{
-    top:45vh;
-    left:3vw;
+
+  .bubble5 {
+    top: 45vh;
+    left: 3vw;
   }
+
   .animated-cta-container {
     padding: 0.5rem;
     margin: 0.1rem;
