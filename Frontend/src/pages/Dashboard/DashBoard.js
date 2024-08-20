@@ -75,9 +75,19 @@ const DashBoard = () => {
             </>}
             <br /><span className={styles.ktjid}>CA ID : {auth == false && user != {} ? <>Not Applicable</> : <>
               {user?.ca_id}
-            </>}</span><br/>
+    
+            </>}
+            <br/>
+            YOUR REFERRAL CODE: <b>{auth == false && user != {} ? <>Not Applicable</> : <>
+              {(user?.ca_id).split("J")[1]}</>}</b>
+            </span>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
 
-            <br/><br/><br/><br/><br/><br/><br/><span className={styles.share}>SHARE TO EARN MORE REWARD POINTS</span></div>
+            <span className={styles.share}>REFER AND SHARE TO EARN MORE REWARD POINTS</span></div>
           <div className={styles.RewardP}>
             <span style={{whiteSpace: "nowrap", paddingBottom:"0.5rem", borderBottom: "2px solid black"}}>:: REWARD POINTS ::</span> <br/><div style={{textAlign: "center"}}>{auth == false && user != {} ? <>N/A</> : <>
               {points}
