@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { MdEmail, MdFacebook } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
 import styles from './Card.module.css';
