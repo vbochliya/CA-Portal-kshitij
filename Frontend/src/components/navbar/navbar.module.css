@@ -1,27 +1,16 @@
   
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
 
-@font-face {
-  font-family: Mplus;
-  src: url("../../fonts/Mplus1p-Regular.otf");
-}
-
-@font-face {
-  font-family: Mplus-Bold;
-  src: url("../../fonts/\/Mplus1p-Bold.otf");
-}
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- /* font-family: "Jost", sans-serif;*/
-  font-family: Mplus;
+  /* font-family: 'Mulish', sans-serif; */
+ font-family: 'Mulish', sans-serif;
 }
 
 .logo span{
-  font-family: Mplus-bold;
+  font-family: 'Mulish', sans-serif;
 }
 
 html {
