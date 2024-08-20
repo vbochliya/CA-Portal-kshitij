@@ -96,7 +96,7 @@
    text-align: center;
    letter-spacing: -1px;;
    font-weight: 600;
- 
+   
    @media (min-width: 640px) { /* sm */
      font-size: 3.5rem; /* 10 is equal to 40px */
      margin-top:2rem;
@@ -110,7 +110,7 @@
    @media (min-width: 1536px) { /* 2xl */
    font-size: 5.5rem; 
    /* 16 is equal to 64px */
-   margin-bottom:3rem;
+   margin-bottom:3.1rem;
    }
  }
  
