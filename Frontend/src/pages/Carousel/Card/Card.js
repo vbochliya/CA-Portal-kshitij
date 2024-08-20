@@ -8,7 +8,7 @@ function Card(props){
             <div className={styles.cardHeadImg}><img src="/logo192.png" alt="img" /></div>
             <div className={styles.cardHeadDesc}>
                 <p>My name is Neel</p>
-                <p>My name is Neel</p>
+                <p>My name is Nel</p>
             </div>
         </div>
         <div className={styles.cardDesc}>
