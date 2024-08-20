@@ -73,6 +73,28 @@ function Home() {
         "https://imgs.search.brave.com/7jGumoA5Inj4_jr2GOUNYp4ROAo6tPS5N28CnIW2xcQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGVzaWduZXZvLmNv/bS9tZWRpYS9jb21f/dGVtcGxhdGUvaW1h/Z2VzL2NuZXRfbG9n/b18yNTAud2VicA",
     ];
 
+    useEffect(() => {
+
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem('token') }
+        };
+        Api.get(`/user/login_check`, requestOptions).then((res) => {
+            console.log("we are printing on home page ")
+            console.log(res.data.user);
+            setca_id(res.data.user.ca_id);
+            setapp_id(res.data.user.app_id);
+            setSel(res.data.user.selection);
+            setAuth(true);
+        }).catch((err) => {
+            console.log(err);
+            setAuth(false);
+        })
+
+
+    }, [])
+
+
     return (
         <div>
             <Navbar show={auth} />

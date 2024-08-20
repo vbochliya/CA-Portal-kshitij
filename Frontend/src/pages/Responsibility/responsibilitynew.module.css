@@ -117,15 +117,15 @@
    */
 
 
-  body{
+  /* body{
     color: white;
-  }
+  } */
   .Responsibilities h1{
     font-size: 4rem;
     margin-top: 2rem;
     text-align: center;
     /* border: 2px solid white; */
-    ;
+    color: white;
   }
   .Responsibilities{
     display: flex;
@@ -135,6 +135,7 @@
     background-color: black;
     overflow: hidden;
     /* border: 2px solid white; */
+    color: white;
   }
   .container{
     display: flex;
