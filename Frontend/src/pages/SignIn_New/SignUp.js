@@ -21,210 +21,107 @@ const FormArea = (props) => {
     console.log(e);
     fieldType === "text" ? setFieldType("password") : setFieldType("text");
   };
+  const [width,setWidth] = useState(window.innerHeight)
+  window.addEventListener("resize", () =>setWidth(window.innerWidth))
   return (
-    <div className={styles.formArea}>
-      <div className={styles.form__formDiv}>
-        {/* <div>&nbsp;</div> */}
-        <div className={styles.form + " " + styles.form__formarea}>
-          <form
-            className={styles.form__group}
-            onSubmit={props.handleSubmit}
-            target="_blank"
-            ref={props.formElement}
-          >
-            <h2>SIGN UP</h2>
-            <div className={styles.signup__flexer}
-            >
-              <div className={styles.signup__name1div}>
-                <label htmlFor="signup__name1" className={styles.form__label}>
-                  First Name
-                </label>
-                <input
-                  id="signup__name1"
-                  className={styles.form__input}
-                  type="text"
-                  name="first_name"
-                  required="true"
-                />
-              </div>
-              <div className={styles.signup__name2div}>
-                <label htmlFor="signup__name2" className={styles.form__label}>
-                  Last Name
-                </label>
-                <input
-                  id="signup__name2"
-                  className={styles.form__input}
-                  type="text"
-                  name="last_name"
-                />
-              </div>
-            </div>
-            <div className={styles.signup__flexer}>
-              <div
-                className={styles.signup__name1div}
-                style={{ width: "100%", position: 'sticky' }}
-              >
-                <label
-                  htmlFor="signup__gender"
-                  className={styles.form__label}
-                  style={{ display: "block" }}
-                >
-                  Gender
-                </label>
-                <select
-                  id="signup__gender"
-                  className={styles.signup__selector}
-                  name="gender"
-                >
-                  <option hidden></option>
-                  <option>MALE</option>
-                  <option>FEMALE</option>
-                  <option>OTHER</option>
-                </select>
-              </div>
-              <div
-                className={styles.signup__name2div}
-                style={{ width: "100%" }}
-              >
-                <label htmlFor="signup__mob" className={styles.form__label}>
-                  Mobile no
-                </label>
-                <input
-                  id="signup__mob"
-                  className={styles.form__input}
-                  type="number"
-                  pattern="[0-9]{10}"
-                  required="true"
-                  name="phone"
-                />
-              </div>
-            </div>
-            <div className={styles.signup__flexer}>
-              <div className={styles.signup__name1div}>
-                <label htmlFor="signup__email" className={styles.form__label}>
-                  Email ID
-                </label>
-                <input
-                  id="signup__email"
-                  className={styles.form__input}
-                  type="email"
-                  required="true"
-                  name="email"
-                />
-              </div>
-
-              <div className={styles.signup__name2div}>
-                <label
-                  htmlFor="signup__password"
-                  className={styles.form__label}
-                >
-                  Password
-                </label>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    width: "100%",
-                  }}
-                >
-                  <input
-                    id="signup__password"
-                    className={styles.form__input}
-                    type={fieldType}
-                    required="true"
-                    name="password"
-                  />
-                  <h6
-                    style={{
-                      right: -15,
-                      display: "inline",
-                      cursor: "pointer",
-                      transform: "translateX(-130%)",
-                      color: "#f542d1",
-                      position: "sticky",
-                    }}
-                    onClick={(e) => toggleVisibility(e)}
-                  >
-                    <span className="material-symbols-outlined">
-                      {fieldType === "password"
-                        ? "visibility"
-                        : "visibility_off"}
-                    </span>
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div className={styles.signup__flexer}>
-              <div className={styles.signup__name1div}>
-                {" "}
-                <label htmlFor="signup__college" className={styles.form__label}>
-                  College Name
-                </label>
-                <input
-                  id="signup__college"
-                  className={styles.form__input}
-                  type="text"
-                  required="true"
-                  name="college"
-                />
-              </div>
-              <div className={styles.signup__name1div}>
-                {" "}
-                <label htmlFor="signup__city" className={styles.form__label}>
-                  City
-                </label>
-                <input
-                  id="signup__city"
-                  className={styles.form__input}
-                  type="text"
-                  required="true"
-                  name="city"
-                />
-              </div>
-              <div className={styles.signup__name1div}>
-                {" "}
-                <label htmlFor="signup__state" className={styles.form__label}>
-                  State
-                </label>
-                <input
-                  id="signup__state"
-                  className={styles.form__input}
-                  type="text"
-                  required="true"
-                  name="state"
-                />
-              </div>
-            </div>
-            <button
-              className={styles.form__button}
-              type="submit"
-              onClick={() => props.setShow(true)}
-            >
-              {props.loading ? (
-                <span style={{ marginRight: "9px", marginTop: "5px" }}>
-                  <TailSpin width="20" height="12" />
-                </span>
-              ) : (
-                ""
-              )}
-              <span
-                className={styles.form__button}
-                style={{ background: "none" }}
-              >
-                Sign Up
-              </span>
-            </button>
-            <h3 className={styles.form__redirect}>
-              ALREADY A MEMBER?{" "}
-              <span>
-                <Link to="/SignIn">SIGN IN</Link>
-              </span>
-            </h3>
-          </form>
+    <div className={`${styles.container} ${styles.form_img}`}>
+    <div className={styles.formwrapper}>
+      <form className={styles.form}  
+       onSubmit={props.handleSubmit}
+       target="_blank"
+       ref={props.formElement}
+      >
+        <h2 className={styles.formTitle}>SIGN UP</h2>
+        <div className={`${styles.formGroup} ${styles.formGroupRow}`}>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupName1" className={styles.formLabel}>First Name</label>}
+            <input id="signupName1" type="text" placeholder={width < 640 ? "First Name" : ""} name="first_name" required className={styles.formInput} />
+          </div>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupName2" className={styles.formLabel}>Last Name</label>}
+            <input id="signupName2" type="text" name="last_name" placeholder={width < 640 ? 'Last Name' : ""} className={styles.formInput} />
+          </div>
         </div>
-      </div>
+        <div className={`${styles.formGroup} ${styles.formGroupRow}`}>
+          <div className={`${styles.formField} ${styles.newFormField} `}>
+            {width > 640 && <label htmlFor="signupGender" className={styles.formLabel}>Gender</label>}
+            <select id="signupGender" name="gender" className={`${styles.formInput} ${styles.anotherInput} ${styles.formselect}`}>
+              <option hidden>Gender</option>
+              <option className={styles.option}>MALE</option>
+              <option className={styles.option}>FEMALE</option>
+              <option className={styles.option}>OTHER</option>
+            </select>
+          </div>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupMob" className={styles.formLabel}>Mobile no</label>}
+            <input id="signupMob" type="number" pattern="[0-9]{10}" placeholder={width < 640 ? "Mobile No" : ""} required name="phone" className={styles.formInput} />
+          </div>
+        </div>
+        <div className={`${styles.formGroup} ${styles.formGroupRow}`}>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupEmail" className={styles.formLabel}>Email ID</label>}
+            <input id="signupEmail" type="email" placeholder='Enter Your Email' required name="email" className={styles.formInput} />
+          </div>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupPassword" className={styles.formLabel}>Password</label>}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%',position:"relative"}}>
+              <input id="signupPassword" placeholder='password' required name="password" type={fieldType} className={styles.formInput} />
+              <h6
+              style={{
+                left: "100%",
+                display: "inline",
+                cursor: "pointer",
+                transform: "translateX(-100%)",
+                color: "#EFED34",
+                position: "sticky",
+                position:"absolute"
+
+              }}
+              onClick={(e) => toggleVisibility(e)}
+            >
+              <span className="material-symbols-outlined">
+                {fieldType === "password"
+                  ? "visibility"
+                  : "visibility_off"}
+              </span>
+            </h6>
+            </div>
+          </div>
+        </div>
+        <div className={`${styles.formGroup} ${styles.formGroupRow} ${styles.formGroupWrap}`}>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupCollege" className={styles.formLabel}>College Name</label>}
+            <input id="signupCollege" type="text" placeholder={width < 640 ? "College Name" : ""} required name="college" className={styles.formInput} />
+          </div>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupCity" className={styles.formLabel}>City</label>}
+            <input id="signupCity" placeholder={width < 640 ? "City" : ""} type="text" required name="city" className={styles.formInput} />
+          </div>
+          <div className={styles.formField}>
+            {width > 640 && <label htmlFor="signupState" className={styles.formLabel}>State</label>}
+            <input id="signupState" placeholder={width < 640 ? "State" : ""} type="text" required name="state" className={styles.formInput} />
+          </div>
+        </div>
+        <div className={styles.formButtonWrapper}>
+          <button type="submit"  style={{cursor:"pointer"}} className={styles.formButton}
+            
+           onClick={() => props.setShow(true)}
+           >
+          {props.loading ? (
+          <span style={{ marginRight: "9px", marginTop: "5px" }}>
+            <TailSpin width="20" height="12" />
+          </span>
+        ) : (
+          ""
+        )}
+            Sign Up </button>
+        </div>
+        <h3 className={styles.formFooter}>
+          ALREADY A MEMBER? <Link to="/SignIn">SIGN IN</Link>
+        </h3>
+      </form>
     </div>
+  </div>
   );
 };
 
