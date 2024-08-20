@@ -5,3 +5,15 @@
     display: flex;
     justify-content: center;
 }
+.react-multi-carousel-list .react-multiple-carousel__arrow{
+    background-color: #333131ee;
+}
+.react-multi-carousel-list .react-multiple-carousel__arrow::before{
+    /* color:rgb(236, 255, 69); */
+    font-weight: 900;
+}
+.react-multi-carousel-list .react-multiple-carousel__arrow:hover{
+    background-color: #464646ee;
+    color: #333131ee;
+    
+}
