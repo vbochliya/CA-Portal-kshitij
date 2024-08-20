@@ -18,7 +18,7 @@
     padding-left: 1rem;
     padding-bottom: 4rem;
     text-align: center;
-    font-family: Ubuntu;
+    font-family: 'Mulish', sans-serif;
     color: #FFFFFF;
     text-shadow: 0 0 4rem #000000;
 }
@@ -40,7 +40,7 @@
 }
   
 p{
-    font-family: oxygen;
+    font-family: 'Mulish', sans-serif;
     font-size: 1.8rem;
     text-align: justify;
     font-weight: 500;
@@ -65,7 +65,7 @@ p{
         padding-left: 1rem;
         padding-bottom: 4rem;
         text-align: center;
-        font-family: Ubuntu;
+        font-family: 'Mulish', sans-serif;
         color: #FFFFFF;
         text-shadow: 0 0 4rem #000000;
     }

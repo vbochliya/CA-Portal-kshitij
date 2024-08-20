@@ -1,12 +1,3 @@
-@font-face {
-  font-family: Mplus-Bold;
-  src: url("../../fonts/Mplus1p-Bold.otf");
-}
-
-@font-face {
-  font-family: Mplus;
-  src: url("../../fonts/Mplus1p-Regular.otf");
-}
 
 html {
   /* scroll-snap-type: y mandatory; */
@@ -14,7 +5,7 @@ html {
 }
 
 p{
-  font-family: Mplus;
+  font-family: 'Mulish', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -74,19 +65,19 @@ p{
 }
 
 .heading {
-  font-family: Mplus-Bold;
+  font-family: 'Mulish', sans-serif;
   font-size: 4rem;
   color: #4D4141;
 }
 
 .head2{
-  font-family: Mplus-Bold;
+  font-family: 'Mulish', sans-serif;
   font-size: 4rem;
   color: #4D4141;
 }
 
 .btn{
-  font-family: Mplus-Bold;
+  font-family: 'Mulish', sans-serif;
   font-size: 2rem;
   background-color: #007FFF;
   margin-top: 5rem;
