@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import classes from "./Navbarnew.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import img1 from "../../images/icon2.png";
-import img2 from "../../images/account 1.png";
+// import img2 from "../../images/account 1.png";
 import { Link, useNavigate } from "react-router-dom";
 import Api from "../../API/Api";
+
 
 const Navbar = (props) => {
   const [user, setUser] = useState(null);
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [buttonText,setbuttonText] = useState('Logout');
+  // const [hoveredLi, setHoveredLi] = useState(null); 
+
   useEffect(() => {
     const requestOptions = {
       method: "GET",
@@ -68,10 +71,7 @@ const Navbar = (props) => {
     });
     return false;
   };
-  
-  
-   
-  
+
   const handleMouseEnter = () => {
     // const logText = !isHovered ? user.first_name : 'Logout';
     setbuttonText('Logout')
@@ -84,11 +84,10 @@ const Navbar = (props) => {
     }
     setIsHovered(false);
   };
-  
-  
+    
   return (
     <>
-      <div className={classes.main_nav}>
+      <div className={classes.main_nav} id="navbar">
         <div className={classes.logo}>
           <img src={img1} alt="" />
           <a href="/">
@@ -107,6 +106,7 @@ const Navbar = (props) => {
             <li>
               <a
                 href="/#"
+                data-hover="Home"
                 onClick={() => {
                   setShowMediaIcons(false);
                   // scrollToComponent(e);
@@ -116,74 +116,79 @@ const Navbar = (props) => {
               </a>
             </li>
             <li>
-              <a href="/#about" onClick={() => setShowMediaIcons(false)}>
+              <a href="/#about" data-hover="About Us" onClick={() => setShowMediaIcons(false)}>
                 About Us
               </a>
             </li>
             <li>
-              <a href="/#resp" onClick={() => setShowMediaIcons(false)}>
+              <a href="/#resp" data-hover="Responsibilities" onClick={() => setShowMediaIcons(false)}>
                 Responsibilities
               </a>
             </li>
 
             <li>
-              <a href="/#inc" onClick={() => setShowMediaIcons(false)}>
+              <a href="/#inc" data-hover="Incentives" onClick={() => setShowMediaIcons(false)}>
                 Incentives
               </a>
             </li>
             <li>
-              <a href="/#testimonials" onClick={() => setShowMediaIcons(false)}>
+              <a href="/#testimonials" data-hover="Testimonials" onClick={() => setShowMediaIcons(false)}>
                 Testimonials
               </a>
             </li>
             <li>
-              <a href="/#contact" onClick={() => setShowMediaIcons(false)}>
+              <a href="/#contact" data-hover="Contact" onClick={() => setShowMediaIcons(false)}>
                 Contact
               </a>
             </li>
-
-            <li>
+            {/* <li id="conditional-li"></li> */}
+         
               <div className="button">
                 {!props.show ? (
                   <>
-                    <button className={classes.sign}>
+                    {/* <button className={classes.sign}>
                       <Link to="/Signup">Sign Up</Link>
-                    </button>
-                    <button className={classes.sign}>
+                    </button> */}
+                    <a href="/Signup" className={classes.sign}>Sign Up</a>
+                    {/* <button className={classes.sign}>
                       <Link to="/SignIn">Sign In</Link>
-                    </button>
+                    </button> */}
+                     <a href="/SignIn" className={classes.sign}>Sign In</a>
                   </>
                 ) : (
                   <>
-                    <button className={classes.sign}>
+                    {/* <button className={classes.sign}>
                       <Link to="/Profile">Profile</Link>
-                    </button>
-                    <button
+                    </button> */}
+                    <a href="/Profile" className={classes.sign}>Profile</a>
+                    <a
                       className={classes.sign}
                       onClick={calllogout}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
+                      href="/"
                       >
                         {/* {buttonText} */}
-                        <Link to="/"> {buttonText} </Link>
+                        {buttonText} 
                       {/* {user.first_name} */}
                       {/* Signout */}
-                    </button>
+                    </a>
                     {/* <button
                     className={classes.sign}>
                     <Link to="/Dashboard">Dashboard</Link>
                   </button> */}
                     {user?.selection === "yes" ? (
-                      <button className={classes.sign}>
-                        <Link to="/Dashboard">Dashboard</Link>
-                      </button>
+                      // <button className={classes.sign}>
+                      //   <Link to="/Dashboard">Dashboard</Link>
+                      // </button>
+                      <a className={classes.sign} href="/Dashboard">Dashboard</a>
                     ) : (
                       ""
                     )}
                   </>
                 )}
               </div>
-            </li>
+            {/* </li> */}
           </ul>
         </div>
 

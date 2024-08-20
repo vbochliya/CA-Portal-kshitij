@@ -56,14 +56,12 @@ function Footer() {
               <span>KSHITIJ</span>
             </div>
             <div className={classes.content}>
-              <p>   Kshitij, IIT Kharagpur's annual techno-management symposium, has grown in popularity, celebrating the spirit of science and technology by bringing together students from all across India to demonstrate their scientific and managerial prowess.
-                <br />
-                We're renowned for putting on an eclectic mix of events, including synchronized workshops, technical displays, and guest talks by experts in the fields of technology and entrepreneurship. Students can assess their abilities and set greater goals than ever before thanks to events ranging from technology to management. </p>
+              <p>  Kshitij, IIT Kharagpur's annual techno-management fest, unites students from across India to showcase their skills in science, technology, and management.<br/> Renowned for diverse events like workshops, technical displays, and expert talks, Kshitij offers students the chance to test their abilities and aim higher. </p>
             </div>
           </div>
           <div className={classes.form}>
             <form className={classes.forms} onSubmit={handleSubmit} method="POST">
-              <div className={classes.h2}>For any queries and suggestions</div>
+              <div className={classes.h2}>For any queries and suggestions:</div>
               <input type="Name" name="Name" onChange={(e) => { setName(e.target.value); }} placeholder='Name' />
               <input type="email" name="email" onChange={(e) => { setEmail(e.target.value); }} placeholder='Email' />
               <input type="contact" name="contact" onChange={(e) => { setPhone(e.target.value); }} placeholder='Contact Number' />
@@ -102,4 +100,3 @@ function Footer() {
 }
 
 export default Footer;
-
