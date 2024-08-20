@@ -1,7 +1,7 @@
 import styles from './car.module.css';
 import './carousal-customStyle.css';
 import React,{useState} from 'react';
-import Card from "./Card/Card"
+import Card from "./Card/Card.js"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
