@@ -1,135 +1,123 @@
 import styles from './car.module.css';
-import React from 'react';
-import Carousel from 'react-material-ui-carousel'
-import ArrowBackIosTwoToneIcon from '@mui/icons-material/ArrowBackIosTwoTone';
-import ArrowForwardIosTwoToneIcon from '@mui/icons-material/ArrowForwardIosTwoTone';
-import Card from './Card/Card';
+import './carousal-customStyle.css';
+import React,{useState} from 'react';
+import Card from "./Card/card"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 // import ReactPlayer from 'react-player';
 
 // const Carousel = ({ cardsData }) => {
 //     const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  
+
 //     useEffect(() => {
 //       const timer = setTimeout(() => {
 //         // Calculate the next card index, and loop back to the first card if necessary.
 //         const nextIndex = (currentCardIndex + 1) % cardsData.length;
 //         setCurrentCardIndex(nextIndex);
 //       }, 3000); // Auto slide every 3 seconds (adjust as needed).
-  
+
 //       // Clear the timer when the component unmounts.
 //       return () => clearTimeout(timer);
 //     }, [currentCardIndex, cardsData.length]);
 
 
-function CarouselComponent() {
+function CarouselComponent(props) {
+  const [autoplay, setAutoplay] = useState(true);
+  const handleClick=(e)=>{
+    let video=e.currentTarget.parentElement.firstChild;
+    if(video.paused){
+      video.play();
+      setAutoplay(false);
+      e.currentTarget.children[0].style.display="none";
+      e.currentTarget.children[1].style.display="flex";
+    }else{
+      setAutoplay(true);
+      video.pause();
+      e.currentTarget.children[1].style.display="none";
+      e.currentTarget.children[0].style.display="flex";
+    }
+  }
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 650 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 650, min: 0 },
+      items: 1,
+    }
+  };
 
   return (
     <div className={styles.main}>
       <h1 className={styles.heading}>TESTIMONIALS</h1>
-
       <div className={styles.carvid}>
-        <Carousel className={styles.cara}
-          NextIcon={<ArrowForwardIosTwoToneIcon />}
-          PrevIcon={<ArrowBackIosTwoToneIcon />}
-          autoPlay={true}
-          indicators={true}
-          animation={"slide"}
-          navButtonsAlwaysVisible={true}
-          
-          navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
-            
-            buttonWrapper:{
-              position: "absolute",
-              height: "10px"
-            },
-            style: {
-              backgroundColor: 'transparent',
-              color: '#99006e',
-              transform: 'scale(2)',
-              borderRadius: 0,
-              margin:"0 auto",
-              padding:0,
-              right:"20vw",
-              left:"0vw"
-              
-            }
-            
-            // buttonVisible:{
-            //   opacity: "1"
-            }
-            
-          }
-          // navButtonsWrapperProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
-          //   style: {
-          //     margin:0,
-          //     color:"black"
-          //   }
-          //   // buttonVisible:{
-          //   //   opacity: "1"
-          //   }
-          // }
-          
-          // navButtonsWrapperProps={{
-          //   style:{
-          //     height:'10rem',
-          //     animation:'none'
-          //   }
-          // }}
-
-          
-          indicatorIconButtonProps={{
-            
-            style: {
-              paddingTop:"10px",
-              marginTop: '4rem'            
-            }
-          }}
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          responsive={responsive}
+          autoPlayOnHover={"hover"}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          autoPlay={autoplay}
+          autoPlaySpeed={2000}
+          keyBoardControl={true}
+          customTransition="all 1.5s ease"
+          transitionDuration={1000}
+          containerClass="carousel-container"
+          deviceType={props.deviceType}
+          dotListClass="dot-list-custom-style"
+          itemClass="carousel-item-padding-40-px"
         >
-          <Card name="Chitransh Kumawat" img="https://drive.google.com/uc?export=view&id=1zTKw9mA_UlpdSVcPymLf6r_Xjt77ZimC" inst="Poornima group of institutions" city="Rajasthan" desc="IIT KHARAGPUR, Kshitij Campus ambassador Program helped me become a part of the worldwide student community and interact with several like-minded people. I enjoyed a lot in this internship and improve my leadership skills and communication skills. I interacted with many new people in my tenure as a campus ambassador and this made me become more confident. I would suggest everyone to participate in the tenure to boost their confidence and leadership skills."></Card>
-
-          {/* <Card name="Karan Saxena" img="https://drive.google.com/uc?export=view&id=1pNaYFT6J5aMmuHPVl03W6T74R0xQIBZe" inst="Invertis University" city="Uttar Pradesh" desc="First of all to represent IIT Kharagpur in my University by being a Campus ambassador was a great moment of honour for me, During my tenure I boosted my confidence by interacting with my collegues and faculties for circulating info related webinars and workshops and all these events were really helpful from technical as well as non-technical point of view. I have developed my leadership and communication skill in a much better way than before, and our mentors were really supportive and were constantly guiding us in throughout the journey."></Card> */}
-
-          <Card name="Manasi Badade " img="https://drive.google.com/uc?export=view&id=1tqC8ZgD2VtppRUoJ8ltjgVtAUzgrNS9w" inst="Nbn Sinhgad School Of Engineering " city="Maharashtra" desc="The Campus Ambassador program enabled me to interact with college students, which in my opinion is great for networking. The management and leadership skills that I have learned from this position has made me far more confident about my ability to lead others in the future."></Card>
-
-          <Card name="Rahul Kumawate" img="https://drive.google.com/uc?export=view&id=15I6ucGUFp090jOsQe2dfgbah4wkemP_9" inst="Poornima University " city="Rajasthan" desc="I am proud to be a campus ambassador of Kshitij IIT Kharagpur .Being a part of it opened numerous doors of opportunities for me. Attending the webinars and sessions of Kshitij were really educational and beneficial for me. These sessions gave me top notch information. I got introduced to so many amazing people. My communication and confidence skills got brushed up. I want to encourage upcoming young students to be a part of it. I also want to thank the mentors who have been very helpful to me . They always kept me updated with Kshitij related assignments. Overall, it was a great experience working with Kshitij IIT Kharagpur. I feel privileged to be a part of it. Looking forward to welcome more such pleasurable opportunities."></Card>
-
-          <Card name="Jaymeen Solanki" img="https://drive.google.com/uc?export=view&id=1fyHcvCY_jpTeSFzpfnJAyZaRJprzvsB_" inst="SIBM, Nagpur" city="Maharashtra" desc="I played the Campus Ambassador role for one of the most significant events held by IIT Kharagpur, i.e. Kshitij. That was an excellent experience for me to boost my existing skills, and learn new skills through the events held by team Kshitij. It was a pleasure to work with team Kshitij."></Card>
-
-          <Card name="Senjuti Dey" img="https://drive.google.com/uc?export=view&id=1kq8TPxhr_1TO8dQEVSy-p8unaDixDjz0" inst="UNIVERSITY OF ENGINEERING AND MANAGEMENT KOLKATA" city="West Bengal" desc="Firstly I would like to thank Kshitij, IIT kharagpur for giving me this opportunity to be a part of such a great event. As a CA you are bound to feel like you're under a lot of pressure. This is because a lot of tasks and trusts are vested in you at the same time. But the good part is,it pays off one way or another. This CA tenure, apart from brushing up my management skills and leadership qualities, also helped me boost my confidence. Co-ordinators were very helpful throughout the journey. Excited for such remarkable next events!"></Card>
-
-          <Card name="Sarvana Kumar" img="https://drive.google.com/uc?export=view&id=1jk7eTpLPeMrNeGw4S8Rf5hrX3OvmolCk" inst="Velammal College of Engineering and Technology (VCET), Madurai" city="Tamil Nadu " desc="The Campus Ambassador Program helped me become a part of the  student community and interact with several people. I enjoyed and learnt a lot in this internship. It helped me  improve my leadership skills and communication skills. "></Card>
-
-          <Card name="Joydeep Setua" img="https://drive.google.com/uc?export=view&id=1Ue8y4S2jCrL6XP3P__AJQVJ9NLHKjBMF" inst="Uday Prasad Uday Government Polytechnic College " city="Durg, Chhattisgarh " desc="The CA journey of Kshitij, IIT Kharagpur was a wonderful learning with fun. Where i learnt to encourage the young talents and to motivate them. I'm glad to have this opportunity in my journey which improved my personality and boosted my confidence."></Card>
-
-          <Card name="Kartvya Master" img="https://drive.google.com/uc?export=view&id=1HAP9Rn4RjlwgKj_OziUTdw4VBgEx2kbx" inst="Sarvajanik College of Engineering & Technology" city="Gujarat" desc="It was  great to be part of such event. With the help of this event I was able to connect to people from different universities and even with my college peers. It helped me to grow as a person."></Card>
-
-          <Card name="Deepa Venkatesan" img="https://drive.google.com/uc?export=view&id=1KVmEPeO6b4zLwLEVnQD869pVMPjuGEbK" inst="Veltech Multi Tech Dr.Rangarajan Dr.sagunthala Engineering College" city="Tamil Nadu" desc="Firstly,Thank you for giving me an amazing opportunity to be a part of CA in KSHITIJ IIT KHARAGPUR. It was very much useful to develop my leadership skills and built by confidence to next level. The workshops conducted by the crew of kshitij is really helpful for my career and my college friends too."></Card>
-
-          <Card name="Aminath Shahana" img="https://drive.google.com/uc?export=view&id=1422G44xnflbXqHsCGnwp6vVxwr2d7jY2" inst="People Institute of Management Studies" city="Kerala" desc="Kshitij is known for non-profit-organisation. The institution provides various technological and other related information for students. The people who are making certain skills for their personal benefit or any creativity skills for personal development Kshitij was helping. When i was joined i have no idea how to do the activities and after getting more knowledge from them i have learned lots of skills, knowledge, build interpersonal relationship and i can spoke with  all the over all country people easily. Then it makes me more beneficial for getting more people knowing about kshitij and they also understood it very well and slowly my friends are also joined in this institutions."></Card>
-
-          {/* <Card name="Kathakali Naskar" img="https://drive.google.com/uc?export=view&id=1B01FyQR_u_17DsOL9h0iqUyopV0K9kzc" inst="meghnad saha institute of technology" city="west bengal" desc="Being a CA for kshitij, was one of the best experiences I had in my very early stage of college life. I could communicate better with my college, rather the whole student community within my reach. All the events taught about new technologies, and business development ideas. Conducting kshitij, is probably the best decisions of IIT Kharagpur. And volunteering to be a CA was mine."></Card> */}
-
-          <Card name="Aman Kumar" img="https://drive.google.com/uc?export=view&id=1ejfCn8S5t1hgH3SH9Zmn8laOrWAKULRC" inst="Government Engineering college West Champaran" city="Bihar" desc="The CA journey of Kshitij, IIT Kharagpur was that of great learning and fun. It increased my confidence in me.The entire experience was a joyful one and full of good experiences which improved my personality. Thank you Kshitij, IIT Kharagpur."></Card>
-
-          {/* <Card name="Sarfaraz Ahmad" img="https://drive.google.com/uc?export=view&id=15zjXFbk8o1jOM8mwJjMtsHhSFUh3L4Yd" inst="Future institute of Engineering and management " city="west bengal" desc="Thank you IIT Kharagpur for giving me this wonderful opportunity.Being the CA of Kshitij of IIT Kharagpur was in itself a proud moment for me. Showcasing my management skills actually got more better by being a part. I was lucky to be a part of various events and workshops conducted by IIT KGP.The tenure was really important both at personal level and at corporate level .It was really a great experience."></Card> */}
-
-          <Card name="Kothapally Agasthya" img="https://drive.google.com/uc?export=view&id=1VdGpgbWvi7lIcBPQAsvfe1X2Nz3QW_aX" inst="University of Petroleum and Engineering Studies" city="Uttarakhand" desc="Working as a campus ambassador has been a really good experience. The tasks are not at all tedious and I had great fun while doing them. It's a great way to put yourself out and communicate"></Card>
+          <Card />
+          <div className={styles.videocontainer}>
+            <video width="270" height="400" poster="" >
+            <source src='/video1.mp4' type="video/mp4"/></video>
+            <button onClick={handleClick} className={styles.videoBtn}>
+              <svg className={styles.videoBtnPlay} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              <svg className={styles.videoBtnPause} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                <path d="M4 7C4 5.58579 4 4.87868 4.43934 4.43934C4.87868 4 5.58579 4 7 4C8.41421 4 9.12132 4 9.56066 4.43934C10 4.87868 10 5.58579 10 7V17C10 18.4142 10 19.1213 9.56066 19.5607C9.12132 20 8.41421 20 7 20C5.58579 20 4.87868 20 4.43934 19.5607C4 19.1213 4 18.4142 4 17V7Z" stroke="currentColor" stroke-width="1.5" />
+                <path d="M14 7C14 5.58579 14 4.87868 14.4393 4.43934C14.8787 4 15.5858 4 17 4C18.4142 4 19.1213 4 19.5607 4.43934C20 4.87868 20 5.58579 20 7V17C20 18.4142 20 19.1213 19.5607 19.5607C19.1213 20 18.4142 20 17 20C15.5858 20 14.8787 20 14.4393 19.5607C14 19.1213 14 18.4142 14 17V7Z" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+            <div className={styles.videoDesc}>
+              <p>Neel Kotkar</p>
+              <p>Founder and CEO: Facebook</p>
+            </div>
+          </div>
+          <Card />
+          <div className={styles.videocontainer}>
+            <video width="270" height="400" poster="" >
+            <source src='/video1.mp4' type="video/mp4"/></video>
+            <button onClick={handleClick} className={styles.videoBtn}>
+              <svg className={styles.videoBtnPlay} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              <svg className={styles.videoBtnPause} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                <path d="M4 7C4 5.58579 4 4.87868 4.43934 4.43934C4.87868 4 5.58579 4 7 4C8.41421 4 9.12132 4 9.56066 4.43934C10 4.87868 10 5.58579 10 7V17C10 18.4142 10 19.1213 9.56066 19.5607C9.12132 20 8.41421 20 7 20C5.58579 20 4.87868 20 4.43934 19.5607C4 19.1213 4 18.4142 4 17V7Z" stroke="currentColor" stroke-width="1.5" />
+                <path d="M14 7C14 5.58579 14 4.87868 14.4393 4.43934C14.8787 4 15.5858 4 17 4C18.4142 4 19.1213 4 19.5607 4.43934C20 4.87868 20 5.58579 20 7V17C20 18.4142 20 19.1213 19.5607 19.5607C19.1213 20 18.4142 20 17 20C15.5858 20 14.8787 20 14.4393 19.5607C14 19.1213 14 18.4142 14 17V7Z" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+            <div className={styles.videoDesc}>
+              <p>Neel Kotkar</p>
+              <p>Founder and CEO: Facebook</p>
+            </div>
+          </div>
+          <Card />
         </Carousel>
 
-        
-        {/* <ReactPlayer className={styles.video} url={'https://drive.google.com/file/d/1S3XUeEc5r7xelk341d2XR1XbeLS6KGKa/view'} 
-          controls={true} width="100%" height='50%'
-        /> */}
 
-        <div className={styles.videocontainer}>
-          <iframe src="https://drive.google.com/file/d/1S3XUeEc5r7xelk341d2XR1XbeLS6KGKa/preview" 
-            allow="autoplay"   allowFullScreen></iframe>
-        </div>
-      
       </div>
-    
+
     </div>
   )
 }
- export default CarouselComponent;
+export default CarouselComponent;
