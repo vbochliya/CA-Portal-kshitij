@@ -19,7 +19,7 @@
   justify-content: space-evenly;
 
 }
- 
+  
 .homeMain::before {
   content: "";
   position: absolute;
