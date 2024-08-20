@@ -1,10 +1,11 @@
 .cardMain{
-    background-color: rgb(223, 223, 223);
+    /* background-color: rgba(159, 152, 152, 0.526); */
+    background-color: #333131ee;
     border-radius: 7px;
     padding: 5px;
     width: 290px;
     height: 400px;
-    color: black;
+    color: white;
 }
 .cardHead{
     display:flex;
@@ -14,7 +15,7 @@
 }
 .cardHeadImg img{
     width: 40px;
-    background-color: black;
+    background-color: white;
     border-radius: 40px;
     height: 40px;
 }

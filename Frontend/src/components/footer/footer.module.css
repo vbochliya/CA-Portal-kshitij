@@ -86,7 +86,7 @@
 .footabout {
   margin-top: 0px;
   display: flex;
-  border-right: 6px solid #50125D;
+  border-right: 6px solid #EFED34;
   width: 50%;
   height: 70%;
   text-align: center;
@@ -221,9 +221,10 @@
 
 .forms button:hover {
   cursor: pointer;
-  background-color: #d9ff00;
+  background-color: #EFED34;
   color: #000000;
   transition: 0.3s;
+  transform: scale(1.05);
   /* font-weight: 900;
   border-radius: 10px;
   width: 10rem; */
@@ -238,9 +239,9 @@
 }
 
 .forms input, textarea{
-  background-color: #50125D;
+  background-color: #efec34e9;
   font-family: Oxygen;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .form h2 {

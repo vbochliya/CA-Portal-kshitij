@@ -19,7 +19,7 @@
     border-radius: 10px;
 }
 .videoBtn{
-    background-color: grey;
+    background-color: #333131ee;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -32,8 +32,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
 }
 .videoBtnPlay{
+    opacity: 1;
+}
+.videoBtn:hover{
+    background-color: #454545ee;
 }
 .videoBtnPause{
     display: none;
