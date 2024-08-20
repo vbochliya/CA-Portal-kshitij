@@ -196,9 +196,10 @@ const SignIn = () => {
         setOpen(true);
 
         console.log(response);
-        navigate("/");
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
+        console.log("DATA STORED IN LOCAL STORAGE");
+        navigate("/");
       })
       .catch((err) => {
         // setMessage(err.toString());

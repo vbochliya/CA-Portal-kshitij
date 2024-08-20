@@ -24,15 +24,19 @@ function App() {
   useEffect(() => {
     const requestOptions = {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem('token') }
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      }
     };
-    fetch(`Api/user/login_check`, requestOptions)
-      .then((res) => res.json())
+    // fetch(`Api/user/login_check`, requestOptions)
+    Api.get(`/user/login_check`, requestOptions)
+      // .then((res) => res.json())
       .then((data) => {
-        // setUser(data.user);
+        setUser(data.user);
         setLoading(false);
       })
-      .catch((err) => { console.log(err); localStorage.removeItem('token'); })
+      .catch((err) => { console.log("USER DELETED",err); localStorage.removeItem('token'); })
       .finally(() => setLoading(false));
   }
   //   fetch(`https://ca-backend-api.herokuapp.com/user/login_check`, requestOptions)
