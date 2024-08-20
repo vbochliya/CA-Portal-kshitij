@@ -35,6 +35,7 @@
     transition: all 0.5s ease;
 }
 .videoBtnPlay{
+    opacity: 1;
 }
 .videoBtn:hover{
     background-color: #454545ee;
