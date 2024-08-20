@@ -19,17 +19,6 @@
   justify-content: space-evenly;
 
 }
-.homeMain::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('landing1.jpg');
-  background-size: cover;
-  filter: blur(6px);
-}
 
 .bgCoverImg {
   width: 50%;
@@ -41,6 +30,17 @@
   padding-left: 4rem;
   border-width: 0 0 0 0.2rem;
   animation: rise-up 1.8s ease-out forwards;
+}
+.homeMain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('landing1.jpg');
+  background-size: cover;
+  filter: blur(6px);
 }
 
 .homeContent {
