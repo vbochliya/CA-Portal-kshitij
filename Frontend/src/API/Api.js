@@ -5,8 +5,8 @@ const devUrl = "http://localhost:5000/"
 const productionUrl = "https://cap-backend-ktj2024.onrender.com"
 
 const Api = axios.create({
- baseURL: productionUrl,
-//  baseURL:devUrl,
+//  baseURL: productionUrl,
+ baseURL:devUrl,
 });
 
 export default Api;

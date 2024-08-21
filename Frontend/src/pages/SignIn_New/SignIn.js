@@ -2,7 +2,6 @@ import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import styles from "./SignIn.module.css";
 import { useState } from "react";
-import img1 from "../../images/homepage_img.svg";
 import Navbar from "../../components/navbar/Navbarnew";
 import axios from "axios";
 import { TailSpin } from "react-loading-icons";
@@ -31,9 +30,10 @@ const FormArea = (props) => {
             <div>
               {" "}
               <label htmlFor="signin__email" className={styles.form__label}>
-                Email-ID
+                E-mail
               </label>
               <input
+              placeholder="Enter your e-mail"
                 id="signin__email"
                 className={styles.form__input}
                 type="email"
@@ -58,10 +58,12 @@ const FormArea = (props) => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
+                    position: "relative",
                     width: "100%",
                   }}
                 >
                   <input
+                  placeholder="Enter your password"
                     id="signin__password"
                     className={styles.form__input}
                     type={fieldType}
@@ -71,12 +73,13 @@ const FormArea = (props) => {
                   />
                   <h6
                     style={{
-                      right: 15,
+                      left: "97%",
                       display: "inline",
                       cursor: "pointer",
-                      transform: "translateX(-150%) translateY(2.5px)",
-                      color: "#f542d1",
+                      transform: "translateX(-100%)",
+                      color: "#EFED34",
                       position: "sticky",
+                      position: "absolute",
                     }}
                     onClick={(e) => toggleVisibility(e)}
                   >
@@ -92,6 +95,7 @@ const FormArea = (props) => {
             <div className={styles.form_remforgot}>
               <p className={styles.form_remforgot_forgotp}>
                 <span
+                className={styles.remforgot}
                   style={{ cursor: "pointer" }}
                   onClick={() => {
                     props.setForget(!props.forget);
@@ -114,7 +118,7 @@ const FormArea = (props) => {
                   ) : (
                     ""
                   )}
-                  <span className={styles.form__button}> Reset Password </span>
+                  <span> Reset Password </span>
                 </button>
               ) : (
                 <button
@@ -129,7 +133,6 @@ const FormArea = (props) => {
                     ""
                   )}
                   <span
-                    className={styles.form__button}
                     style={{ background: "none" }}
                   >
                     {" "}
@@ -193,9 +196,10 @@ const SignIn = () => {
         setOpen(true);
 
         console.log(response);
-        navigate("/");
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
+        console.log("DATA STORED IN LOCAL STORAGE");
+        navigate("/");
       })
       .catch((err) => {
         // setMessage(err.toString());
