@@ -59,7 +59,7 @@
   bottom: 0px;
   display: flex;
   flex-direction: column;
-  background-image:linear-gradient(to bottom,#000000, rgb(2, 18, 48));
+  background-image:linear-gradient(to bottom,#000000, #e6ff022e);
   /* Fill: Solid rgba(15, 42, 112, 0.5); */
   min-height: 60rem;
 
