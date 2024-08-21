@@ -30,13 +30,11 @@
     padding: 4rem 6rem;
     min-height: 100%;
     max-width: 75%;
-    border-image: linear-gradient(135deg, #f701b2, #01a7fe) 30;
+    border-image: linear-gradient(135deg, #E8FB23, #ffffff, #E8FB23, #ffffff) 30;
     border-width: 0.6rem;
     border-style: solid;
-    box-shadow: -1rem -0.5rem 2rem #f701b244,
-                1rem 0.5rem 2rem #01a7fe44,
-                inset 1rem 0.5rem 2rem #f701b244,
-                inset -1rem -0.5rem 2rem #01a7fe44;
+    box-shadow: inset 1rem 0.5rem 2rem #ffffff6f,
+                inset -1rem -0.5rem 2rem #fff2006d;
 }
   
 p{

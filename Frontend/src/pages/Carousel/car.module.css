@@ -3,6 +3,7 @@
     src: url("../../fonts/Mplus1p-Regular.otf");
 }
 .heading{
+    font-size: 4rem;
     padding-bottom: 0px;
     margin-bottom: 0px;
     padding-top: 70px;
@@ -47,6 +48,7 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
+    width: 80%;
     color: white;
 }
 
