@@ -39,8 +39,11 @@
   right: 0;
   bottom: 0;
   background-image: url('landing1.jpg');
+
+  /* adda graident  */
+  background: linear-gradient(0deg, #000 0%, #0000 80%, #0000 100%), url('landing1.jpg');
   background-size: cover;
-  filter: blur(6px);
+  filter: blur(2px);
 }
 
 .homeContent {
@@ -69,7 +72,7 @@
 }
 
 .heading1 {
-  font-family: "Inter", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 700;
   font-size: 8rem;
   max-width: 80rem;
@@ -83,7 +86,7 @@
 }
 
 .heading3 {
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #ffffff;
@@ -135,7 +138,7 @@
   border: none;
   margin: 4rem 2rem 0 3rem;
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: bold;
   border-radius: 1rem;
   color: black;
@@ -217,14 +220,14 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 2s infinite;
+  animation: float 8s ease-in-out infinite, blink 4s infinite;
 }
 
 .bubble2 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 1s infinite;
+  animation: float 8s ease-in-out infinite, blink 3s infinite;
 }
 
 .bubble3 {
@@ -238,7 +241,7 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 2.3s infinite;
+  animation: float 8s ease-in-out infinite, blink 4.5s infinite;
 }
 
 .bubble5 {
@@ -294,14 +297,10 @@
   box-shadow: 0 0 4rem #e6ff02, 0 0.1rem 0.5rem #e6ff02;
 }
 
-.animated-cta-button:hover span {
-  animation: textAnimation 1s infinite;
-}
-
 .info {
   color: white;
   opacity: 0.9;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 1.8rem;
   font-weight: bold;
   padding: 1rem;

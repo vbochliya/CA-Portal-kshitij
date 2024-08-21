@@ -7,6 +7,8 @@ function Incentives() {
     const img0thick = "https://i.postimg.cc/vmLYBn3S/imagebold.png"
     const img1thin = "https://i.postimg.cc/grnqtsYL/com-thin.png"
     const img1thick = "https://i.postimg.cc/ZnjVM0p2/com-thick.png"
+    const img2thin = "https://i.postimg.cc/FFdGC6Wj/bag-thin.png"
+    const img2thick = "https://i.postimg.cc/prFZ99h0/bag-thick.png"
     const img3thin = "https://i.postimg.cc/JhVpqH5c/global-network-thin.png"
     const img3thick = "https://i.postimg.cc/MpjsVmVp/global-network-thick.png"
     const img4thin = "https://i.postimg.cc/BPnqNtW2/podium-thin.png"
@@ -26,7 +28,12 @@ function Incentives() {
                 <IncBox
                     imgThin={img1thin}
                     imgThick={img1thick}
-                    text={"Invitation to all the events\nconducted by Kshitij IIT Kharagpur. Goodies and Hampers\nafter the fest."}
+                    text={"Invitation to all the events\nconducted by Kshitij IIT Kharagpur."}
+                />
+                <IncBox
+                    imgThick={img2thick}
+                    imgThin={img2thin}
+                    text={"\n\n\nGoodies and Hampers\nafter the fest"}
                 />
                 <IncBox
                     imgThin={img3thin}

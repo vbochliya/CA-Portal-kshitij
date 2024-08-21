@@ -6,6 +6,7 @@
   
  
  .container {
+  overflow-x: hidden;
    width: 100vw;
    min-height: 100vh;
    display: flex;
@@ -27,7 +28,7 @@
  }
  
  .formwrapper {
-   font-family: 'Poppins';
+  font-family: 'Mulish', sans-serif;
    padding-top: 3rem;
    padding-bottom: 3rem;
    width: 100%;

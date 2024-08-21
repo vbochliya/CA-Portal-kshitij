@@ -1,14 +1,9 @@
-@font-face {
-    font-family: Mplus;
-    src: url("../../fonts/Mplus1p-Regular.otf");
-  }
-
 .elem{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;   
-    font-family: Mplus;
+    font-family: 'Mulish', sans-serif;
     align-items: center;
     justify-items: center;
 }
