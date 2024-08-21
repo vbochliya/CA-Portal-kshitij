@@ -76,7 +76,7 @@
 
 .Over1 {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Mulish', sans-serif;
     color: black;
     display: none;
     
@@ -94,7 +94,7 @@
     top: 39%;
     border-radius: nullpx;
     color: #FFFFFF;
-    /* font-family: Montserrat; */
+    /* font-family: 'Mulish', sans-serif; */
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 3rem;
@@ -351,7 +351,7 @@ p {
             top: 2.9rem;
             border-radius: nullpx;
             color: #FFFFFF;
-            /* font-family: Montserrat; */
+            /* font-family: 'Mulish', sans-serif; */
             font-size: 2.3rem;
             font-weight: 700;
             line-height: 2.5rem;
