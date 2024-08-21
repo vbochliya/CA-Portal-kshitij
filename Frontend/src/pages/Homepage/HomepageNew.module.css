@@ -43,7 +43,7 @@
   background: linear-gradient(0deg, #000 0%, #0000 80%, #0000 100%), url('landing1.jpg');
 
   background-size: cover;
-  filter: blur(6px);
+  filter: blur(2px);
 }
 
 .homeContent {
@@ -220,14 +220,14 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 2s infinite;
+  animation: float 8s ease-in-out infinite, blink 4s infinite;
 }
 
 .bubble2 {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 1s infinite;
+  animation: float 8s ease-in-out infinite, blink 3s infinite;
 }
 
 .bubble3 {
@@ -241,7 +241,7 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 2.3s infinite;
+  animation: float 8s ease-in-out infinite, blink 4.5s infinite;
 }
 
 .bubble5 {
@@ -297,9 +297,9 @@
   box-shadow: 0 0 4rem #e6ff02, 0 0.1rem 0.5rem #e6ff02;
 }
 
-.animated-cta-button:hover span {
+/* .animated-cta-button:hover span {
   animation: textAnimation 1s infinite;
-}
+} */
 
 .info {
   color: white;
