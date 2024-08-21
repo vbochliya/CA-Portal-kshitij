@@ -3,24 +3,24 @@
         "id" : 0,
         "heading": "Bridge",
         "description": "To act as a bridge between Kshitij, IIT Kharagpur and your respective college",
-        "img" : "https://i.postimg.cc/t4nQN1PL/image.png"
+        "img" : "https://i.postimg.cc/gjTrdGwF/bridges.png"
     },
     {
         "id" : 1,
         "heading": "Publicity",
         "description": "Publicising Kshitij in your respective colleges by circulating posters, mails or messages in the official college groups",
-        "img" : "https://i.postimg.cc/mkytmXH6/feedbackwhite-crop.png"
+        "img":"https://i.postimg.cc/xTXc5N70/feedbackwhite-crop.png"
     },
     {
         "id" : 2,
         "heading": "Kascade",
         "description": "Help conduct the Kshitij’s regional event Kascade in their respective hometowns.",
-        "img" : "https://i.postimg.cc/Z5rDV67v/indiawhite-1-compress.png"
+        "img" : "https://i.postimg.cc/x8CqWX13/02.png"
     },
     {
         "id" : 3,
         "heading": "College",
         "description": "Ensuring participation from your respective colleges for various events conducted by Kshitij.",
-        "img" : "https://i.postimg.cc/yYvYbSDx/hand-final-compress.png"
+        "img" : "https://i.postimg.cc/qBbN2x1b/03.png"
     }
 ]
