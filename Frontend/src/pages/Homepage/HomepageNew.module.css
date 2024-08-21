@@ -39,9 +39,9 @@
   right: 0;
   bottom: 0;
   background-image: url('landing1.jpg');
+
   /* adda graident  */
   background: linear-gradient(0deg, #000 0%, #0000 80%, #0000 100%), url('landing1.jpg');
-
   background-size: cover;
   filter: blur(2px);
 }
@@ -296,10 +296,6 @@
 .animated-cta-button:hover {
   box-shadow: 0 0 4rem #e6ff02, 0 0.1rem 0.5rem #e6ff02;
 }
-
-/* .animated-cta-button:hover span {
-  animation: textAnimation 1s infinite;
-} */
 
 .info {
   color: white;
