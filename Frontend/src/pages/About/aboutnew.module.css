@@ -46,38 +46,41 @@ p{
 
 @media only screen and (max-width:1000px) {
     .box{
-        border-radius: 1rem;
         box-sizing: border-box;
-        padding: 4rem 4rem;
+        padding: 2rem 2rem;
         
         /* background-color: rgba(255,255,255,0.8); */
         min-height: 100%;
         min-width: 85%;
         
-        margin: 0 1.2rem 0 1.2rem ;
+        /* margin: 0 .2rem 0 1.2rem ; */
         /* font-size: ; */
+    }
+    .para{
+        font-size: 1.5rem;
     }
 
     .heading{
         font-size: 4rem;
         padding-left: 1rem;
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
         text-align: center;
         font-family: 'Mulish', sans-serif;
         color: #FFFFFF;
         text-shadow: 0 0 4rem #000000;
     }
     
-
-    
-
-    p{
-        font-size: 1.38rem;
-        
-    }
-
     .main{
-       padding: 5rem 0;
+        padding: 4rem 0;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .heading{
+        font-size: 3.5rem;
+    }
+    .para{
+        font-size: 1.38rem;
     }
 }
     

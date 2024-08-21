@@ -184,7 +184,7 @@
     transition: ;
   } */
   .active_head{
-    border-image: linear-gradient(135deg, #f701b2, #01a7fe) 30;
+    border-image: linear-gradient(135deg, #e3ea0b, #e9fe27) 30;
     border-width: 0.6rem;
     opacity: 1 ;
     align-self: center;
