@@ -45,28 +45,28 @@ const Responsibility = () => {
             <h1>RESPONSIBILITIES</h1>
             <div className={classes.container}>
                 
-                <a className="btn-slide" onClick={()=>{
+                {active!== 0 &&<a className="btn-slide" onClick={()=>{
                     PrevSlide()
                 }}>
                 <img src={previousimg} alt="previousButton" height='35px' width='35px' />
-                </a>
+                </a>}
                 <div className={classes.headerscontainer}>
                 {Data.map((value, i) => (
                     <Heading key={i} index={value.id} heading={value.heading} setBar={setBar} active = {active}/>
                 ))}
                 </div>
                 
-                <a className="btn-slide" onClick={()=>{
+                {active!== 3 &&<a className="btn-slide" onClick={()=>{
                     NextSlide()
                 }}>
                     <img src={nextimg} alt="previousButton" height='35px' width='35px' />
-                </a>
+                </a>}
                 
             </div>
             
             <div className={classes.answer_container}>
                 {Data.map((value, i) => (
-                    i === active && <Card key={i} details={value.description} image= {value.img} />
+                    i === active && <Card  key={i} details={value.description} image= {value.img} />
                 ))}
             </div>
         </div>

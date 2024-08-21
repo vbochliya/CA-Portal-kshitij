@@ -26,7 +26,7 @@
 import classes from './responsibilitynew.module.css';
 const Card = (props) => {
     return ( 
-        <div className={classes.Responsibility}>
+        <div  className={classes.Responsibility}>
             <div className={classes.textbox}>{props.details}</div>
             <div className={classes.imagebox}><img src={props.image}  /></div>
         </div>
