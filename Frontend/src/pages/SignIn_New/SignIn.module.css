@@ -19,7 +19,7 @@ form *{
   background-attachment: fixed;
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 h2 {
@@ -128,10 +128,10 @@ h2 {
 .form__input:focus {
   border-bottom: 2.5px solid #EFED34;
 }
-.form__input:focus:invalid {
+/* .form__input:focus:invalid {
   outline-color: orange;
   outline-style: groove;
-}
+} */
 .form__input:placeholder-shown ~ .form__label {
   opacity: 0;
 }
