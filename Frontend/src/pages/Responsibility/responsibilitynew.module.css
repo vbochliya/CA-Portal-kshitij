@@ -145,6 +145,9 @@
     font-size: 2rem;
     margin: 0 2rem;
     scroll-behavior: smooth;
+    /* border: 2px solid white; */
+    /* width: 250px; */
+    transition: 1s;
   }
   .headerscontainer{
     display: flex;
@@ -154,6 +157,9 @@
     scroll-snap-type:x mandatory;
     scroll-behavior: smooth;
     transition: 1s ease;
+    /* border: 2px solid white; */
+
+    
   }
   .Responsibility{
     display: flex;
@@ -162,22 +168,31 @@
     align-items: center;
     font-size: 2rem;
     width: 100%;
-    padding:1rem 15rem;    
+    padding:1rem 15rem; 
+    animation:textanimation;
+    animation-duration: 2s;
   }
   .nav_head{
     font-size: 4rem;
     margin: 0 4rem;
     opacity:0.5;
     cursor:pointer;
+    transition: 2s;
   }
+  /* .active_head::after{
+    border:2px solid white;
+    transition: ;
+  } */
   .active_head{
-    border-image: linear-gradient(135deg, #f701b2, #01a7fe) 30;
+    border-image: linear-gradient(135deg, #e3ea0b, #e9fe27) 30;
     border-width: 0.6rem;
     opacity: 1 ;
     align-self: center;
     text-align: center;
     border-bottom: 2px solid white;
     scroll-snap-align: center;
+    animation:headersanimation;
+    animation-duration: 2s;
     /* text-align: center; */
     /* border-style:double; */
     text-shadow: -1rem -0.5rem 2rem #f701b244,
@@ -185,9 +200,19 @@
                 inset 1rem 0.5rem 2rem #f701b244,
                 inset -1rem -0.5rem 2rem #01a7fe44;
   }
+  @keyframes headersanimation{
+    from{
+      opacity:0.2;
+    }
+    to{
+      opacity:1;
+    }
+  }
+
   .answer_container{
     padding:0 5rem;
     margin-top: 5rem;
+    
   }
   .textbox{
     font-size: 3rem;
@@ -196,29 +221,64 @@
     width: 60%;
     text-align: left;
   }
+  @keyframes textanimation{
+    from{
+      opacity:0;
+    }
+    to{
+      opacity:1;
+    }
+  }
+
   .imagebox{
     width: 40%;
-    height: 40rem;
+    min-height: 40rem;
     /* border: 2px solid white; */
   }
+  @media (max-width:350px){
+    .imagebox img{
+      width:20rem;
+      height: 20rem;
+    }
+  }
   @media (max-width:720px){
+    .imagebox img{
+      width:25rem;
+      height: 25rem;
+    }
+    .answer_container{
+      margin-top: 0;
+    }
     .Responsibilities h1{
       font-size: 3rem;
       text-align: center;
     }
     .imagebox{
-      display: none;
+      /* display: none; */
+      /* border: 2px solid white; */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      min-height: 25rem;
     }
     .Responsibility{
       width: 100%;
       margin: 2rem;
-      height: 30rem;
+      min-height: 30rem;
+      
+      flex-direction: column-reverse;
+      /* border: 2px solid red; */
+
     }
     .textbox{
       width:100%;
+      /* border: 2px solid white; */
+
     }
     .Responsibilities{
       padding: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
 
   }
@@ -228,10 +288,7 @@
 
 
   @media (max-width:1090px){
-    .container{
-      /* width: 100%; */
-      /* border: 2px solid red; */
-    }
+    
       .headerscontainer{
         overflow-x: scroll;
         scrollbar-width:none;
@@ -239,15 +296,8 @@
         /* border: 2px solid white; */
       }
       .Responsibility{
-        flex-direction: column;
+        /* flex-direction: column-reverse; */
         padding: 0;
-        /* border: 2px solid white; */
-        /* width: 100%; */
-
-      }
-      .imagebox{
-        /* width: 100%; */
-        /* border: 2px solid white; */
       }
       .textbox{
         /* width: 100%; */

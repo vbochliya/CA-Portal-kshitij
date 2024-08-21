@@ -3,6 +3,7 @@
     src: url("../../fonts/Mplus1p-Regular.otf");
 }
 .heading{
+    font-size: 4rem;
     padding-bottom: 0px;
     margin-bottom: 0px;
     padding-top: 70px;
@@ -13,7 +14,17 @@
     border-radius: 10px;
     border: none;
     position: relative;
-    border: 1px solid white;
+    /* border: 1px solid #e3ea0b; */
+}
+.videocontainer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, black, transparent, transparent);
+    /* display: none;    */
 }
 .videocontainer video{
     border-radius: 10px;
@@ -26,13 +37,14 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
-    border:2px solid white;
+    border:2px solid #e3ea0b;
     height: 36px;
     width: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease;
+    z-index: 2;
 }
 .videoBtnPlay{
     opacity: 1;
@@ -47,7 +59,9 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
+    width: 80%;
     color: white;
+    z-index: 2;
 }
 
 .videoDesc p:nth-child(2){
