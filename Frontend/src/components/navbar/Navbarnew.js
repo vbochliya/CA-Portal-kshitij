@@ -168,8 +168,9 @@ const Navbar = (props) => {
                       onMouseLeave={handleMouseLeave}
                       href="/"
                       >
-                        {/* {buttonText} */}
-                        {buttonText} 
+                        {"Logout"}
+                        {/* {buttonText}  */}
+
                       {/* {user.first_name} */}
                       {/* Signout */}
                     </a>

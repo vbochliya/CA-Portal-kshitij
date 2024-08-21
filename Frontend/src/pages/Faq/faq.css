@@ -7,11 +7,14 @@
     line-height: 1.8rem;
 }
  
-
+.title {
+    font-size: 4rem;
+}
 .MuiAccordion-root {
     /* background-color: #D9D9D933 !important; */
     background-color: #333333 !important; /* Dark background for the accordion */
-    border: 1px solid  #eeea0e;  /* Yellow border */
+    border: 1px solid  #eeea0e77;  /* Yellow border */
+    border-radius: 0.5rem !important;
     box-shadow: none;
     margin-bottom: 1rem;
 }
@@ -29,6 +32,7 @@
 .MuiAccordionSummary-root {
     background-color: #222222 !important; /* Slightly lighter background for the summary */
     border-bottom: 1px solid #eeea0e; /* Yellow border between summary and details */
+    border-radius: 0.5rem !important;
 }
 .MuiAccordionSummary-content {
     margin: 0 !important;
@@ -36,8 +40,9 @@
 
 /* Accordion Details */
 .MuiAccordionDetails-root {
-    background-color: #444444 !important; /* Dark background for the details */
+    background-color: #303030 !important; /* Dark background for the details */
     border-top: 1px solid #ffcc00; /* Yellow border between summary and details */
+    border-radius: 0 0 0.5rem 0.5rem !important;
 }
 
 /* .MuiTypography-root{

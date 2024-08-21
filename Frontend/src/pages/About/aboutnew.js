@@ -18,7 +18,7 @@ function About() {
               to engage in serious networking and gain knowledge of marketing and social media. More than 70 thousand
                students from 2000+ colleges will be under their management. The Campus Ambassador Program is structured 
                to help Campus Ambassadors develop their corporate personalities and soft skills. The Campus Ambassadors' 
-               involvement will be essential to the success of Kshitij 2024, the 21st edition of Kshitij.
+               involvement will be essential to the success of Kshitij 2025, the 22nd edition of Kshitij.
             </p>
         </div>
     </div>

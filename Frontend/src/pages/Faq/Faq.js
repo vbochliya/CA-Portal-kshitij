@@ -47,7 +47,7 @@ const data = [
 function Faq() {
   return (
     <div className={styles.cov}>
-      <h1> FAQS</h1>
+      <h1 className={styles.title}> FAQS</h1>
       <div class = "faq_div">
 
         {data.map((item) => {
