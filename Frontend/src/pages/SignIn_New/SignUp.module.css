@@ -1,243 +1,238 @@
-  
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
- 
- 
-  
- 
- .container {
+.container {
   overflow-x: hidden;
-   width: 100vw;
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   
- }
- 
- .form_img{
-   background-image: url(../../images/signin_img.jpg);
-   background-position: center;
-   background-size: cover;
- }
- 
- /* Media query for large screens (1024px and above) */
- @media (min-width: 1024px) {
-   .container {
-     justify-content: flex-end;
-   }
- }
- 
- .formwrapper {
-  font-family: 'Mulish', sans-serif;
-   padding-top: 3rem;
-   padding-bottom: 3rem;
-   width: 100%;
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-left: 2px solid #4e4e4e85;
-   border-right: 2px solid #4e4e4e85;
-   backdrop-filter: blur(30px);
- }
- 
-  
- @media (min-width: 640px) { /* sm */
-   .formwrapper {
-     width: 90%;
-   }
- }
- 
- @media (min-width: 768px) { /* md */
-   .formwrapper {
-     width: 100%;
-   }
- }
- 
- @media (min-width: 1280px) { /* xl */
-   .formwrapper {
-     width: 60%;
-   }
- }
- 
- @media (min-width: 1536px) { /* 2xl */
-   .formwrapper {
-     width: 50%;
-   }
- }
- 
- .form {
-   width: 86%;
-   margin: auto;
-   display: flex;
-   flex-direction: column;
-   gap:0rem; /* 5 is equal to 20px */
- 
-   /* Larger screen sizes */
-   @media (min-width: 640px) { /* sm */
-     gap: 4rem; /* 10 is equal to 40px */
-   }
- 
-   @media (min-width: 1280px) { /* xl */
-     gap: 4.5rem; /* 10 is equal to 40px */
-   }
- 
-   @media (min-width: 1536px) { /* 2xl */
-     gap: 5rem; /* 16 is equal to 64px */
-   }
- 
-   margin-top: auto;
-   margin-bottom: auto;
- }
- 
- .formTitle {
-   color: #eae8e8;
-   font-size:3rem;
-   margin-top: 3rem;;
-   text-align: center;
-   letter-spacing: -1px;;
-   font-weight: 600;
-   
-   @media (min-width: 640px) { /* sm */
-     font-size: 3.5rem; /* 10 is equal to 40px */
-     margin-top:2rem;
-   }
- 
-   @media (min-width: 1280px) { /* xl */
-     font-size: 4rem; /* 10 is equal to 40px */
-     margin-top:3rem;
-   }
- 
-   @media (min-width: 1536px) { /* 2xl */
-   font-size: 5.5rem; 
-   /* 16 is equal to 64px */
-   margin-bottom:3.1rem;
-   }
- }
- 
- .formGroup {
-   display: flex;
-   flex-direction: column;
-   gap: 1.3rem; /* 3 is equal to 12px */
-   justify-content: space-between;
- }
- 
- @media (min-width: 640px) { /* sm */
-   .formGroup {
-     flex-direction: row;
-     
-   }
-    
- }
- 
-  
- 
- .formField {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
- }
- 
-  
- .formLabel {
-   color: #e0dede;
-   font-size: 2.2rem;
- }
- 
- .formInput {
-   background: transparent;
-   padding: 1rem 1rem 1rem 0;
-   
-   height: fit-content;
-  
-   border: none;
-   outline: none;
-   color: rgb(238, 238, 238);
-   width: 100%;
-    
-   border-bottom: 2px solid #787878;
-   box-shadow: none;
-   font-size: 2rem;
-   border-radius: 0px;
-   transition: all ease 0.3s;
- }
- .formInput::placeholder {
-   color:#ada9a9
- }
- 
- .formInput:focus{
-   border-bottom: 2.5px solid #EFED34;
- }
- 
- /* Adjust input padding for larger screens */
- @media (min-width: 1024px) { /* md */
-  
- }
- 
- .option{
-   color:black;
- }
- 
-  
- 
- .formButtonWrapper {
-   text-align: center;
- }
- 
- .formButton {
-   margin-top: 2rem;
-   display:inline-block;
-   width: 90%;
-   padding: 14px 40px;
-   background: #EFED34  ;
-   color: black;
-   font-size: 1.7rem;
-   font-weight: 600;
-   border-radius: 10px;
-   /* border: 2px solid #787878; */
-   outline: none;
-   border:none;
-   transition: all ease 0.2;
-   
-   
- }
- 
- .formButton:hover{
-   background: #fbf96f  ;
- }
- 
- /* Adjust button width for larger screens */
- @media (min-width: 1024px) { /* md */
-   .formButton {
-     width: 50%;
-   }
- }
- 
- .formFooter {
-   margin-top: 1.5rem;
-   color: white;
-   font-size: 1.4rem;
-   text-align: center;
- }
- 
- .formFooter a {
-   text-decoration: underline;
- }
- 
- 
- .newformInput {
-   background-color: transparent;
-   outline: none;
-   padding: 0.5rem 1rem; /* py-2 is 8px, px-4 is 16px */
-   border-bottom: 2px solid #787878;
-   color: white;
-   box-shadow: none;
-   border-radius: 0px;
-   font-size: 1.6rem;
- }
- 
- 
- .anotherInput {
-   position:static;
- }
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.form_img {
+  background-image: url(../../images/signin_img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Media query for large screens (1024px and above) */
+@media (min-width: 1024px) {
+  .container {
+    justify-content: flex-end;
+  }
+}
+
+.formwrapper {
+  font-family: "Mulish", sans-serif;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid #4e4e4e85;
+  border-right: 2px solid #4e4e4e85;
+  backdrop-filter: blur(30px);
+}
+
+@media (min-width: 640px) {
+  /* sm */
+  .formwrapper {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .formwrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl */
+  .formwrapper {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1536px) {
+  /* 2xl */
+  .formwrapper {
+    width: 50%;
+  }
+}
+
+.form {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem; /* 5 is equal to 20px */
+  margin-top: 3rem;
+
+  /* Larger screen sizes */
+  @media (min-width: 640px) {
+    /* sm */
+    gap: 4rem; /* 10 is equal to 40px */
+  }
+
+  @media (min-width: 1280px) {
+    /* xl */
+    gap: 4.5rem; /* 10 is equal to 40px */
+  }
+
+  @media (min-width: 1536px) {
+    /* 2xl */
+    gap: 5rem; /* 16 is equal to 64px */
+  }
+
+  /* margin-top: auto;
+  margin-bottom: auto; */
+}
+
+.formTitle {
+  color: #eae8e8;
+  font-size: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  letter-spacing: -1px;
+  font-weight: 600;
+
+  @media (min-width: 640px) {
+    /* sm */
+    font-size: 3.5rem; /* 10 is equal to 40px */
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 1280px) {
+    /* xl */
+    font-size: 4rem; /* 10 is equal to 40px */
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 1536px) {
+    /* 2xl */
+    font-size: 5.5rem;
+    /* 16 is equal to 64px */
+    margin-bottom: 3.1rem;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem; /* 3 is equal to 12px */
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  /* sm */
+  .formGroup {
+    flex-direction: row;
+  }
+}
+
+.formField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formLabel {
+  color: #e0dede;
+  font-size: 2.2rem;
+}
+
+.formInput {
+  background: transparent;
+  padding: 1rem 1rem 1rem 0;
+
+  height: fit-content;
+
+  border: none;
+  outline: none;
+  color: rgb(238, 238, 238);
+  width: 100%;
+
+  border-bottom: 2px solid #787878;
+  box-shadow: none;
+  font-size: 2rem;
+  border-radius: 0px;
+  transition: all ease 0.3s;
+}
+.formInput::placeholder {
+  color: #ada9a9;
+}
+
+.formInput:focus {
+  border-bottom: 2.5px solid #efed34;
+}
+
+/* Adjust input padding for larger screens */
+@media (min-width: 1024px) {
+  /* md */
+}
+
+.option {
+  color: black;
+}
+
+.formButtonWrapper {
+  text-align: center;
+}
+
+.formButton {
+  margin-top: 2rem;
+  display: inline-block;
+  width: 90%;
+  padding: 14px 40px;
+  background: #efed34;
+  color: black;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-radius: 10px;
+  /* border: 2px solid #787878; */
+  outline: none;
+  border: none;
+  transition: all ease 0.2;
+}
+
+.formButton:hover {
+  background: #fbf96f;
+}
+
+/* Adjust button width for larger screens */
+@media (min-width: 1024px) {
+  /* md */
+  .formButton {
+    width: 50%;
+  }
+}
+
+.formFooter {
+  margin-top: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.formFooter a {
+  text-decoration: underline;
+}
+
+.newformInput {
+  background-color: transparent;
+  outline: none;
+  padding: 0.5rem 1rem; /* py-2 is 8px, px-4 is 16px */
+  border-bottom: 2px solid #787878;
+  color: white;
+  box-shadow: none;
+  border-radius: 0px;
+  font-size: 1.6rem;
+}
+
+.anotherInput {
+  position: static;
+}

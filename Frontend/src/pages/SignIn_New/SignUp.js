@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./SignUp.module.css";
 import { useState } from "react";
@@ -23,6 +23,11 @@ const FormArea = (props) => {
   };
   const [width,setWidth] = useState(window.innerHeight)
   window.addEventListener("resize", () =>setWidth(window.innerWidth))
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, []);
+  
   return (
     <div className={`${styles.container} ${styles.form_img}`}>
     <div className={styles.formwrapper}>
@@ -65,7 +70,7 @@ const FormArea = (props) => {
           <div className={styles.formField}>
             {width > 640 && <label htmlFor="signupPassword" className={styles.formLabel}>Password</label>}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%',position:"relative"}}>
-              <input id="signupPassword" placeholder='password' required name="password" type={fieldType} className={styles.formInput} />
+              <input id="signupPassword" placeholder='Password' required name="password" type={fieldType} className={styles.formInput} />
               <h6
               style={{
                 left: "100%",

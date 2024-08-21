@@ -33,7 +33,7 @@ const FormArea = (props) => {
                 E-mail
               </label>
               <input
-              placeholder="Enter your e-mail"
+              placeholder="Enter your E-mail"
                 id="signin__email"
                 className={styles.form__input}
                 type="email"
@@ -63,7 +63,7 @@ const FormArea = (props) => {
                   }}
                 >
                   <input
-                  placeholder="Enter your password"
+                  placeholder="Enter your Password"
                     id="signin__password"
                     className={styles.form__input}
                     type={fieldType}
@@ -83,7 +83,7 @@ const FormArea = (props) => {
                     }}
                     onClick={(e) => toggleVisibility(e)}
                   >
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                       {fieldType === "password"
                         ? "visibility"
                         : "visibility_off"}

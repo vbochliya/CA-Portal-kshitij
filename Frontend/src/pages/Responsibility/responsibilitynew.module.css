@@ -263,7 +263,7 @@
     }
     .Responsibility{
       width: 100%;
-      margin: 2rem;
+      /* margin: 2rem; */
       min-height: 30rem;
       
       flex-direction: column-reverse;
@@ -279,6 +279,14 @@
       padding: 0;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .active_head{
+      border-bottom: none;
+    }
+
+    .nav_head{
+      font-size: 2.5rem;
     }
 
   }
