@@ -11,7 +11,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Faq from '../Faq/Faq';
 import Api from '../../API/Api';
-
+import ambassadorImage from '../Homepage/ambassador.jpg';
+import caImage from '../Homepage/CAp.jpg';
+import publicImage from '../Homepage/public-relation.jpg'
+import influencerImage from '../Homepage/influencer.jpg'
+import independenceImage from '../Homepage/independence.jpg'
 function BubbleSVG({ imageUrl }) {
     return (
         <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -47,31 +51,12 @@ function Home() {
     const [ca_id, setca_id] = useState(null);
     const [app_id, setapp_id] = useState(null);
     const [sel, setSel] = useState("no");
-    const [currentImage1, setCurrentImage1] = useState("https://imgs.search.brave.com/KvtKA-aHPfEd3UR43m53uiv8LRufrwUZbmmFdVuKApM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/dHlwLnVzL2ZpbGUv/b29zdGVuZGUuc3Zn");
-    const [currentImage2, setCurrentImage2] = useState("https://imgs.search.brave.com/mvYEUp4fGGoTL3wj9UcNRHHClxI781ReaoMZEkQtK4c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9nZXR3/YWxscGFwZXJzLmNv/bS93YWxscGFwZXIv/ZnVsbC8wL2YvMy8x/Nzg5NzUuanBn");
-    const [currentImage3, setCurrentImage3] = useState("https://imgs.search.brave.com/v2_dF5QhQY92igXcUPrGI3XWJpaDbF2j6ttUg5rJQww/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA2LzkyLzExLzEx/LzM2MF9GXzY5MjEx/MTE3N19yVFBNR0E5/a2piS0VwVWR1MDM5/aVZYeWppTDlJd1lG/Zy5qcGc");
-    const [currentImage4, setCurrentImage4] = useState("https://imgs.search.brave.com/Kb1SwFkzoPexoZ2C7h5FaxVEGex9jwVuOiwN2FptH0s/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/LmNvbS9pbWFnZS1j/ZG4vaW1hZ2VzL2t0/czkyOHBkL3Byb2R1/Y3Rpb24vYzJmY2Jh/ZTFhYzJkY2RiZjI0/YWYxZTM5NGI5NWNk/ZTA2MzVjYmM3MC03/MzF4NzMxLnBuZz93/PTEwODAmcT03MiZm/bT13ZWJw");
-    const [currentImage5, setCurrentImage5] = useState("https://imgs.search.brave.com/Dmu1WbEjb5fRHySnJBihlPEqnjyXIQNkdXQ24nge6iY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2V0YW1iYXNzYWRv/ci5jb20vaHViZnMv/MTclMjBPbmJvYXJk/aW5nJTIwU3VwcG9y/dC5zdmc");
-    const imageUrls1 = [
-        "https://imgs.search.brave.com/uGcAcXzNsyfMmtM5WS6_6Gw605o0vxHPH7bNNY2biUw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzQ1Mjcw/NjQvc2NyZWVuc2hv/dHMvMTgzMjU0NTQv/bWVkaWEvMTFjM2Nm/ZmU0YWNmMTA1ZWI3/ZjIxYjdlOTRkNGVl/NTEuanBnP3Jlc2l6/ZT00MDB4MA",
-        "https://imgs.search.brave.com/ZV--mmAxNhGsu67cF6Nw6uYEPcuUcyDpvPQMBrNK77A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy83/Lzc4L0ZhaXJfdXNl/X2xvZ28uc3Zn",
-    ]
-    const imageUrls2= [
-        "https://imgs.search.brave.com/mvYEUp4fGGoTL3wj9UcNRHHClxI781ReaoMZEkQtK4c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9nZXR3/YWxscGFwZXJzLmNv/bS93YWxscGFwZXIv/ZnVsbC8wL2YvMy8x/Nzg5NzUuanBn",
-        "https://imgs.search.brave.com/KvtKA-aHPfEd3UR43m53uiv8LRufrwUZbmmFdVuKApM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/dHlwLnVzL2ZpbGUv/b29zdGVuZGUuc3Zn",
-    ];
-    const imageUrls3= [
-        "https://imgs.search.brave.com/v2_dF5QhQY92igXcUPrGI3XWJpaDbF2j6ttUg5rJQww/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA2LzkyLzExLzEx/LzM2MF9GXzY5MjEx/MTE3N19yVFBNR0E5/a2piS0VwVWR1MDM5/aVZYeWppTDlJd1lG/Zy5qcGc",
-        "https://imgs.search.brave.com/yGuWGfulBS1q477IfG92RFoikNO6xwP5GMRYE15_rd0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2V0YW1iYXNzYWRv/ci5jb20vaHViZnMv/MzElMjBTaW5nbGUl/MjBTaWduLU9uLnN2/Zw",
-    ];
-    const imageUrls4= [
-        "https://imgs.search.brave.com/FGq5q0HfOitAJK_fBu1cfmPRInor6a7rs0vaTQoPfiQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmljZXBuZy5jb20v/cG5nL2RldGFpbC8z/MjUtMzI1NDA1NV9h/bWJhc3NhZG9yLWxv/Z28tYW1iYXNzYWRv/ci1jbHViLXNkYS5w/bmc",
-        "https://imgs.search.brave.com/Kb1SwFkzoPexoZ2C7h5FaxVEGex9jwVuOiwN2FptH0s/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/LmNvbS9pbWFnZS1j/ZG4vaW1hZ2VzL2t0/czkyOHBkL3Byb2R1/Y3Rpb24vYzJmY2Jh/ZTFhYzJkY2RiZjI0/YWYxZTM5NGI5NWNk/ZTA2MzVjYmM3MC03/MzF4NzMxLnBuZz93/PTEwODAmcT03MiZm/bT13ZWJw",
-    ];
-    const imageUrls5= [
-        "https://imgs.search.brave.com/Dmu1WbEjb5fRHySnJBihlPEqnjyXIQNkdXQ24nge6iY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2V0YW1iYXNzYWRv/ci5jb20vaHViZnMv/MTclMjBPbmJvYXJk/aW5nJTIwU3VwcG9y/dC5zdmc",
-        "https://imgs.search.brave.com/7jGumoA5Inj4_jr2GOUNYp4ROAo6tPS5N28CnIW2xcQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGVzaWduZXZvLmNv/bS9tZWRpYS9jb21f/dGVtcGxhdGUvaW1h/Z2VzL2NuZXRfbG9n/b18yNTAud2VicA",
-    ];
+    const [currentImage1, setCurrentImage1] = useState(ambassadorImage);
+    const [currentImage2, setCurrentImage2] = useState(caImage);
+    const [currentImage3, setCurrentImage3] = useState(publicImage);
+    const [currentImage4, setCurrentImage4] = useState(influencerImage);
+    const [currentImage5, setCurrentImage5] = useState(independenceImage);
+
 
     useEffect(() => {
 
