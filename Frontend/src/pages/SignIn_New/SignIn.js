@@ -83,7 +83,7 @@ const FormArea = (props) => {
                     }}
                     onClick={(e) => toggleVisibility(e)}
                   >
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                       {fieldType === "password"
                         ? "visibility"
                         : "visibility_off"}
