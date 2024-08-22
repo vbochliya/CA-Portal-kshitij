@@ -16,6 +16,7 @@ import caImage from '../Homepage/CAp.jpg';
 import publicImage from '../Homepage/public-relation.jpg'
 import influencerImage from '../Homepage/influencer.jpg'
 import independenceImage from '../Homepage/independence.jpg'
+import CompanyIncentives from '../companyIncentives/CompanyIncentives';
 function BubbleSVG({ imageUrl }) {
     return (
         <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -135,6 +136,7 @@ function Home() {
                 <div id="about" className={styles.scroll}><About /></div>
                 <div id="resp" className={styles.scroll}><Responsibility /></div>
                 <div id="inc" className={styles.scroll}><IncentivesNew /></div>
+                <div id="companyInc" className={styles.scroll}><CompanyIncentives /></div>
                 <div id="testimonials" className={styles.scroll}><CarouselComponent /></div>
                 <div id="faq"><Faq /></div>
                 <div id="contact" className={styles.scroll}><Contact /></div>
