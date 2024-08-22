@@ -23,7 +23,7 @@ const FormArea = (props) => {
       <div className={styles.form__formDiv}>
         <div className={styles.form__imgDiv}>&nbsp;</div>
         <div className={styles.form + " " + styles.form__formarea}>
-          <form className={styles.form__group}>
+          <form className={styles.form__group} onSubmit={props.handleSubmit}>
             <div>
               <h2>{props.forget ? "RESET PASSWORD" : "SIGN IN"}</h2>
             </div>
@@ -37,6 +37,7 @@ const FormArea = (props) => {
                 id="signin__email"
                 className={styles.form__input}
                 type="email"
+                required
                 onChange={(e) => {
                   props.forget
                     ? props.setEmail(e.target.value)
@@ -67,6 +68,7 @@ const FormArea = (props) => {
                     id="signin__password"
                     className={styles.form__input}
                     type={fieldType}
+                    required
                     onChange={(e) => {
                       props.setPassword(e.target.value);
                     }}
@@ -123,7 +125,7 @@ const FormArea = (props) => {
               ) : (
                 <button
                   className={styles.form__button}
-                  onClick={props.handleSubmit}
+                  type="submit"
                 >
                   {props.loading ? (
                     <span style={{ marginRight: "9px", marginTop: "5px" }}>
@@ -157,8 +159,8 @@ const FormArea = (props) => {
 };
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(true);
@@ -204,11 +206,11 @@ const SignIn = () => {
       .catch((err) => {
         // setMessage(err.toString());
 
-        console.log(err.response.data.message);
+        console.log(err.response.data);
         setLoading(false);
-        setError(err.response.data.message);
+        setError(err.response.data);
         setOpen(true);
-        console.log(err);
+        // console.log(err);
         // setStatus("error");
       });
   };
