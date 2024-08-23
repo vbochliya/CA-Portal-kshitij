@@ -37,6 +37,9 @@
     border-radius: .4rem;
 }
 
+
+
+
 .card {
     overflow: visible;
     width: 254px;
@@ -212,5 +215,11 @@
   
     100% {
       transform: translateY(0px);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .cardContainer{
+        padding: 0;
     }
   }

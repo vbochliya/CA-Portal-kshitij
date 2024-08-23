@@ -17,9 +17,10 @@ import publicImage from '../Homepage/public-relation.jpg'
 import influencerImage from '../Homepage/influencer.jpg'
 import independenceImage from '../Homepage/independence.jpg'
 import CompanyIncentives from '../companyIncentives/CompanyIncentives';
+
 function BubbleSVG({ imageUrl }) {
     return (
-        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+        <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="bubbleClip">
                     <circle cx="50" cy="50" r="25" />
