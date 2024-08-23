@@ -132,6 +132,11 @@ const Navbar = (props) => {
               </a>
             </li>
             <li>
+              <a href="/#companyInc" data-hover="Gifts" onClick={() => setShowMediaIcons(false)}>
+                Gifts
+              </a>
+            </li>
+            <li>
               <a href="/#testimonials" data-hover="Testimonials" onClick={() => setShowMediaIcons(false)}>
                 Testimonials
               </a>
@@ -141,7 +146,7 @@ const Navbar = (props) => {
                 Contact
               </a>
             </li>
-            {/* <li id="conditional-li"></li> */}
+            <li id="conditional-li"></li>
          
               <div className="button">
                 {!props.show ? (
