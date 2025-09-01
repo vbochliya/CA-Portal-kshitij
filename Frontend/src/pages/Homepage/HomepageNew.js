@@ -18,34 +18,34 @@ import influencerImage from '../Homepage/influencer.jpg'
 import independenceImage from '../Homepage/independence.jpg'
 import CompanyIncentives from '../companyIncentives/CompanyIncentives';
 
-function BubbleSVG({ imageUrl }) {
-    return (
-        <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <clipPath id="bubbleClip">
-                    <circle cx="50" cy="50" r="25" />
-                </clipPath>
-            </defs>
-            <circle
-                cx="50"
-                cy="50"
-                r="25"
-                fill="rgba(173, 216, 230, 0.3)"
-                stroke="rgba(173, 216, 230, 0.6)"
-                strokeWidth="4"
-            />
-            <image
-                href={imageUrl}
-                width="50"
-                height="50"
-                x="25"
-                y="25"
-                clipPath="url(#bubbleClip)"
-                preserveAspectRatio="xMidYMid slice"
-            />
-        </svg>
-    );
-}
+// function BubbleSVG({ imageUrl }) {
+//     return (
+//         <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+//             <defs>
+//                 <clipPath id="bubbleClip">
+//                     <circle cx="50" cy="50" r="25" />
+//                 </clipPath>
+//             </defs>
+//             <circle
+//                 cx="50"
+//                 cy="50"
+//                 r="25"
+//                 fill="rgba(173, 216, 230, 0.3)"
+//                 stroke="rgba(173, 216, 230, 0.6)"
+//                 strokeWidth="4"
+//             />
+//             <image
+//                 href={imageUrl}
+//                 width="50"
+//                 height="50"
+//                 x="25"
+//                 y="25"
+//                 clipPath="url(#bubbleClip)"
+//                 preserveAspectRatio="xMidYMid slice"
+//             />
+//         </svg>
+//     );
+// }
 
 function Home() {
 
@@ -92,7 +92,7 @@ function Home() {
                         <h3 className={styles.heading3}>
                             Kshitij, IIT Kharagpur presents the Campus Ambassador Programme with the goal of fostering in you the essential leadership qualities.
                         </h3>
-                        <div className={styles.bubbles}>
+                        {/* <div className={styles.bubbles}>
                             <div className={styles.bubble10}>
                                 <BubbleSVG imageUrl={currentImage1} />
                             </div>
@@ -108,7 +108,7 @@ function Home() {
                             <div className={styles.bubble5}>
                             <BubbleSVG imageUrl={currentImage5} />
                             </div>
-                        </div>
+                        </div> */}
                         {auth ? (
                             <>
                                 <h1 className={styles.btn}>
