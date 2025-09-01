@@ -1,6 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Montserrat:wght@400;600&family=Patua+One&display=swap");
+/* Button container animations */
+.buttonContainer {
+  transition: all 0.8s ease-out;
+}
+
+.hiddenButton {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.showButton {
+  opacity: 1;
+  transform: translateY(0);
+}@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Montserrat:wght@400;600&family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
- 
 
 .homeMain {
   min-width: 100%;
@@ -27,20 +39,6 @@
   border-width: 0 0 0 0.2rem;
   animation: rise-up 1.8s ease-out forwards;
 }
-/* .homeMain::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('landing1.jpg');
-
-
-  background: linear-gradient(0deg, #000 0%, #0000 80%, #0000 100%), url('landing1.jpg');
-  background-size: cover;
-  filter: blur(2px);
-} */
 
 .homeContent {
   display: flex;
@@ -67,6 +65,7 @@
   width: 24rem;
 }
 
+/* Base heading styles */
 .heading1 {
   font-family: 'Mulish', sans-serif;
   font-weight: 700;
@@ -77,8 +76,14 @@
   letter-spacing: 0.25rem;
   color: #ffffff;
   text-shadow: 0px 0px 4rem #342e2e;
-  animation: rise-up 1.8s ease-out forwards;
   padding-bottom: 1rem;
+  min-height: 8rem;
+}
+
+/* Show heading1 with fade in */
+.showHeading1 {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .heading3 {
@@ -91,9 +96,52 @@
   margin-bottom: 2rem;
   text-align: center;
   text-shadow: 0px 0px 4rem #00000044;
-  animation: rise-up 2.2s ease-out forwards;
   z-index: 2;
+  line-height: 1.4;
+  min-height: 3.5rem;
 }
+
+/* Show heading3 with fade in */
+.showHeading3 {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Cursor for heading3 */
+.cursor {
+  color: #ff4d4d;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+/* Hidden state for headings */
+.hiddenHeading {
+  opacity: 0;
+  width: 0;
+  border-right: none;
+}
+
+/* Remove old typing animations and replace with simple ones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ff4d4d; }
+}
+
+/* Remove cursor after completion */
+@keyframes remove-cursor {
+  to { border-right: none; }
+}
+
 #particles-js {
   position: fixed;
   top: 0;
@@ -102,17 +150,16 @@
   height: 100%;
   z-index: 0;
 }
+
 @keyframes rise-up {
   0% {
     opacity: 0;
     transform: translateY(5rem);
   }
-
   50% {
     opacity: 0;
     transform: translateY(5rem);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -146,16 +193,25 @@
   font-weight: bold;
   border-radius: 1rem;
   color: black;
-  background: linear-gradient(0deg, #e3ea0b, #e9fe27);
+  background: #ff4d4d;
   box-shadow: 0 0 4rem #000000, 0 0.1rem 0.5rem #00000044;
   width: max-content;
   max-width: calc(100% - 3rem);
-  transition: 0.25s;
-  animation: rise-up 2.4s ease-out forwards;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
-.animated-cta-button:hover .animated-cta-button {
-  transform: scale(1.05);
+.animated-cta-button:hover {
+  background: #ff3333;
+  transform: translateY(-2px);
+  box-shadow: 0 0 4rem rgba(255, 77, 77, 0.6), 0 0.3rem 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.animated-cta-button:active {
+  background: #e60000;
+  box-shadow: inset 0 0.3rem 0.6rem rgba(255, 0, 0, 0.6),
+              0 0.1rem 0.3rem rgba(0, 0, 0, 0.6);
+  transform: translateY(1px);
 }
 
 .btn-main-icon-block {
@@ -167,7 +223,6 @@
   z-index: 2;
 }
 
-/* Positioning the blocks */
 .is-left {
   top: 50%;
   left: -12px;
@@ -192,7 +247,6 @@
   transform: translateX(-50%);
 }
 
-/* Animations on hover */
 .animated-cta-button:hover .is-left,
 .animated-cta-button:hover .is-right {
   width: 100%;
@@ -214,84 +268,33 @@
   background-color: #101206;
 }
 
-/* .bubbles {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  opacity: .5;
-} */
-
-/* .bubble10 {
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 4s infinite;
-}
-
-.bubble2 {
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 3s infinite;
-} */
-
-/* .bubble3 {
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 5s infinite;
-}
-
-.bubble4 {
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 4.5s infinite;
-} */
-
-/* .bubble5 {
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: float 8s ease-in-out infinite, blink 4s infinite;
-} */
-
 @keyframes float {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(-1rem) translateX(0);
   }
-
   50% {
     transform: translateY(1rem) translateX(0);
   }
 }
 
 @keyframes blink {
-
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
 }
-
 
 @keyframes textAnimation {
   0% {
     color: rgb(112, 222, 28);
     transform: scale(1);
   }
-
   50% {
     color: rgb(17, 13, 5);
     transform: scale(1.1);
   }
-
   100% {
     color: yellow;
     transform: scale(1);
@@ -311,7 +314,6 @@
   padding: 1rem;
   text-shadow: 0 0 1rem #000000, 0 0 2rem #000000, 0 0 3rem #000000;
   text-align: center;
-  animation: rise-up 2.6s ease-out forwards;
 }
 
 .applicationId {
@@ -325,32 +327,11 @@
   text-decoration: underline;
 }
 
-/* @media only screen and (min-width: 720px) {
-  .bubble10 {
-    left: 60vw;
-    top: 30vh;
-  }
-
-  .bubble2 {
-    top: 40vh;
-    left: 25vw;
-  }
-
-  .bubble3 {
-    top: 45vh;
-    left: 70vw;
-  }
-
-  .bubble4 {
-    top: 55vh;
-    left: 45vw;
-  }
-
-  .bubble5 {
-    top: 50vh;
-    left: 30vw;
-  }
-} */
+/* JavaScript will add this class to remove cursor */
+.cursorRemoved {
+  border-right: none !important;
+  animation: none !important;
+}
 
 @media only screen and (max-width: 1440px) {
   .heading1 {
@@ -387,35 +368,10 @@
     height: 0.8rem;
   }
 
-  /* .bubble10 {
-    top: 24vh;
-    left: 70vw;
-  }
-
-  .bubble2 {
-    top: 50vh;
-    left: 45vw;
-  }
-
-  .bubble3 {
-    top: 40vh;
-    left: 85vw;
-  }
-
-  .bubble4 {
-    top: 30vh;
-    left: 10vw;
-  }
-
-  .bubble5 {
-    top: 50vh;
-    left: 10vw;
-  }
-
   .homeContent {
     width: 100%;
     height: max-content;
-  } */
+  }
 
   .bgCoverImg {
     width: 100%;
@@ -467,31 +423,6 @@
     width: 20rem;
     cursor: pointer;
   }
-
-  /* .bubble10 {
-    top: 24vh;
-    left: 65vw;
-  }
-
-  .bubble2 {
-    top: 55vh;
-    left: 45vw;
-  }
-
-  .bubble3 {
-    top: 40vh;
-    left: 75vw;
-  }
-
-  .bubble4 {
-    top: 30vh;
-    left: 10vw;
-  }
-
-  .bubble5 {
-    top: 45vh;
-    left: 3vw;
-  } */
 
   .animated-cta-container {
     padding: 0.5rem;

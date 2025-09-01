@@ -7,6 +7,15 @@ export default function ParticlesBackground() {
       console.log("Particles.js config loaded");
     });
   }, []);
-
-  return <div id="particles-js" style={{ position: "fixed", width: "100%", height: "100%", backgroundColor: "#c2002f" }} />;
+  return (
+    <div
+      id="particles-js"
+      style={{
+        position: "fixed",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#000000"   // black background
+      }}
+    />
+  );
 }
