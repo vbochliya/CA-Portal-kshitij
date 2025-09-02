@@ -8,13 +8,13 @@ import Incentives from '../Incentives/incentive';
 import Contact from '../ContactUs/contact';
 import Footer from '../../components/footer/footer';
 // import ButtonUnstyled from '@mui/base/ButtonUnstyled';
-import Responsibility from '../Responsibility/responsibility';
+import Responsibility from '../Responsibility/ResponsibilityFuturistic';
 import { Link } from 'react-router-dom';
 
 function Home() {
     return (
         <div>
-            <Navbar />
+            <Navabr/>
             <div className={styles.container}>
                 <div className={styles.bg1}> 
                 <div className={styles.bg2}> <img src={bg}/>
