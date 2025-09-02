@@ -13,6 +13,7 @@
 }
 
 
+
 .heading{
     font-size: 4rem;
     padding-left: 1rem;
@@ -35,6 +36,7 @@
     border-style: solid;
     box-shadow: inset 1rem 0.5rem 2rem #ffffff6f,
                 inset -1rem -0.5rem 2rem #fff2006d;
+    z-index: 0;
 }
   
 p{
@@ -42,6 +44,7 @@ p{
     font-size: 1.8rem;
     text-align: justify;
     font-weight: 500;
+    
 }
 
 @media only screen and (max-width:1000px) {

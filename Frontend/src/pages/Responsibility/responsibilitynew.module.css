@@ -127,12 +127,14 @@
     /* border: 2px solid white; */
     color: white;
   }
+  .answer_container{
+    z-index: 0;
+  }
   .Responsibilities{
     display: flex;
     flex-direction: column;
     padding:0 50px;
     /* border: 2px solid white; */
-    background-color: black;
     overflow: hidden;
     /* border: 2px solid white; */
     color: white;
@@ -145,6 +147,7 @@
     font-size: 2rem;
     margin: 0 2rem;
     scroll-behavior: smooth;
+    z-index: 0;
     /* border: 2px solid white; */
     /* width: 250px; */
     transition: 1s;
@@ -157,6 +160,7 @@
     scroll-snap-type:x mandatory;
     scroll-behavior: smooth;
     transition: 1s ease;
+    z-index:0;
     /* border: 2px solid white; */
 
     
@@ -168,6 +172,7 @@
     align-items: center;
     font-size: 2rem;
     width: 100%;
+    z-index:0;
     padding:1rem 15rem; 
     animation:textanimation;
     animation-duration: 2s;
@@ -301,11 +306,13 @@
         overflow-x: scroll;
         scrollbar-width:none;
         margin: 0;
+        z-index: 2;
         /* border: 2px solid white; */
       }
       .Responsibility{
         /* flex-direction: column-reverse; */
         padding: 0;
+        z-index: 2;
       }
       .textbox{
         /* width: 100%; */
