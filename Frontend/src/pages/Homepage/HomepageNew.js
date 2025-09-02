@@ -6,7 +6,7 @@ import Navbar from '../../components/navbar/Navbarnew';
 import IncentivesNew from '../Incentives/incentive25';
 import Contact from '../ContactUs/contact';
 import Footer from '../../components/footer/footer';
-import Responsibility from '../Responsibility/responsibilitynew';
+import Responsibility from '../Responsibility/ResponsibilityFuturistic';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Faq from '../Faq/Faq';

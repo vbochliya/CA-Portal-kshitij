@@ -9,7 +9,7 @@ import Incentives from "../Incentives/incentive";
 import Contact from "../ContactUs/contact";
 import Footer from "../../components/footer/footer";
 // import ButtonUnstyled from '@mui/base/ButtonUnstyled';
-import Responsibility from "../Responsibility/responsibilitynew";
+import Responsibility from "../Responsibility/ResponsibilityFuturistic";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Faq from "../Faq/Faq";
