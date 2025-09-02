@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './HomepageNew.module.css'; // or './HomepageNew.module.scss' if using Option A
-import Navbar from '../../components/navbar/Navbarnew';
+import Navbar from '../../components/navbar/Navbarags';
 import About from '../About/aboutnew';
 import CarouselComponent from '../Carousel/car';
 import IncentivesNew from '../Incentives/incentive25';
 import Contact from '../ContactUs/contact';
 import Footer from '../../components/footer/footer';
 
-import Responsibility from '../Responsibility/responsibilitynew';
 import Responsibility from '../Responsibility/ResponsibilityFuturistic';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -15,7 +14,6 @@ import { Link } from 'react-router-dom';
 import Faq from '../Faq/Faq';
 import CompanyIncentives from '../companyIncentives/CompanyIncentives';
 import Api from '../../API/Api';
-import { Link } from 'react-router-dom';
 
 function Home() {
   const [auth, setAuth] = useState(false);

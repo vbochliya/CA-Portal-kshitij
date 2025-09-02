@@ -99,7 +99,6 @@
     margin-bottom: 4rem;
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     position: relative;
     z-index: 3;
@@ -107,90 +106,17 @@
 }
 
 .titleGlow {
-    background: linear-gradient(135deg, 
-        #ff3131 0%, 
-        #ffffff 20%, 
-        #da2520 40%, 
-        #ff4040 60%, 
-        #ffffff 80%, 
-        #ff3131 100%);
-    background-size: 300% 300%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: titleFlow 3s ease-in-out infinite, titlePulse 2s ease-in-out infinite alternate;
+    color: #ffffff;
     position: relative;
     display: inline-block;
 }
 
 .titleGlow::before {
-    content: 'RESPONSIBILITIES';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: linear-gradient(135deg, #ff3131, #da2520);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: blur(10px);
-    opacity: 0.7;
-    animation: titleShadow 2s ease-in-out infinite alternate;
+    display: none;
 }
 
 .titleGlow::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: linear-gradient(45deg, 
-        transparent 30%, 
-        rgba(255, 49, 49, 0.1) 50%, 
-        transparent 70%);
-    border-radius: 20px;
-    z-index: -2;
-    animation: titleAura 4s ease-in-out infinite;
-}
-
-@keyframes titleFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes titlePulse {
-    0% { 
-        filter: drop-shadow(0 0 10px rgba(255, 49, 49, 0.5));
-        transform: scale(1);
-    }
-    100% { 
-        filter: drop-shadow(0 0 30px rgba(255, 49, 49, 0.9));
-        transform: scale(1.02);
-    }
-}
-
-@keyframes titleShadow {
-    0% { 
-        transform: translate(5px, 5px) scale(1.02);
-        opacity: 0.3;
-    }
-    100% { 
-        transform: translate(-5px, -5px) scale(1.05);
-        opacity: 0.7;
-    }
-}
-
-@keyframes titleAura {
-    0%, 100% { 
-        opacity: 0.2;
-        transform: rotate(0deg) scale(1);
-    }
-    50% { 
-        opacity: 0.5;
-        transform: rotate(1deg) scale(1.1);
-    }
+    display: none;
 }
 
 /* Main section layout */

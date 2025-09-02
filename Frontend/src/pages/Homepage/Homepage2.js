@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './Homepage.module.css';
 import About from '../About/about';
 import CarouselComponent from '../Carousel/car';
-import Navbar from '../../components/navbar/navbar';
+import Navbar from '../../components/navbar/Navbarags';
 import bg from "../../images/bg.png"
-import Incentives from '../Incentives/incentive';
+import Incentives from '../Incentives/incentive25';
 import Contact from '../ContactUs/contact';
 import Footer from '../../components/footer/footer';
 // import ButtonUnstyled from '@mui/base/ButtonUnstyled';
