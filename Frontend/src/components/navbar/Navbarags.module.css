@@ -1,0 +1,394 @@
+:root {
+    --brand-red: rgb(255, 49, 49);
+    --brand-red-dark: rgb(218, 37, 32);
+    --text: #ffffff;
+    --text-gray: #c9c9c9;
+    --bar-bg: rgba(15, 15, 15, 0.95);
+    --ease-spring: cubic-bezier(.22, .61, .36, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#about,
+#resp,
+#inc,
+#companyInc,
+#testimonials,
+#contact {
+    scroll-margin-top: 80px;
+}
+
+/* Shell */
+.navbarWrapper {
+    position: fixed;
+    top: 14px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .6rem;
+    padding: 0.45rem 1rem;
+    border-radius: 10px;
+    background: transparent;
+    width: 94%;
+    max-width: 1250px;
+    transition: background .3s var(--ease-spring), box-shadow .3s var(--ease-spring);
+}
+
+.scrolled {
+    background: #000;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .42);
+}
+
+/* Backdrop covers the rest of the page */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .28s ease;
+    z-index: 1100;
+}
+
+.showBackdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    text-decoration: none;
+}
+
+.brandImg {
+    width: clamp(64px, 7.2vw, 108px);
+    height: clamp(64px, 7.2vw, 108px);
+    object-fit: contain;
+}
+
+.navbar .brandText {
+    font-size: clamp(2.6rem, 4.8vw, 3.6rem);
+    letter-spacing: .09em;
+    line-height: 1.12;
+}
+
+/* Links */
+.links {
+    display: none;
+    align-items: center;
+    gap: 1.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    height: 36px;
+    line-height: 1.1;
+    padding: 0 .3rem;
+    transition: color .22s ease-out, text-shadow .22s ease-out;
+}
+
+.links a:hover {
+    color: var(--text-gray);
+    text-shadow: none;
+}
+
+.links a.active {
+    color: var(--text-gray);
+}
+
+/* Buttons */
+:where(.btnPrimary, .btnOutline) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    padding: 0 .95rem;
+    border-radius: 0;
+    font-weight: 800;
+    letter-spacing: .02em;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        background-color .25s var(--ease-spring),
+        color .25s var(--ease-spring),
+        border-color .25s var(--ease-spring),
+        box-shadow .30s var(--ease-spring),
+        transform .15s var(--ease-spring);
+}
+
+.btnPrimary {
+    background: var(--brand-red);
+    color: #fff;
+    border: 2px solid var(--brand-red);
+    box-shadow: 0 6px 18px rgba(255, 49, 49, .26);
+}
+
+.btnPrimary:hover {
+    background: transparent;
+    color: var(--brand-red);
+    border-color: var(--brand-red);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(255, 49, 49, .3);
+}
+
+.btnOutline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid var(--brand-red);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, .25);
+}
+
+.btnOutline:hover {
+    background: var(--brand-red);
+    color: #fff;
+    border-color: var(--brand-red-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(255, 49, 49, .32);
+}
+
+.signInFixed {
+    background: var(--brand-red);
+    color: #fff;
+    border-color: var(--brand-red);
+}
+
+.signInFixed:hover {
+    background: var(--brand-red);
+    color: #fff;
+    border-color: var(--brand-red-dark);
+    transform: translateY(-1px);
+}
+
+/* Hamburger + drawer */
+.hamburger {
+    display: block;
+    font-size: 1.75rem;
+    color: var(--text);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Drawer widened; positioned context for close button */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    max-width: 460px;
+    height: 100%;
+    background: #1f1f1f;
+    padding: 1.2rem 1rem 1.4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    transform: translateX(-106%);
+    opacity: 0;
+    transition: transform .42s var(--ease-spring), opacity .28s ease-out;
+    z-index: 1200;
+}
+
+.showMenu {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Close 'X' button inside drawer */
+.drawerClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* anchored to the fixed drawer */
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .18);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.drawerClose:hover {
+    background: rgba(255, 255, 255, .12);
+    border-color: rgba(255, 255, 255, .28);
+}
+
+.drawerClose svg {
+    font-size: 20px;
+    pointer-events: none;
+}
+
+/* Staggered entrance for drawer links */
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* define keyframes for stagger animation [1] */
+
+.staggerList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+.staggerList>li {
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    animation: slideFadeIn .36s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+/* run once as items mount [2] */
+.staggerList>li:nth-child(1) {
+    animation-delay: .03s;
+}
+
+.staggerList>li:nth-child(2) {
+    animation-delay: .06s;
+}
+
+.staggerList>li:nth-child(3) {
+    animation-delay: .09s;
+}
+
+.staggerList>li:nth-child(4) {
+    animation-delay: .12s;
+}
+
+.staggerList>li:nth-child(5) {
+    animation-delay: .15s;
+}
+
+.staggerList>li:nth-child(6) {
+    animation-delay: .18s;
+}
+
+.staggerList>li:nth-child(7) {
+    animation-delay: .21s;
+}
+
+.staggerList>li:nth-child(8) {
+    animation-delay: .24s;
+}
+
+.staggerList>li:nth-child(9) {
+    animation-delay: .27s;
+}
+
+.staggerList>li:nth-child(10) {
+    animation-delay: .30s;
+}
+
+/* delays via nth-child [14] */
+
+.staggerList a {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: clamp(1.05rem, 3.3vw, 1.35rem);
+    line-height: 1.2;
+    padding: 0 .25rem;
+    transition: color .22s ease-out;
+}
+
+.staggerList a:hover {
+    color: var(--text-gray);
+}
+
+.staggerList a.active {
+    color: var(--text-gray);
+}
+
+/* Phone tweaks */
+@media (max-width: 650px) {
+    .mobileMenu {
+        width: 94%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .mobileMenu {
+        width: 100%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 0.5rem 1.6rem;
+        width: 92%;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+
+    .brandImg {
+        width: clamp(60px, 5.5vw, 96px);
+        height: clamp(60px, 5.5vw, 96px);
+    }
+
+    .brandText {
+        font-size: clamp(1.35rem, 1.7vw, 1.9rem);
+    }
+}
