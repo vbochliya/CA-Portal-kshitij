@@ -1,75 +1,319 @@
 .card {
   display: flex;
-  /* box-sizing: border-box; */
-  border-radius: 0.5rem;
-  /* grid-template-columns: 1fr; */
-  /* grid-template-rows: 4fr repeat(4,1fr); */
+  border-radius: 1.5rem;
   align-items: center;
   justify-items: center;
-  background: #d9d9d933;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  border: 1px solid rgba(255, 69, 58, 0.3);
   text-align: center;
-  padding: 2rem 4rem;
+  padding: 3rem 4rem; /* Increased top-down padding */
   transition: all 0.3s;
   z-index: 20;
   width: 40rem;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 3rem;
+  position: relative;
+  overflow: hidden;
+  
+  /* Initial state - hidden and positioned */
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.8s ease-out forwards;
 }
 
+/* Futuristic tech pattern with red/orange elements */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 69, 58, 0.1) 1px, transparent 2px),
+    radial-gradient(circle at 80% 30%, rgba(255, 149, 0, 0.08) 1px, transparent 2px),
+    radial-gradient(circle at 60% 70%, rgba(255, 69, 58, 0.06) 1px, transparent 2px),
+    linear-gradient(45deg, transparent 48%, rgba(255, 69, 58, 0.02) 49%, rgba(255, 69, 58, 0.02) 51%, transparent 52%);
+  background-size: 60px 60px, 80px 80px, 50px 50px, 100px 100px;
+  z-index: 1;
+}
+
+/* Network connection lines */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background-image: 
+    linear-gradient(45deg, transparent 40%, rgba(255, 69, 58, 0.15) 41%, rgba(255, 69, 58, 0.15) 42%, transparent 43%),
+    linear-gradient(-45deg, transparent 40%, rgba(255, 149, 0, 0.1) 41%, rgba(255, 149, 0, 0.1) 42%, transparent 43%);
+  background-size: 120px 120px, 80px 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hover effect with red glow */
 .card:hover {
   transform: translateY(-3.6rem) scale(1.01);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 69, 58, 0.2),
+    inset 0 1px 0 rgba(255, 69, 58, 0.1);
+  border-color: rgba(255, 69, 58, 0.6);
 }
+
+/* Tech corner accents */
+.card .tech-accent {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 69, 58, 0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card .tech-accent.top-left {
+  top: 15px;
+  left: 15px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.card .tech-accent.top-right {
+  top: 15px;
+  right: 15px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.card .tech-accent.bottom-left {
+  bottom: 15px;
+  left: 15px;
+  border-right: none;
+  border-top: none;
+}
+
+.card .tech-accent.bottom-right {
+  bottom: 15px;
+  right: 15px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Alternate cards come from right */
+.card:nth-child(even) {
+  transform: translateX(100px);
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Add staggered delay for multiple cards */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
 
 .name {
   font-size: 2.5rem;
   grid-row: 2/3;
   color: #ffffff;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s ease 0.1s;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.card:hover .name {
+  transform: translateY(-8px);
+  text-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 69, 58, 0.3);
+  color: #ff453a;
 }
 
 .job {
   font-size: 2rem;
   grid-row: 3/4;
+  color: #cccccc;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s ease 0.2s;
+  position: relative;
+  z-index: 10;
+}
+
+.card:hover .job {
+  transform: translateY(-6px);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   color: #ffffff;
 }
 
 .icons {
   color: #ffffff;
-
   font-size: 3.5rem;
+  transform: translateY(0);
+  transition: all 0.4s ease 0.3s;
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.card:hover .icons {
+  transform: translateY(-4px);
 }
 
 .num {
   font-size: 2rem;
+  color: #cccccc;
+  transform: translateY(0);
+  transition: all 0.4s ease 0.25s;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+/* Telephone handset icon using SVG */
+.num::before {
+  content: '';
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff453a'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 0 5px rgba(255, 69, 58, 0.3));
+  transition: all 0.3s ease;
+}
+
+.card:hover .num {
+  transform: translateY(-5px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #ffffff;
 }
 
+.card:hover .num::before {
+  filter: drop-shadow(0 0 10px rgba(255, 69, 58, 0.5));
+  transform: scale(1.1);
+}
+
 .circle {
-  /* box-sizing: border-box; */
   border-radius: 30rem;
-  background: grey;
+  background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
   background-position: center;
   background-size: cover;
   height: 15rem;
   width: 15rem;
   align-self: center;
   grid-row: 1/2;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  border: 2px solid rgba(255, 69, 58, 0.3);
 }
+
 .circle img {
   height: 15rem;
   width: 15rem;
   border-radius: 30rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover .circle {
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 69, 58, 0.4);
+  border-color: rgba(255, 69, 58, 0.8);
 }
 
 .icons a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   opacity: 0.8;
   transition: all 0.25s;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
 }
 
 .icons a:hover {
   opacity: 1;
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Gmail Icon - Google Red */
+.icons a[href*="gmail"],
+.icons a[href*="mail"] {
+  color: #ea4335;
+}
+
+.icons a[href*="gmail"]:hover,
+.icons a[href*="mail"]:hover {
+  background: rgba(234, 67, 53, 0.1);
+  border-color: rgba(234, 67, 53, 0.3);
+  box-shadow: 0 0 10px rgba(234, 67, 53, 0.2);
+}
+
+/* Facebook Icon - Facebook Blue */
+.icons a[href*="facebook"],
+.icons a[href*="fb"] {
+  color: #1877f2;
+}
+
+.icons a[href*="facebook"]:hover,
+.icons a[href*="fb"]:hover {
+  background: rgba(24, 119, 242, 0.1);
+  border-color: rgba(24, 119, 242, 0.3);
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.2);
+}
+
+/* LinkedIn Icon - LinkedIn Blue */
+.icons a[href*="linkedin"] {
+  color: #0a66c2;
+}
+
+.icons a[href*="linkedin"]:hover {
+  background: rgba(10, 102, 194, 0.1);
+  border-color: rgba(10, 102, 194, 0.3);
+  box-shadow: 0 0 10px rgba(10, 102, 194, 0.2);
+}
+
+/* Keyframe animations for smooth entry */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 1380px) {
@@ -77,4 +321,18 @@
     width: 85%;
     margin: 1.4rem 0 1.4rem 0;
   }
+}
+
+.cov {
+  padding-top: 10vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem; /* Reduced from 5rem to 2rem */
+  padding-bottom: 20rem;
+  flex-wrap: wrap;
 }

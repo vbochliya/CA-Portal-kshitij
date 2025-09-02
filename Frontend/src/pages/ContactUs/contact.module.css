@@ -4,9 +4,9 @@
 
 .main{
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Changed from space-around to center */
     padding: 2rem;
-    gap: 5rem;
+    gap: 20rem; /* This will now work as expected */
     padding-bottom: 20rem;
     flex-wrap: wrap;
 }
