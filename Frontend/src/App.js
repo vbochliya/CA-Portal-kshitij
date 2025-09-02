@@ -7,6 +7,7 @@ import './App.css';
 import Home from './pages/Homepage/Homepage';
 import Home2 from './pages/Homepage/Homepage2'
 import HomeNew from './pages/Homepage/HomepageNew'
+import Homeags from './pages/Homepage/Homepageags';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUp from './pages/SignIn_New/SignUp';
 import SignIn from './pages/SignIn_New/SignIn';
@@ -54,7 +55,7 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomeNew />} />
+        <Route path='/' element={<Homeags />} />
         <Route path='/SignUp' getMessage={({ params }) => params.message} element={<SignUp />} />
         <Route path='/SignIn' element={<SignIn />} />
         <Route path='/Profile' element={<ProfileEdit />} />

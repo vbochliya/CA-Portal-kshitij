@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div>
-            <Navbar />
+            <Navabr/>
             <div className={styles.container}>
                 <div className={styles.bg1}> 
                 <div className={styles.bg2}> <img src={bg}/>
