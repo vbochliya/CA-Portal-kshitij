@@ -14,10 +14,10 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div>
-            <Navabr/>
+            <Navbar />
             <div className={styles.container}>
                 <div className={styles.bg1}> 
-                <div className={styles.bg2}> <img src={bg}/>
+                <div className={styles.bg2}> <img src={bg} alt="background"/>
                 </div>
                 <div className={styles.bg}> 
                 <h2 className ={styles.head2}> You are Registered Successfully </h2>
