@@ -14,7 +14,6 @@
   font-size: 2rem;
   cursor: pointer;
 
-  /* Customize your color here */
   --btn-color: #ff4d4d;
   --btn-text-color: #ffecec;
 
@@ -48,18 +47,18 @@
   height: 20px;
   border-radius: 50%;
   background-color: var(--btn-color);
-  z-index: 0; /* behind text */
+  z-index: 0;
   opacity: 0.85;
   transform: translate(-50%, -50%) scale(1);
   pointer-events: none;
 }
 
 .btn11::before {
-  left: -20px; /* start outside left edge */
+  left: -20px;
 }
 
 .btn11::after {
-  left: calc(100% + 20px); /* start outside right edge */
+  left: calc(100% + 20px); 
 }
 
 .btn11:hover::before {

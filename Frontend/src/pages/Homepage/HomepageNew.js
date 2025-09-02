@@ -133,7 +133,6 @@ function Home() {
                     <span className="btn-main-icon-block is-top" />
                     <span className="btn-main-icon-block is-right" />
                     <span className="btn-main-icon-block is-bottom" />
-
                     <span className={styles.reg}>Register for CA Programme</span>
                   </button>
                 </Link>
