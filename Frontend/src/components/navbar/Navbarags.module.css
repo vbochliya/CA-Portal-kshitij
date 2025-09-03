@@ -5,12 +5,19 @@
     --text-gray: #c9c9c9;
     --bar-bg: rgba(15, 15, 15, 0.95);
     --ease-spring: cubic-bezier(.22, .61, .36, 1);
+    --header-offset: 80px;
+    --navbar-top: 3rem;
+    --transition-fast: .22s;
+    --transition-medium: .28s;
+    --transition-slow: .42s;
 }
 
+/* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
 }
 
+/* Section scroll margins for fixed header */
 #home,
 #about,
 #resp,
@@ -18,41 +25,48 @@ html {
 #companyInc,
 #testimonials,
 #contact {
-    scroll-margin-top: 80px;
+    scroll-margin-top: var(--header-offset);
 }
 
-/* Shell */
+/* Navbar wrapper */
 .navbarWrapper {
     position: fixed;
-    top: 14px;
+    top: var(--navbar-top);
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     z-index: 1000;
+    transition-duration: 0.4s;
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: .6rem;
-    padding: 0.45rem 1rem;
+    gap: .8rem;
+    /* padding: 0.45rem 1rem; */
     border-radius: 10px;
     background: transparent;
-    width: 94%;
-    max-width: 1250px;
-    transition: background .3s var(--ease-spring), box-shadow .3s var(--ease-spring);
+    width: 98%;
+    max-width: 1300px;
+    transition: 
+        background .3s var(--ease-spring), 
+        box-shadow .3s var(--ease-spring),
+        width .4s var(--ease-spring);
 }
 
-.scrolled {
-    background: #000;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+.navbar.scrolled {
+    background: #151515;
+    width: 83%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .42);
 }
+.scrolled2{
+    top: 1.5rem;
+    /* transition-duration: 0.4s; */
+}
 
-/* Backdrop covers the rest of the page */
+/* Backdrop overlay */
 .backdrop {
     position: fixed;
     inset: 0;
@@ -61,16 +75,16 @@ html {
     -webkit-backdrop-filter: blur(2px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity .28s ease;
+    transition: opacity var(--transition-medium) ease;
     z-index: 1100;
 }
 
-.showBackdrop {
+.backdrop.showBackdrop {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Brand */
+/* Brand logo and text */
 .brand {
     display: flex;
     align-items: center;
@@ -84,13 +98,14 @@ html {
     object-fit: contain;
 }
 
-.navbar .brandText {
+.brandText {
     font-size: clamp(2.6rem, 4.8vw, 3.6rem);
     letter-spacing: .09em;
     line-height: 1.12;
+    color: var(--text);
 }
 
-/* Links */
+/* Navigation links */
 .links {
     display: none;
     align-items: center;
@@ -98,7 +113,6 @@ html {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
 }
 
 .links li {
@@ -112,33 +126,32 @@ html {
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
-    height: 36px;
     line-height: 1.1;
     padding: 0 .3rem;
-    transition: color .22s ease-out, text-shadow .22s ease-out;
+    transition: 
+        color var(--transition-fast) ease-out, 
+        text-shadow var(--transition-fast) ease-out;
 }
 
-.links a:hover {
-    color: var(--text-gray);
+.links a:hover,
+.links a.active {
+    color: var(--brand-red);
     text-shadow: none;
 }
 
-.links a.active {
-    color: var(--text-gray);
-}
-
-/* Buttons */
-:where(.btnPrimary, .btnOutline) {
+/* Button styles */
+.btnPrimary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 34px;
-    padding: 0 .95rem;
-    border-radius: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 4rem;
+    width: 8rem;
     font-weight: 800;
     letter-spacing: .02em;
-    line-height: 1;
     text-decoration: none;
+    background-color: var(--brand-red);
     transition:
         background-color .25s var(--ease-spring),
         color .25s var(--ease-spring),
@@ -148,49 +161,28 @@ html {
 }
 
 .btnPrimary {
-    background: var(--brand-red);
+    /* background-color: var(--brand-red); */
     color: #fff;
-    border: 2px solid var(--brand-red);
-    box-shadow: 0 6px 18px rgba(255, 49, 49, .26);
+    /* box-shadow: 0 6px 18px rgba(255, 49, 49, .26); */
 }
 
 .btnPrimary:hover {
-    background: transparent;
+    background-color: rgba(0, 0, 0, 0);
     color: var(--brand-red);
-    border-color: var(--brand-red);
     transform: translateY(-1px);
-    box-shadow: 0 8px 22px rgba(255, 49, 49, .3);
-}
-
-.btnOutline {
-    background: transparent;
-    color: #fff;
-    border: 2px solid var(--brand-red);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, .25);
+    outline: 2px solid var(--brand-red);
 }
 
 .btnOutline:hover {
-    background: var(--brand-red);
-    color: #fff;
+    background: none;
     border-color: var(--brand-red-dark);
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(255, 49, 49, .32);
+    /* box-shadow: 0 10px 24px rgba(255, 49, 49, .32); */
 }
 
-.signInFixed {
-    background: var(--brand-red);
-    color: #fff;
-    border-color: var(--brand-red);
-}
 
-.signInFixed:hover {
-    background: var(--brand-red);
-    color: #fff;
-    border-color: var(--brand-red-dark);
-    transform: translateY(-1px);
-}
 
-/* Hamburger + drawer */
+/* Hamburger menu button */
 .hamburger {
     display: block;
     font-size: 1.75rem;
@@ -198,9 +190,15 @@ html {
     background: transparent;
     border: none;
     cursor: pointer;
+    padding: .5rem;
+    transition: opacity var(--transition-fast) ease;
 }
 
-/* Drawer widened; positioned context for close button */
+.hamburger:hover {
+    opacity: .8;
+}
+
+/* Mobile menu drawer */
 .mobileMenu {
     position: fixed;
     top: 0;
@@ -209,27 +207,28 @@ html {
     max-width: 460px;
     height: 100%;
     background: #1f1f1f;
-    padding: 1.2rem 1rem 1.4rem 1rem;
+    padding: 1.2rem 1rem 1.4rem;
     display: flex;
     flex-direction: column;
     gap: .8rem;
     transform: translateX(-106%);
     opacity: 0;
-    transition: transform .42s var(--ease-spring), opacity .28s ease-out;
+    transition: 
+        transform var(--transition-slow) var(--ease-spring), 
+        opacity var(--transition-medium) ease-out;
     z-index: 1200;
 }
 
-.showMenu {
+.mobileMenu.showMenu {
     transform: translateX(0);
     opacity: 1;
 }
 
-/* Close 'X' button inside drawer */
+/* Close button inside drawer */
 .drawerClose {
     position: absolute;
     top: 10px;
     right: 10px;
-    /* anchored to the fixed drawer */
     z-index: 1;
     width: 36px;
     height: 36px;
@@ -241,7 +240,9 @@ html {
     border: 2px solid rgba(255, 255, 255, .18);
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    transition: 
+        background-color .2s ease, 
+        border-color .2s ease;
 }
 
 .drawerClose:hover {
@@ -254,20 +255,17 @@ html {
     pointer-events: none;
 }
 
-/* Staggered entrance for drawer links */
+/* Stagger animation for drawer items */
 @keyframes slideFadeIn {
     from {
         opacity: 0;
         transform: translateY(8px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-/* define keyframes for stagger animation [1] */
 
 .staggerList {
     list-style: none;
@@ -279,55 +277,24 @@ html {
     width: 100%;
 }
 
-.staggerList>li {
+.staggerList > li {
     display: flex;
     width: 100%;
     opacity: 0;
-    animation: slideFadeIn .36s cubic-bezier(.22, .61, .36, 1) both;
+    animation: slideFadeIn .36s var(--ease-spring) both;
 }
 
-/* run once as items mount [2] */
-.staggerList>li:nth-child(1) {
-    animation-delay: .03s;
-}
-
-.staggerList>li:nth-child(2) {
-    animation-delay: .06s;
-}
-
-.staggerList>li:nth-child(3) {
-    animation-delay: .09s;
-}
-
-.staggerList>li:nth-child(4) {
-    animation-delay: .12s;
-}
-
-.staggerList>li:nth-child(5) {
-    animation-delay: .15s;
-}
-
-.staggerList>li:nth-child(6) {
-    animation-delay: .18s;
-}
-
-.staggerList>li:nth-child(7) {
-    animation-delay: .21s;
-}
-
-.staggerList>li:nth-child(8) {
-    animation-delay: .24s;
-}
-
-.staggerList>li:nth-child(9) {
-    animation-delay: .27s;
-}
-
-.staggerList>li:nth-child(10) {
-    animation-delay: .30s;
-}
-
-/* delays via nth-child [14] */
+/* Stagger delays using nth-child */
+.staggerList > li:nth-child(1) { animation-delay: .03s; }
+.staggerList > li:nth-child(2) { animation-delay: .06s; }
+.staggerList > li:nth-child(3) { animation-delay: .09s; }
+.staggerList > li:nth-child(4) { animation-delay: .12s; }
+.staggerList > li:nth-child(5) { animation-delay: .15s; }
+.staggerList > li:nth-child(6) { animation-delay: .18s; }
+.staggerList > li:nth-child(7) { animation-delay: .21s; }
+.staggerList > li:nth-child(8) { animation-delay: .24s; }
+.staggerList > li:nth-child(9) { animation-delay: .27s; }
+.staggerList > li:nth-child(10) { animation-delay: .30s; }
 
 .staggerList a {
     display: inline-flex;
@@ -339,18 +306,15 @@ html {
     font-size: clamp(1.05rem, 3.3vw, 1.35rem);
     line-height: 1.2;
     padding: 0 .25rem;
-    transition: color .22s ease-out;
+    transition: color var(--transition-fast) ease-out;
 }
 
-.staggerList a:hover {
-    color: var(--text-gray);
-}
-
+.staggerList a:hover,
 .staggerList a.active {
     color: var(--text-gray);
 }
 
-/* Phone tweaks */
+/* Responsive styles */
 @media (max-width: 650px) {
     .mobileMenu {
         width: 94%;
@@ -364,7 +328,7 @@ html {
     }
 }
 
-/* Desktop */
+/* Desktop styles */
 @media (min-width: 1200px) {
     .navbar {
         padding: 0.5rem 1.6rem;
@@ -375,10 +339,7 @@ html {
         display: flex;
     }
 
-    .hamburger {
-        display: none;
-    }
-
+    .hamburger,
     .mobileMenu {
         display: none;
     }
