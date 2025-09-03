@@ -7,12 +7,13 @@ import IncentivesNew from '../Incentives/incentive25';
 import Incentives26 from '../Incentives/Incentives26/Incentives26';
 import Contact from '../ContactUs/contact';
 import Footer from '../../components/footer/footer';
-
+import Footer26 from '../../components/footer/Footer26';
 import Responsibility from '../Responsibility/ResponsibilityFuturistic';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import Faq from '../Faq/Faq';
+import Faq26 from '../Faq/Faq26';
 import CompanyIncentives from '../companyIncentives/CompanyIncentives';
 import Api from '../../API/Api';
 
@@ -150,11 +151,12 @@ function Home() {
         <div id="inc" className={styles.scroll}><Incentives26/></div>
         <div id="companyInc" className={styles.scroll}><CompanyIncentives /></div>
         <div id="testimonials" className={styles.scroll}><CarouselComponent /></div>
-        <div id="faq"><Faq /></div>
+        {/* <div id="faq"><Faq /></div> */}
+        <div id="faq" className={`${styles.faq}`}><Faq26 /></div>
         <div id="contact" className={styles.scroll}><Contact /></div>
       </div>
 
-      <Footer />
+      <Footer26 />
     </div>
   );
 }
