@@ -475,3 +475,11 @@ z-index: 0;
     margin: 0.1rem;
   }
 }
+
+
+.faq {
+  /* width: 70%; */
+  margin: 4rem auto;
+  z-index: 5;
+  position: relative; 
+}
