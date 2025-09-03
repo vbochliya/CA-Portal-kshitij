@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './HomepageNew.module.css'; // or './HomepageNew.module.scss' if using Option A
 import Navbar from '../../components/navbar/Navbarags';
-import About from '../About/aboutnew';
+// import About from '../About/aboutnew';
+import About from '../About/About26';
 import CarouselComponent from '../Carousel/car';
 import IncentivesNew from '../Incentives/incentive25';
 import Incentives26 from '../Incentives/Incentives26/Incentives26';
@@ -146,7 +147,7 @@ function Home() {
           </div>
         </div>
 
-        <div id="about" className={styles.scroll}><About /></div>
+        <div id="about" className={`${styles.scroll} ${styles.about}`}><About /></div>
         <div id="resp" className={styles.scroll}><Responsibility /></div>
         <div id="inc" className={styles.scroll}><Incentives26/></div>
         <div id="companyInc" className={styles.scroll}><CompanyIncentives /></div>
