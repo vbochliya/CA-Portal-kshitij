@@ -74,19 +74,19 @@ function Footer26() {
           <div className={classes.social}>
             <ul>
               <li>
-                <a href='https://www.facebook.com/ktj.iitkgp' target="_blank" className='Bs'><BsFacebook  size={30} className={classes.ii} /></a>
+                <a href='https://www.facebook.com/ktj.iitkgp' target="_blank" className='Bs'><BsFacebook  size={21} className={classes.ii} /></a>
               </li>
               <li>
-                <a href='https://www.instagram.com/ktj.iitkgp/' target="_blank" className='Bs'><BsInstagram size={30} className={classes.ii} /></a>
+                <a href='https://www.instagram.com/ktj.iitkgp/' target="_blank" className='Bs'><BsInstagram size={21} className={classes.ii} /></a>
               </li>
               <li>
-                <a  href='https://twitter.com/ktj_iitkgp' target="_blank" className='Bs'><BsTwitter size={30}  className={classes.ii}/></a>
+                <a  href='https://twitter.com/ktj_iitkgp' target="_blank" className='Bs'><BsTwitter size={21}  className={classes.ii}/></a>
               </li>
               <li>
-                <a  href='https://www.linkedin.com/company/kshitij-iit-kharagpur/' target="_blank" className='Bs'><BsLinkedin size={30} className={classes.ii} /></a>
+                <a  href='https://www.linkedin.com/company/kshitij-iit-kharagpur/' target="_blank" className='Bs'><BsLinkedin size={21} className={classes.ii} /></a>
               </li>
               <li>
-                <a  href='https://www.youtube.com/ktjiitkgp' target="_blank" className='Bs'><BsYoutube size={30} className={classes.ii} /></a>
+                <a  href='https://www.youtube.com/ktjiitkgp' target="_blank" className='Bs'><BsYoutube size={21} className={classes.ii} /></a>
               </li>
             </ul>
           </div>
