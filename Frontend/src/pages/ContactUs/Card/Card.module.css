@@ -322,6 +322,23 @@
     margin: 1.4rem 0 1.4rem 0;
   }
 }
+@media (max-width: 500px) {
+    .card {
+    width: 85%;
+    margin: .25rem 0 .25rem 0;
+    padding: 2.5rem;
+  }
+  .icons {
+    font-size: 2.5rem;
+    gap: 1rem;
+  }
+.name {
+  font-size: 2rem;
+}
+.job {
+  font-size: 1.5rem;
+}
+}
 
 .cov {
   padding-top: 10vh;

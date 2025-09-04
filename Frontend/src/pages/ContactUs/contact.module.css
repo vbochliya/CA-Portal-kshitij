@@ -1,12 +1,24 @@
 .cov{
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .main{
     display: flex;
     justify-content: center; /* Changed from space-around to center */
     padding: 2rem;
-    gap: 20rem; /* This will now work as expected */
+    gap: 10rem; /* This will now work as expected */
     padding-bottom: 20rem;
     flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+    .cov{
+    padding-top: 0;
+}
+    .main {
+        padding: .15rem;
+        gap: 5rem;
+        padding-bottom: 5rem;
+    }
+    
 }
