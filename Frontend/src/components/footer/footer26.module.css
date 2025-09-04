@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  background: linear-gradient(135deg, #0a0a0a 0%, rgb(49, 22, 22) 48%, rgb(49, 22, 22) 52%,  #000000 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, rgb(49, 22, 22) 80%, rgb(49, 22, 22) 100%,  #000000 100%);
   min-height: 80vh;
   width: 100%;
   margin: 0;
@@ -77,20 +77,20 @@
   background: rgba(255, 49, 49, 0.1);
   border: 1px solid rgba(255, 49, 49, 0.3);
   border-radius: 25px;
-  padding: 0.5rem 1.5rem;
-  width: fit-content;
+  padding: 1rem 2rem;
+  width: max-content;
   z-index: 10;
 }
 
 .logo img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
 .logo span {
   color: rgb(255, 49, 49);
-  font-size: 0.9rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 
@@ -115,9 +115,8 @@
 /* Footer bottom section - Contact Cards */
 .footdown {
   position: absolute;
-
   bottom: 2rem;
-  left: 3rem;
+  left: 10%;
   right: 3rem;
   display: flex;
   flex-direction: column;
@@ -133,36 +132,22 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 1.4rem;
+  padding: .5rem;
   display: flex;
-  width: 50%;
-  height: 8rem;
+  width: 40%;
+  height: 5rem;
   align-items: center;
+  justify-content: center;
   gap: 7%;
   transition: all 0.3s ease;
   cursor: pointer;
   margin: 0 0 0.5rem 0;
 }
-
 .social:hover,
 .copy:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 49, 49, 0.8);
   transform: translateX(5px);
-}
-
-/* Contact card icons with red colors */
-.social::before {
-  content: '📧';
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 49, 49, 0.2);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(255, 49, 49);
-  font-size: 2.1rem;
 }
 
 .copy::before {
@@ -184,6 +169,8 @@
   flex-direction: row;
   gap: 13%;
   list-style: none;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   flex: 1;
@@ -297,9 +284,7 @@
   }
    .social,
   .copy {
-    margin-left: 18px;
     padding:  1rem;
-      background: rgba(255, 255, 255, 0.05);
     width: 47%;
   }
   
@@ -310,13 +295,8 @@
 
   .footdown {
     bottom: 4rem;
-    left: 2rem;
+    left: 5%;
     right: 2rem;
-  }
-
-  .logo img {
-    width: 25px;
-    height: 25px;
   }
 }
 
@@ -346,17 +326,14 @@
   }
    .social,
   .copy {
-    margin-left: 18px;
-    padding: 2rem;
-      background: rgba(255, 255, 255, 0.05);
-    width: 95%;
+    background: rgba(255, 255, 255, 0.05);
+    width: 75%;
   }
   
   .footdown {
     position: relative;
     bottom: auto;
-    left: auto;
-    right: auto;
+align-items: center;
     margin-top: 2rem;
   }
 
@@ -371,7 +348,7 @@
   }
 
   .logo span {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
@@ -392,9 +369,8 @@
   
   .social,
   .copy {
-    padding: 1rem;
-   background: rgba(255, 255, 255, 0.05);
-    width: 100%;
+    padding: .25rem;
+    width: 95%;
   }
   
   .forms input,
@@ -403,18 +379,10 @@
   }
 
   .footdown {
-    left: 1.5rem;
-    right: 1.5rem;
+    left: 0;
+    right: 0;
   }
 
-  .logo img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .logo span {
-    font-size: 0.8rem;
-  }
 }
 
 
