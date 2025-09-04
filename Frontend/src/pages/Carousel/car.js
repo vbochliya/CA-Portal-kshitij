@@ -1,7 +1,6 @@
 import styles from './car.module.css';
 import './carousal-customStyle.css';
-import React,{useState} from 'react';
-import Card from "./Card/Card.js"
+import {useState} from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -63,7 +62,7 @@ function CarouselComponent(props) {
           showDots={true}
           responsive={responsive}
           autoPlayOnHover={"hover"}
-          ssr={true} // means to render carousel on server-side.
+          // ssr={true} // means to render carousel on server-side.
           infinite={true}
           autoPlay={autoplay}
           autoPlaySpeed={2000}
