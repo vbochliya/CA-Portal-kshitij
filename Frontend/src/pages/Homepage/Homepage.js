@@ -3,7 +3,8 @@ import bg from "../../images/bg.png";
 import styles from "./Homepage.module.css";
 //import About from '../About/about';
 import About from "../About/aboutnew";
-import CarouselComponent from "../Carousel/car";
+import Carousel3DComponent from "../Carousel/carousel.js";
+// import CarouselComponent from "../Carousel/car";
 import Navbar from "../../components/navbar/Navbarags";
 import Incentives from "../Incentives/incentive25";
 import Contact from "../ContactUs/contact";
@@ -93,7 +94,8 @@ function Home() {
           <Incentives />
         </div>
         <div id="testimonials" className={styles.scroll}>
-          <CarouselComponent />
+          {/* <CarouselComponent /> */}
+          <Carousel3DComponent />
         </div>
         <div id="faq">
           <Faq />

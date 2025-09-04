@@ -3,7 +3,8 @@ import styles from './HomepageNew.module.css'; // or './HomepageNew.module.scss'
 import Navbar from '../../components/navbar/Navbarags';
 // import About from '../About/aboutnew';
 import About from '../About/About26';
-import CarouselComponent from '../Carousel/car';
+// import CarouselComponent from '../Carousel/car';
+import Carousel3DComponent from '../Carousel/carousel.js';
 import IncentivesNew from '../Incentives/incentive25';
 import Incentives26 from '../Incentives/Incentives26/Incentives26';
 import Contact from '../ContactUs/contact';
@@ -151,7 +152,8 @@ function Home() {
         <div id="resp" className={styles.scroll}><Responsibility /></div>
         <div id="inc" className={styles.scroll}><Incentives26/></div>
         <div id="companyInc" className={styles.scroll}><CompanyIncentives /></div>
-        <div id="testimonials" className={styles.scroll}><CarouselComponent /></div>
+        {/* <div id="testimonials" className={styles.scroll}><CarouselComponent /></div> */}
+        <div id="testimonials" className={styles.scroll}><Carousel3DComponent /></div>
         {/* <div id="faq"><Faq /></div> */}
         <div id="faq" className={`${styles.faq}`}><Faq26 /></div>
         <div id="contact" className={styles.scroll}><Contact /></div>
